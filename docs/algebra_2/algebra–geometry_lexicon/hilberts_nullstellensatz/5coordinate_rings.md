@@ -141,11 +141,13 @@
     === "Proof"
         $A = K[\underline a], a \in A^n$
 
-        Let $\phi_a : K[\underline x] \to A$ be the canonical evaluation epimorphism at $x=a$.
+        Let $\phi_a : K[\underline x] \to A$ be the canonical evaluation epimorphism at $\underline x = \underline a$.
+
+        $I := \Ker \phi_a$ which is reduced
 
         $$
         \begin{align*}
-            \implies & A \cong K[\underline x]/I, I = \Ker \phi \text{ which is reduced} \\
+            \implies & A \cong K[\underline x]/I \\
             \implies & \sqrt I = I
         \end{align*}
         $$
