@@ -15,6 +15,7 @@ window.MathJax = {
             Spec: ["{\\operatorname{Spec}\\left(#1\\right)}", 1], // Spectrum of a ring
             Specmax: ["{\\operatorname{Spec}_{max}\\left(#1\\right)}", 1], // Maximal spectrum of a ring
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
+            nil: "{\\operatorname{nil}}",
             N: "\\mathbb{N}", // Natural numbers
             I: "\\mathcal{I}", // Vanishing ideal
             V: "{\\mathcal{V}}", // Affine variety
