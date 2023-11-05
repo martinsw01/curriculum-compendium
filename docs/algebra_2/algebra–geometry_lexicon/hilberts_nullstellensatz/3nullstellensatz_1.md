@@ -101,7 +101,8 @@
     ## Correspondence points–maximal ideals
     === "Theorem"
         Let
-        
+    
+    
         - $K = \overline K$ be algebraically closed
         - $S \subseteq K[\underline x]$ be a subset
         - $\mathcal M_S := \{m \ideal K[\underline x] | m \text{ is maximal} \land S \subseteq m\}$

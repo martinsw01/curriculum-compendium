@@ -21,6 +21,7 @@
     is called the radical ideal
 
 
+
 ??? lemma "Lemma 1.10"
     ## Lemma 1.10
     === "Lemma"
