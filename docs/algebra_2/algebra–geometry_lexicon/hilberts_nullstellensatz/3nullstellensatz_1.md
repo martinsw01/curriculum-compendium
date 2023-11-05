@@ -101,20 +101,19 @@
     ## Correspondence points–maximal ideals
     === "Theorem"
         Let
-    
-    
+
         - $K = \overline K$ be algebraically closed
         - $S \subseteq K[\underline x]$ be a subset
-        - $\mathcal M_S := \{m \ideal K[\underline x] | m \text{ is maximal} \land S \subseteq m\}$
+        - $\M_S := \{m \ideal K[\underline x] | m \text{ is maximal} \land S \subseteq m\}$
         be the set of maximal ideals containing S
-        - $\Phi : \mathcal V(S) \to \mathcal M_S$ be the homomorphism given by $p \mapsto m_p$
+        - $\Phi : \V(S) \to \M_S$ be the homomorphism given by $p \mapsto m_p$
 
         $\implies \Phi$ is a bijection.
 
     === "Proof"
         *Surjectivity:*
 
-        Let $m \in \mathcal M_S$
+        Let $m \in \M_S$
 
         $$\begin{align*}
             \implieshref{#maximal-ideals-in-a-polynomial-ring}{L.1.5}
@@ -146,17 +145,17 @@
         $\implies \mathcal V(I) \neq \emptyset$
 
     === "Proof"
-        Let $\mathcal M:=\{J \properideal K[\underline x] | I \subseteq J\}$ be ordered by $\subseteq$ inclusion.
-        and $c \subseteq \mathcal M$ be a chain.
+        Let $\M:=\{J \properideal K[\underline x] | I \subseteq J\}$ be ordered by $\subseteq$ inclusion.
+        and $c \subseteq \M$ be a chain.
         
         Need to find an upper bound to use Zorn's lemma (Z.L.).
 
-        If $c = \emptyset$, then any $I \in \mathcal M$ is an upper bound. </br>
-        If not, then $\overline J = \cup c \in \mathcal M$ is an upper bound.
+        If $c = \emptyset$, then any $I \in \M$ is an upper bound. </br>
+        If not, then $\overline J = \cup c \in \M$ is an upper bound.
 
         $$\begin{align*}
             \implieshref{https://en.wikipedia.org/wiki/Zorn%27s_lemma}{Z.L.}
-            & \mathcal M \text{ has a maximal element } m \in \mathcal M \\
+            & \M \text{ has a maximal element } m \in \M \\
             \implies & m \text{ is a maximal ideal} \\
             \implieshref{#correspondence-pointsmaximal-ideals}{T.1.7}
             & \exists\ p \in \mathcal V(I) \text{ s.t. } \\ & m=m_p \\

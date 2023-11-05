@@ -25,15 +25,15 @@
 ??? lemma "Lemma 1.10"
     ## Lemma 1.10
     === "Lemma"
-        Let $\mathcal M \subseteq \Spec R$ be a set of prime ideals</br>
+        Let $\M \subseteq \Spec R$ be a set of prime ideals</br>
         and $I \ideal R$ be an ideal.
 
         $$
-            \implies \sqrt I \subseteq \bigcap_{I \subseteq P \in \mathcal M} P
+            \implies \sqrt I \subseteq \bigcap_{I \subseteq P \in \M} P
         $$
 
     === "Proof"
-        Let $a \in \sqrt I, I\subseteq P\in \mathcal M$
+        Let $a \in \sqrt I, I\subseteq P\in \M$
 
         $$\begin{align*}
             \implies & \exists\ k : a^k \in I \subseteq P = \sqrt P \\
@@ -102,9 +102,9 @@
 ??? corollary "Corollary 1.12"
     ## Intersecting prime ideals
     === "Corollary"
-        Let $I \ideal R, \mathcal M=\Spec R$
+        Let $I \ideal R, \M=\Spec R$
 
-        $$\implies \sqrt I = \bigcap_{\substack{P \in \mathcal M \\ I \subseteq P}} P$$
+        $$\implies \sqrt I = \bigcap_{\substack{P \in \M \\ I \subseteq P}} P$$
 
     === "Proof"
         $\subseteq:$ follows from [L.1.10](#lemma-110)

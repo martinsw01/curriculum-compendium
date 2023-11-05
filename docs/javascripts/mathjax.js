@@ -17,12 +17,17 @@ window.MathJax = {
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
             nil: "{\\operatorname{nil}}",
             N: "\\mathbb{N}", // Natural numbers
+            Z: "\\mathbb{Z}", // Integers
             I: "\\mathcal{I}", // Vanishing ideal
             V: "{\\mathcal{V}}", // Affine variety
+            M: "{\\mathcal{M}}", // Fancy M
             H: "{\\mathcal H}", // Hausdorff measure
             Hauseps: ["{\\H_\\varepsilon^{#1}}", 1], // Hausdorff measure approximation
             contradiction: "{\\ \\Rightarrow\\!\\Leftarrow}",
             tab: "{\\ \\ \\ \\ }"
+        },
+        environments: {
+                rcases: ['\\left.\\begin{matrix}', '\\end{matrix}\\right\\rbrace', ''],
         },
         processEscapes: true,
         processEnvironments: true
