@@ -27,7 +27,7 @@ window.MathJax = {
             tab: "{\\ \\ \\ \\ }"
         },
         environments: {
-                rcases: ['\\left.\\begin{matrix}', '\\end{matrix}\\right\\rbrace', ''],
+                rcases: ['\\left.\\begin{aligned}', '\\end{aligned}\\right\\rbrace', ''],
         },
         processEscapes: true,
         processEnvironments: true

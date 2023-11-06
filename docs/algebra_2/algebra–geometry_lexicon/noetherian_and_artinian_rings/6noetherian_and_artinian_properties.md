@@ -85,7 +85,7 @@
 
 
 ??? proposition "Proposition 2.4"
-    ## Submodules and quotient modules <a id=l24></a>
+    ## Submodules and quotient modules <a id=p24></a>
 
     Let $M$ be an $R$-module, and $N\subseteq M$ be a sumbodule.
 
@@ -238,7 +238,7 @@
 
         $\implies \{0\} = I_n \subseteq I_{n-1} \subseteq ... \subseteq I_1 \subseteq I_0 = R$
 
-        By [L.2.4](#l24), we get that
+        By [P.2.4](#p24), we get that
 
         $$
         R \text{ is }
