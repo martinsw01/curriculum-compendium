@@ -50,10 +50,11 @@
             \end{align*}$
             
             For each $j$, we have that $m_j \in M_j$. </br>
+
             $\begin{align*}
-                \text{Let } k:= \max\left{{i_j\right\}_{j=1}^n \\
+                \text{Let } &k:= \max\left\{i_j\right\}_{j=1}^n \\
                 \implies & m_k \in M_k \\
-                \text{Let } i \ge k \\
+                \text{Let } &i \ge k \\
                 \implies & M_i \subseteq N = (m_1, ..., m_n) \subseteq M_k \subseteq M_i \\
                 \implies &M_i = M_k & \square
             \end{align*}$
@@ -104,7 +105,7 @@
             \end{align*}$
 
 
-???+ theroem "Theorem 2.11"
+???+ theorem "Theorem 2.11"
     ## Polynomial rings over Noetherian rings
     Let $R$ be a Noetherian ring.
 
@@ -148,7 +149,7 @@
             \text{and } & a_{i,j} \in J_i \text{ be the } i\text{th coefficient of } f_{i,j}
         \end{align*}$
 
-        We want to proove that $\left\{f_{i,j}\right\}_{i=0,j=1}^{n,m_i}$ generate I:
+        We want to prove that $\left\{f_{i,j}\right\}_{i=0,j=1}^{n,m_i}$ generate I:
         
         Let
 
@@ -207,7 +208,7 @@
     Every f.g. algebra over a Noetherian ring is Noetherian
 
 
-??? theorem "Hilbert's basis theorem"
-    ## Hilbert's basis theorem
+??? theorem "Theorem 2.13"
+    ## Hilbert's basis theorem <a id="t213"></a>
 
     Every ideal in $K[\underline x]$ is f.g.

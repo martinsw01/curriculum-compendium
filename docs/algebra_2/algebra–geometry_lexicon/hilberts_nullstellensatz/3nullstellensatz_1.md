@@ -9,8 +9,8 @@
 
         $$
         \begin{align*}
-        \implies & \text{For any maximal ideal} m \ideal B \\
-        & \phi^{-1}(m) \ideal A \text{is also a maximal ideal}
+        \implies & \text{For any maximal ideal } m \ideal B \\
+        & \phi^{-1}(m) \ideal A \text{ is also a maximal ideal}
         \end{align*}
         $$
 
@@ -32,7 +32,7 @@
             \implies & A/n \cong \Im \gamma \subseteq B/m \text{, which is f.g.} \\
             \implieshref{../2lemma1.1}{L.1.1b)} & A/n \text{ is an algebraic domain} \\
             \implieshref{../2lemma1.1}{L.1.1a)} & A/n \text{ is a field} \\
-            \iff & n \ideal A \text{is a maximal ideal} & \square
+            \iff & n \ideal A \text{ is a maximal ideal} & \square
         \end{align*}$$
 
 
@@ -104,7 +104,7 @@
 
         - $K = \overline K$ be algebraically closed
         - $S \subseteq K[\underline x]$ be a subset
-        - $\M_S := \{m \ideal K[\underline x] | m \text{ is maximal} \land S \subseteq m\}$
+        - $\M_S := \{m \ideal K[\underline x] | m \text{ is maximal } \land S \subseteq m\}$
         be the set of maximal ideals containing S
         - $\Phi : \V(S) \to \M_S$ be the homomorphism given by $p \mapsto m_p$
 

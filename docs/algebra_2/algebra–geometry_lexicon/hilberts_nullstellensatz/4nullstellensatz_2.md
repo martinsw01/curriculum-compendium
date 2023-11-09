@@ -100,7 +100,7 @@
 
 
 ??? corollary "Corollary 1.12"
-    ## Intersecting prime ideals
+    ## Intersecting prime ideals <a id="c112"></a>
     === "Corollary"
         Let $I \ideal R, \M=\Spec R$
 
@@ -166,7 +166,7 @@
     === "Theorem"
         Let $K = \overline K, I \ideal K[\underline x]$
 
-        $$\implies \I(\V(I) = \sqrt I$$
+        $$\implies \I(\V(I)) = \sqrt I$$
 
     === "Proof"
         $$\begin{align*}
@@ -178,7 +178,7 @@
 
 
 ??? lemma "Lemma 1.18"
-    ## Lemma 1.18
+    ## Lemma 1.18 <a id="l118"></a>
 
     === "Lemme"
         Let $X \subseteq K^n$ be an affine variery.
