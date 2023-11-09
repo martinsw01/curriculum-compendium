@@ -16,11 +16,17 @@ window.MathJax = {
             Specmax: ["{\\operatorname{Spec}_{max}\\left(#1\\right)}", 1], // Maximal spectrum of a ring
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
             nil: "{\\operatorname{nil}}",
+            Lip: "{\\operatorname{Lip}}",// Lipschitz constant
+            diam: "{\\operatorname{diam}}",// Lipschitz constant
             N: "\\mathbb{N}", // Natural numbers
             Z: "\\mathbb{Z}", // Integers
+            R: "\\mathbb{R}", // Reals
+            C: "\\mathbb{C}", // Complex numbers
             I: "\\mathcal{I}", // Vanishing ideal
             V: "{\\mathcal{V}}", // Affine variety
             M: "{\\mathcal{M}}", // Fancy M
+            F: "{\\mathcal{F}}", // Fancy F
+            a: "{\\mathfrak{a}}", // Fancy a
             H: "{\\mathcal H}", // Hausdorff measure
             Hauseps: ["{\\H_\\varepsilon^{#1}}", 1], // Hausdorff measure approximation
             contradiction: "{\\ \\Rightarrow\\!\\Leftarrow}",
