@@ -25,17 +25,17 @@
 
 ??? theorem "Theorem 3.9"
 	## Noether property of the Zariski topology
-	=== "Theorem"
-		=== "a)"
-			Let $X\subseteq K^n$ be a set of points equipped with the Zariski-topology.
-			
-			$$\implies X \text{ is Noetherian}$$
-			
-		=== "b)"
-			Let $R$ be a Noetherian ring and $X\subseteq \Spec R$ equipped with the Zariski-topology.
-			
-			$$\implies X \text{ is Noetherian}$$
-	=== "Proof"
+	=== "a)"
+		Let $X\subseteq K^n$ be a set of points equipped with the Zariski-topology.
+		
+		$$\implies X \text{ is Noetherian}$$
+		
+	=== "b)"
+		Let $R$ be a Noetherian ring and $X\subseteq \Spec R$ equipped with the Zariski-topology.
+		
+		$$\implies X \text{ is Noetherian}$$
+
+	??? proof
 		=== "a)"
 			Assume without loss of generality that $X=K^n$.
 			
@@ -60,13 +60,12 @@
 
 	Let $I = \I(X)$.
 
-	=== "Theorem"
-		=== "a)"
-			$$X \subseteq K^n \text{ is irreducible } \iff \I(X) \text{ is a prime ideal}$$
-		=== "b)"
-			$$X \subseteq \Spec R \text{ is irreducible } \iff \I(X) \text{ is a prime ideal}$$
+	=== "a)"
+		$$X \subseteq K^n \text{ is irreducible } \iff \I(X) \text{ is a prime ideal}$$
+	=== "b)"
+		$$X \subseteq \Spec R \text{ is irreducible } \iff \I(X) \text{ is a prime ideal}$$
 
-	=== "Proof"
+	??? proof
 		=== "a)"
 			Let $\V:=\V_K$ and $\I:=\I_{K[\underline x]}$ as defined in respectively
 			[D.1.6](../../hilberts_nullstellensatz/3nullstellensatz_1/#d115) and
@@ -155,25 +154,23 @@
 
 	Let $X$ be a Noetherian topological space.
 
-	=== "Theorem"
+	=== "a)"
+		There are closed irreducible subsets $Z_1, ..., Z_n \subseteq X$ with
+		$n \in \N_0$ and $Z_i \subsetneq Z_j\ \forall\ i\neq j$ s.t.
 
-		=== "a)"
-			There are closed irreducible subsets $Z_1, ..., Z_n \subseteq X$ with
-			$n \in \N_0$ and $Z_i \subsetneq Z_j\ \forall\ i\neq j$ s.t.
-	
-			$$X = \bigcup_{i=1}^n Z_i$$
-	
-		=== "b)"
-			If the closed irreducible $Z_1, ..., Z_n \subseteq X$ satisfies **a)**,
-			then every irreducible subset $Z\subseteq X$ is contained in a $Z_i$.
-	
-		=== "c)"
-			If the closed irreducible $Z_1, ..., Z_n \subseteq X$ satisfies **a)**,
-			then they are the maximal irreducible subsets of $X$.
-	
-			Moreover, they are uniquelly determined up to order.
+		$$X = \bigcup_{i=1}^n Z_i$$
 
-	=== "Proof"
+	=== "b)"
+		If the closed irreducible $Z_1, ..., Z_n \subseteq X$ satisfies **a)**,
+		then every irreducible subset $Z\subseteq X$ is contained in a $Z_i$.
+
+	=== "c)"
+		If the closed irreducible $Z_1, ..., Z_n \subseteq X$ satisfies **a)**,
+		then they are the maximal irreducible subsets of $X$.
+
+		Moreover, they are uniquelly determined up to order.
+
+	??? proof
 		=== "a)"
 			As $X$ is Noetherian, every nonempty closed subset of $X$ contains a minimal closed subset
 			([AoC](https://en.wikipedia.org/wiki/Axiom_of_choice)).
@@ -235,22 +232,21 @@
 	## Minimal prime ideals <a id="c314"></a>
 	Let $R$ be a Noetherian ring.
 
-	=== "Corollary"
-		=== "a)"
-			$$R \text{ has finitely many prime ideals } P_1, ..., P_n \ideal R.$$
-		=== "b)"
-			$$\text{Every prime ideal contains a minimal prime ideal.}$$
-		=== "c)"
-			$$\nil(R) = \bigcap_{i=1}^n P_i = \sqrt{\{0\}}$$
+	=== "a)"
+		$$R \text{ has finitely many prime ideals } P_1, ..., P_n \ideal R.$$
+	=== "b)"
+		$$\text{Every prime ideal contains a minimal prime ideal.}$$
+	=== "c)"
+		$$\nil(R) = \bigcap_{i=1}^n P_i = \sqrt{\{0\}}$$
 
-		=== "d)"
-			Let $I \ideal R$ be an ideal.
+	=== "d)"
+		Let $I \ideal R$ be an ideal.
 
-			$$\V_{\Spec R}(I) \text{ contains finitely many minimal elements } Q_1, ..., Q_n.$$
+		$$\V_{\Spec R}(I) \text{ contains finitely many minimal elements } Q_1, ..., Q_n.$$
 
-			$$\sqrt I = \bigcap_{i=1}^n Q_i$$
+		$$\sqrt I = \bigcap_{i=1}^n Q_i$$
 
-	=== "Proof"
+	??? proof
 		=== "a)"
 			By [P.3.6e)](../spectra/#p36) and [T.3.10b)](#t310) (minimal) prime ideals in $R$ cooresponds to
 			(maximal) closed irreducible subsets of $\Spec R$.
@@ -270,10 +266,9 @@
 
 
 ??? theorem "Theorem 2.8"
-	=== "Theorem"
-		$$R \text{ is Noetherian } \iff R \text{ is Noetherian and } \Spec R = \Specmax R$$
+	$$R \text{ is Noetherian } \iff R \text{ is Noetherian and } \Spec R = \Specmax R$$
 
-	=== "Proof"
+	??? proof
 		=== "$\implies$"
 			See [original statement](../../noetherian_and_artinian_rings/6noetherian_and_artinian_properties/#t28).
 		=== "$\impliedby$"

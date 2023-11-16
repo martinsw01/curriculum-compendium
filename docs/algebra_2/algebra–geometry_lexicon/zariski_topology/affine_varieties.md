@@ -5,18 +5,17 @@
 
     Let $n\in\N$
 
-    === "Theorem"
-        === "a)"
-            For $I, J \ideal K[\underline x]$:
+    === "a)"
+        For $I, J \ideal K[\underline x]$:
 
-            $$\V(I) \cup \V(J) = \V(I\cap J)$$
+        $$\V(I) \cup \V(J) = \V(I\cap J)$$
 
-        === "b)"
-            For $\emptyset \neq \M$, the set of subsets of $K[\underline x]$:
+    === "b)"
+        For $\emptyset \neq \M$, the set of subsets of $K[\underline x]$:
 
-            $$\bigcap_{S\in\M} \V(S) = \V\left(\bigcup_{S\in\M} S\right)$$
+        $$\bigcap_{S\in\M} \V(S) = \V\left(\bigcup_{S\in\M} S\right)$$
 
-    === "Proof"
+    ??? proof
         === "a)"
             Convince yourself that the inclusion $\subseteq$ is trivial.
 
@@ -42,7 +41,7 @@
             $$
             
         === "b)"
-            This is also somehowe clear.
+            This is also somehow clear.
 
 
 ???+ definition "Definition 3.2"

@@ -22,52 +22,51 @@
 
 ??? proposition "Proposition 3.6"
 	## Properties of $\V_{\Spec R}$ and $\I_R$ <a id="p36"></a>
-	=== "Theorem"
-		
-		=== "a)"
-			### Finite union of closed subsets
-			
-			Let $S, T \subseteq R$ be subsets.
-			
-			$$\V(S) \cup \V(T) = \V\Big((S)_R \cap (T)_R\Big)$$
-			
-		=== "b)"
-			### Arbitrary intersection of closed subsets
-			
-			For $\emptyset \ne \M \subseteq P(R)$, a nonempty subset of the powerset:
-			
-			$$\bigcap_{S\in\M} \V(S) = \V(\cup \M)$$
-			
-		=== "c)"
-			### Radical ideal
-		
-			$$\I(X) \ideal R \text{ is a radiacal ideal}$$
 
-		=== "d)"
-			### Nullstellensatz
-			
-			For $I \ideal R$:
-			
-			$$\I(\V(I)) = \sqrt I$$
-			
-		=== "e)"
-			### Bijection between radicals and closed subsets
-			
-			There exists a unique bijection between
-			
-			- radical ideals in $R$
-			- closed subsets of $\Spec R$
+	=== "a)"
+		### Finite union of closed subsets
+		
+		Let $S, T \subseteq R$ be subsets.
+		
+		$$\V(S) \cup \V(T) = \V\Big((S)_R \cap (T)_R\Big)$$
+		
+	=== "b)"
+		### Arbitrary intersection of closed subsets
+		
+		For $\emptyset \ne \M \subseteq P(R)$, a nonempty subset of the powerset:
+		
+		$$\bigcap_{S\in\M} \V(S) = \V(\cup \M)$$
+		
+	=== "c)"
+		### Radical ideal
+	
+		$$\I(X) \ideal R \text{ is a radiacal ideal}$$
 
-			given by
+	=== "d)"
+		### Nullstellensatz
+		
+		For $I \ideal R$:
+		
+		$$\I(\V(I)) = \sqrt I$$
+		
+	=== "e)"
+		### Bijection between radicals and closed subsets
+		
+		There exists a unique bijection between
+		
+		- radical ideals in $R$
+		- closed subsets of $\Spec R$
+
+		given by
+		
+		$$
+		\begin{align*}
+			I & \mapsto \V(I) \\
+			X &\mapsto \I(X)
+		\end{align*}
+		$$
 			
-			$$
-			\begin{align*}
-				I & \mapsto \V(I) \\
-				X &\mapsto \I(X)
-			\end{align*}
-			$$
-			
-	=== "Proof"
+	??? proof
 		=== "a)"
 			=== "$\subseteq$"
 				Let $P \in \V(S)$
