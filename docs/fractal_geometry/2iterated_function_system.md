@@ -40,15 +40,14 @@
 
 
 ??? lemma "Lemma 1"
-    === "Lemma"
-        $\begin{align*}
-            \text{Let } & f \text{ be a contraction on } X \\
-            & L:= \Lip f < 1
-        \end{align*}$
-    
-        $$\implies h\left(f(A), f(B)\right) \le L h(A, B)$$
+    $\begin{align*}
+        \text{Let } & f \text{ be a contraction on } X \\
+        & L:= \Lip f < 1
+    \end{align*}$
 
-    === "Proof"
+    $$\implies h\left(f(A), f(B)\right) \le L h(A, B)$$
+
+    ??? proof
         It is well defined:
 
         $\begin{align*}

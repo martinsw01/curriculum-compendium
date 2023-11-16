@@ -11,7 +11,9 @@ window.MathJax = {
             ideal: "{\\ \\trianglelefteq} \\ ",
             Ker: "{\\operatorname{Ker}}",
             Im: "{\\operatorname{Im}}",
-            implieshref: ["{\\overset{\\href{#1}{\\text{#2}}}{\\implies}}", 2], // overset \implies with a link
+            oversethref: ["{\\overset{\\href{#1}{\\text{#2}}}{#3}}", 3], // overset with link
+            implieshref: ["{\\oversethref{#1}{#2}{\\implies}}", 2], // overset \implies with a link
+            eqhref: ["{\\oversethref{#1}{#2}{=}}", 2], // overset = with a link
             Spec: ["{\\operatorname{Spec}\\left(#1\\right)}", 1], // Spectrum of a ring
             Specmax: ["{\\operatorname{Spec}_{max}\\left(#1\\right)}", 1], // Maximal spectrum of a ring
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring

@@ -3,6 +3,7 @@ site_name: Curriculum Compendium
 theme:
   name: material
   features:
+    - content.tabs.link # Proof and theorem/lemma/... are on the same tab
     - navigation.instant
     - search.highlight
     - navigation.indexes
@@ -35,3 +36,4 @@ extra_css:
   - stylesheets/admonitions/proposition.css
   - stylesheets/admonitions/remark.css
   - stylesheets/admonitions/example.css
+  - stylesheets/admonitions/proof.css

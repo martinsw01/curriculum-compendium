@@ -2,19 +2,19 @@
 
 ??? proposition "Proposition 1.2"
     ## Preimages of maximal ideals
-    === "Propositon"
-        Let $\phi A \to B$ be a homomorphism of $K$-algebras, 
 
-        and $B$ be f.g. 
+    Let $\phi A \to B$ be a homomorphism of $K$-algebras, 
 
-        $$
-        \begin{align*}
-        \implies & \text{For any maximal ideal } m \ideal B \\
-        & \phi^{-1}(m) \ideal A \text{ is also a maximal ideal}
-        \end{align*}
-        $$
+    and $B$ be f.g. 
 
-    === "Proof"
+    $$
+    \begin{align*}
+    \implies & \text{For any maximal ideal } m \ideal B \\
+    & \phi^{-1}(m) \ideal A \text{ is also a maximal ideal}
+    \end{align*}
+    $$
+
+    ??? proof
         Let
 
         $$\begin{align*}
@@ -44,12 +44,12 @@
 
 ??? lemma "Lemma 1.4"
     ## Lemma 1.4
-    === "Lemma"
-        Let $p=(\xi_i)_1^n\in K^n$
-    
-        $\implies m_p = (x_1-\xi_1, ..., x_n-\xi_n) \ideal K[\underline x]$ is a maximal ideal.
 
-    === "Proof"
+    Let $p=(\xi_i)_1^n\in K^n$
+
+    $\implies m_p = (x_1-\xi_1, ..., x_n-\xi_n) \ideal K[\underline x]$ is a maximal ideal.
+
+    ??? proof
         Let $\phi : K[\underline x] \to K$ be the surjective vealuation homomorphism at $\xi \in K^n$. 
 
         $\implies \Ker \phi = m_p$ 
@@ -61,14 +61,14 @@
 
 ??? proposition "Proposition 1.5"
     ## Maximal ideals in a polynomial ring
-    === "Proposition"
-        Let $K=\overline K$ be algebraically closed, 
 
-        and $m\ideal K[\underline x]$ be a maximal ideal.
+    Let $K=\overline K$ be algebraically closed, 
 
-        $\implies \exists\ p=(\xi_i)_1^n \in K^n$ such that $m=m_p$.
+    and $m\ideal K[\underline x]$ be a maximal ideal.
 
-    === "Proof"
+    $\implies \exists\ p=(\xi_i)_1^n \in K^n$ such that $m=m_p$.
+
+    ??? proof
         Let $\phi : K[x_i] \to K[\underline x]$ be the identity hommomorphism. 
 
         $\implieshref{#preimages-of-maximal-ideals}{L.1.2} K[x_i] \cap m = \phi^{-1}(m) \ideal K[x_i]$ is maximal. 
@@ -81,12 +81,12 @@
 
         $m_p = (\underline x - \underline \xi) \subseteq m (*)$ 
 
-        $\implieshref{#lemma-14}{L.1.4} m_p \ideal K[x]$ is maximal (**) 
+        $\implieshref{#lemma-14}{L.1.4} m_p \ideal K[x]$ is maximal $(**)$ 
 
-        $\overset{(*)+(**)}{\implies} m_p = m $
+        $\overset{(*)+(**)}{\implies} m_p = m$
 
 ??? definition "Definition 1.6"
-    ## Affine variety
+    ## Affine variety <a id="d16"></a>
     Let $K$ be a field, and $S \subseteq K[\underline x]$ a subset.
     
     $$
@@ -99,18 +99,17 @@
 
 ??? theorem "Theorem 1.7"
     ## Correspondence points–maximal ideals
-    === "Theorem"
-        Let
+    Let
 
-        - $K = \overline K$ be algebraically closed
-        - $S \subseteq K[\underline x]$ be a subset
-        - $\M_S := \{m \ideal K[\underline x] | m \text{ is maximal } \land S \subseteq m\}$
-        be the set of maximal ideals containing S
-        - $\Phi : \V(S) \to \M_S$ be the homomorphism given by $p \mapsto m_p$
+    - $K = \overline K$ be algebraically closed
+    - $S \subseteq K[\underline x]$ be a subset
+    - $\M_S := \{m \ideal K[\underline x] | m \text{ is maximal } \land S \subseteq m\}$
+    be the set of maximal ideals containing S
+    - $\Phi : \V(S) \to \M_S$ be the homomorphism given by $p \mapsto m_p$
 
-        $\implies \Phi$ is a bijection.
+    $\implies \Phi$ is a bijection.
 
-    === "Proof"
+    ??? proof
         *Surjectivity:*
 
         Let $m \in \M_S$
@@ -139,12 +138,12 @@
 
 ???+ corollary "Corollary 1.8"
     ## Hilbert's Nullstellsatz
-    === "Corollary"
-        Let $K=\overline K,\ I \properideal K[x]$
-        
-        $\implies \mathcal V(I) \neq \emptyset$
 
-    === "Proof"
+    Let $K=\overline K,\ I \properideal K[x]$
+    
+    $\implies \mathcal V(I) \neq \emptyset$
+
+    ??? proof
         Let $\M:=\{J \properideal K[\underline x] | I \subseteq J\}$ be ordered by $\subseteq$ inclusion.
         and $c \subseteq \M$ be a chain.
         
