@@ -24,15 +24,14 @@
 
 ??? lemma "Lemma 1.10"
     ## Lemma 1.10
-    === "Lemma"
-        Let $\M \subseteq \Spec R$ be a set of prime ideals</br>
-        and $I \ideal R$ be an ideal.
+    Let $\M \subseteq \Spec R$ be a set of prime ideals</br>
+    and $I \ideal R$ be an ideal.
 
-        $$
-            \implies \sqrt I \subseteq \bigcap_{I \subseteq P \in \M} P
-        $$
+    $$
+        \implies \sqrt I \subseteq \bigcap_{I \subseteq P \in \M} P
+    $$
 
-    === "Proof"
+    ??? proof
         Let $a \in \sqrt I, I\subseteq P\in \M$
 
         $$\begin{align*}
@@ -43,12 +42,11 @@
 
 ??? proposition "Proposition 1.11"
     ## The raison d’être of the Rabinowitsch spectrum
-    === "Proposition"
-        Let $I \ideal R$
+    Let $I \ideal R$
 
-        $$\implies \sqrt I = \bigcap_{\substack{P \in \Specrab R \\ I \subseteq P}} P$$
+    $$\implies \sqrt I = \bigcap_{\substack{P \in \Specrab R \\ I \subseteq P}} P$$
 
-    === "Proof"
+    ??? proof
         $\subseteq:$ follows from [L.1.10](#lemma-110)
 
         $\supseteq:$ Let $a \in \cap P$ and 
@@ -101,12 +99,11 @@
 
 ??? corollary "Corollary 1.12"
     ## Intersecting prime ideals <a id="c112"></a>
-    === "Corollary"
-        Let $I \ideal R, \M=\Spec R$
+    Let $I \ideal R, \M=\Spec R$
 
-        $$\implies \sqrt I = \bigcap_{\substack{P \in \M \\ I \subseteq P}} P$$
+    $$\implies \sqrt I = \bigcap_{\substack{P \in \M \\ I \subseteq P}} P$$
 
-    === "Proof"
+    ??? proof
         $\subseteq:$ follows from [L.1.10](#lemma-110)
         
         $\supseteq:$
@@ -121,12 +118,11 @@
 
 ??? theorem "Theorem 1.13"
     ## Intersecting maximal ideals
-    === "Theorem"
-        Let $I \ideal A$ be an ideal in an affine algebra
+    Let $I \ideal A$ be an ideal in an affine algebra
 
-        $$\implies \sqrt I = \bigcap_{\substack{m \in \Specmax A \\ I \subseteq m}} m$$
+    $$\implies \sqrt I = \bigcap_{\substack{m \in \Specmax A \\ I \subseteq m}} m$$
     
-    === "Proof"
+    ??? proof
         $\subseteq:$ follows from [L.1.10](#lemma-110)
         
         $\supseteq:$ Let $P \in \Specrab A$
@@ -164,12 +160,11 @@
 ???+ theorem "Theorem 1.17"
     ## Hilbert's Nullstellensatz
 
-    === "Theorem"
-        Let $K = \overline K, I \ideal K[\underline x]$
+    Let $K = \overline K, I \ideal K[\underline x]$
 
-        $$\implies \I(\V(I)) = \sqrt I$$
+    $$\implies \I(\V(I)) = \sqrt I$$
 
-    === "Proof"
+    ??? proof
         $$\begin{align*}
             \I(\V(I)) &= \bigcap_{p \in \V(I)} m_p
             \overset{\href{../3nullstellensatz_1/#correspondence-pointsmaximal-ideals}{T.1.7}}{=}
@@ -181,12 +176,11 @@
 ??? lemma "Lemma 1.18"
     ## Lemma 1.18 <a id="l118"></a>
 
-    === "Lemme"
-        Let $X \subseteq K^n$ be an affine variery.
+    Let $X \subseteq K^n$ be an affine variery.
 
-        $$\implies \V(\I(X)) = X$$
+    $$\implies \V(\I(X)) = X$$
 
-    === "Proof"
+    ??? proof
         Let $S \subseteq K[\underline x]$ be a subset s.t. $X = \V(S)$.
 
         $$\begin{align*}
@@ -197,19 +191,18 @@
 
 ??? corollary "Corollary 1.19"
     ## Ideal–variety correspondence
-    
-    === "Corollary"
-        Let $K = \overline K, n \in \N_+$
-    
-        $$\begin{align*}
-            \implies & \text{There is an inclusion-reversing bijection between} \\
-            & A:= \{I \ideal K[\underline x] | I \text{ is a radical ideal}\} \\
-            & G:= \{X \subseteq K^n | X \text{ is an affine variety}\} \\
-            & A \to G \text{ given by } I \mapsto \V(I) \\
-            & G \to A \text{ given by } X \mapsto \I(X)
-        \end{align*}$$
 
-    === "Proof"
+    Let $K = \overline K, n \in \N_+$
+
+    $$\begin{align*}
+        \implies & \text{There is an inclusion-reversing bijection between} \\
+        & A:= \{I \ideal K[\underline x] | I \text{ is a radical ideal}\} \\
+        & G:= \{X \subseteq K^n | X \text{ is an affine variety}\} \\
+        & A \to G \text{ given by } I \mapsto \V(I) \\
+        & G \to A \text{ given by } X \mapsto \I(X)
+    \end{align*}$$
+
+    ??? proof
         $$
             \I(\V(I))
             \overset{\href{#hilberts-nullstellensatz}{L.1.17}}{=} \sqrt I = I \tab \square
