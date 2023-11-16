@@ -148,7 +148,8 @@
 
 
 ??? definition "Definition 1.15"
-    ## Vanishing ideal
+    ## Vanishing ideal <a id="d115"></a>
+
     Let $X \subseteq K^n$ be any subset.
     
     $$\I(X) := \{f \in K[\underline x] : f|_X = 0\}$$

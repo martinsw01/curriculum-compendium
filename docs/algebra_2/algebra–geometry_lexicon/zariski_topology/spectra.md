@@ -21,7 +21,7 @@
 	
 
 ??? proposition "Proposition 3.6"
-	## Properties of $\V_{\Spec R}$ and $\I_R$
+	## Properties of $\V_{\Spec R}$ and $\I_R$ <a id="p36"></a>
 	=== "Theorem"
 		
 		=== "a)"

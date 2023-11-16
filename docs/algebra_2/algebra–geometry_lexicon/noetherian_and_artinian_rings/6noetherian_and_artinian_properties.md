@@ -177,7 +177,7 @@
 
 
 ??? lemma "Lemma 2.6"
-    ## Ideal powers and radical ideals
+    ## Ideal powers and radical ideals <a id="l26"></a>
 
     $\begin{align*}
         \text{Let } & I, J \ideal R \\
@@ -256,7 +256,7 @@
 
 
 ???+ theorem "Theorem 2.8"
-    ## Artinian rings are Noetherian
+    ## Artinian rings are Noetherian <a id="t28"></a>
     === "Theorem"
         $$R \text{ is Artinian } \iff R \text{ is Noetherian and } \Spec R = \Specmax R$$
 
@@ -349,4 +349,4 @@
             $$
         
         === "$\impliedby$"
-            Postponed
+            See [Noetherian and Irreducible Spaces](../../zariski_topology/noeth_irred_spaces/#t28).

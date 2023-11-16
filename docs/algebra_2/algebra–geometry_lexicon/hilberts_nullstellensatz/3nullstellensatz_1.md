@@ -86,7 +86,7 @@
         $\overset{(*)+(**)}{\implies} m_p = m $
 
 ??? definition "Definition 1.6"
-    ## Affine variety
+    ## Affine variety <a id="d16"></a>
     Let $K$ be a field, and $S \subseteq K[\underline x]$ a subset.
     
     $$
