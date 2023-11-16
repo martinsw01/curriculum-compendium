@@ -35,3 +35,4 @@ extra_css:
   - stylesheets/admonitions/proposition.css
   - stylesheets/admonitions/remark.css
   - stylesheets/admonitions/example.css
+  - stylesheets/admonitions/proof.css
