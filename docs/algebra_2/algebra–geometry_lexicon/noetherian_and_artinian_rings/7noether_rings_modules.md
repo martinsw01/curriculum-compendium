@@ -3,25 +3,24 @@
 ???+ theorem "Theorem 2.9"
     ## Alternate definition of Noetherian Modules <a id="t29"></a>
 
-    === "Theorem"
-        Let $M$ be an $R$-module
+    Let $M$ be an $R$-module
 
-        The following are equivalent:
-        === "a)"
-            $$M \text{ is Noetherian}$$
-        === "b)"
-            Let $S \subset M$ be any subset.
+    The following are equivalent:
+    === "a)"
+        $$M \text{ is Noetherian}$$
+    === "b)"
+        Let $S \subset M$ be any subset.
 
-            $$
-            \begin{align*}
-            \exists\ m_1, ..., m_n \in S \text{ s.t.} \\
-            (S)_R = (m_1, ..., m_n)
-            \end{align*}
-            $$
-        === "c)"
-            $$\text{Every submodule of } M \text{ is f.g.}$$
+        $$
+        \begin{align*}
+        \exists\ m_1, ..., m_n \in S \text{ s.t.} \\
+        (S)_R = (m_1, ..., m_n)
+        \end{align*}
+        $$
+    === "c)"
+        $$\text{Every submodule of } M \text{ is f.g.}$$
 
-    === "Proof"
+    ??? proof
         === "$(a) \implies (b)$"
             Assume $\exists\ S\subseteq M$ not satisfying $b)$.
             
@@ -75,10 +74,9 @@
         & M \text{ be an } R\text{-module}
     \end{align*}$
 
-    === "Theorem"
-        $$M \text{ is Noetherian} \iff m \text{ is finitely generated}$$
+    $$M \text{ is Noetherian} \iff m \text{ is finitely generated}$$
 
-    === "Proof"
+    ??? proof
         === "$\implies$"
             Follows from [T.2.9](#t29).
         === "$\impliedby$"
@@ -109,10 +107,9 @@
     ## Polynomial rings over Noetherian rings
     Let $R$ be a Noetherian ring.
 
-    === "Theorem"
-        $$\implies R[x] \text{ is Noetherian}$$
+    $$\implies R[x] \text{ is Noetherian}$$
 
-    === "Proof"
+    ??? proof
         We want to show that all ideals $I\ideal R[x]$ are f.g. as modules, and use [T2.10](t210) to show
         that $R[x]$ is Noetherian.
 

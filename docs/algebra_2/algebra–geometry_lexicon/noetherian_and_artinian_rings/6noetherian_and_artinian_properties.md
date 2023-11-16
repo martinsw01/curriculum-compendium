@@ -89,11 +89,11 @@
 
     Let $M$ be an $R$-module, and $N\subseteq M$ be a sumbodule.
 
-    === "Proposition"
-        $$
-        M \text{ is Noetherian/Artinian } \iff N \land M/N \text{ is Noetherian/Artinian}
-        $$
-    === "Proof"
+    $$
+    M \text{ is Noetherian/Artinian } \iff N \land M/N \text{ is Noetherian/Artinian}
+    $$
+
+    ??? proof
         The proof for artinian follows from tha same arguments.
 
         === "$\implies$"
@@ -184,10 +184,9 @@
         & I \text{ f.g.}
     \end{align*}$
 
-    === "Lemma"
-        $$ I \subseteq \sqrt J \iff \exists\ k \in \N : I^k \subseteq J$$
+    $$ I \subseteq \sqrt J \iff \exists\ k \in \N : I^k \subseteq J$$
 
-    === "Proof"
+    ??? proof
         === "$\impliedby$"
             $\begin{align*}
                 \text{We have that } & I^k \subseteq J \\
@@ -226,14 +225,13 @@
         & m_1 \cdot m_2 \cdot ... \cdot m_n = \{0\}
     \end{align*}$
 
-    === "Lemma"
-        $$R \text{ is Noetherian } \iff R \text{ is Artinian}$$
+    $$R \text{ is Noetherian } \iff R \text{ is Artinian}$$
 
-        Moreover,
+    Moreover,
 
-        $$\Spec R = \{m_i\}_1^n$$
+    $$\Spec R = \{m_i\}_1^n$$
 
-    === "Proof"
+    ??? proof
         Set $I_i = \prod_{j=1}^i m_j \ideal R$
 
         $\implies \{0\} = I_n \subseteq I_{n-1} \subseteq ... \subseteq I_1 \subseteq I_0 = R$
@@ -257,10 +255,10 @@
 
 ???+ theorem "Theorem 2.8"
     ## Artinian rings are Noetherian <a id="t28"></a>
-    === "Theorem"
-        $$R \text{ is Artinian } \iff R \text{ is Noetherian and } \Spec R = \Specmax R$$
 
-    === "Proof"
+    $$R \text{ is Artinian } \iff R \text{ is Noetherian and } \Spec R = \Specmax R$$
+
+    ??? proof
         === "$\implies$"
             Assume $|\Specmax R|=\infty$
             
