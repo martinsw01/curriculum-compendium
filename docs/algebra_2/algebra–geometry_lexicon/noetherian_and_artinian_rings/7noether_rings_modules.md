@@ -200,7 +200,7 @@
 
 
 ??? corollary "Corollary 2.12"
-    ## Finitely generated algebras
+    ## Finitely generated algebras <a id="c212"></a>
 
     Every f.g. algebra over a Noetherian ring is Noetherian
 

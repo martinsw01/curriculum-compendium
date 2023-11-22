@@ -17,6 +17,9 @@ window.MathJax = {
             Spec: ["{\\operatorname{Spec}\\left(#1\\right)}", 1], // Spectrum of a ring
             Specmax: ["{\\operatorname{Spec}_{max}\\left(#1\\right)}", 1], // Maximal spectrum of a ring
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
+            length: ["{\\operatorname{length}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
+            trdeg: "{\\operatorname{trdeg}}", // Rabinowitsch spectrum of a ring
+            Quot: "{\\operatorname{Quot}}", // Rabinowitsch spectrum of a ring
             nil: "{\\operatorname{nil}}",
             Lip: "{\\operatorname{Lip}}",// Lipschitz constant
             diam: "{\\operatorname{diam}}",// Lipschitz constant

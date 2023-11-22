@@ -74,7 +74,7 @@
     $$
     \begin{align*}
         \Phi : A & \to G \\
-        J \mapsto \V_X(J) := \{x \in X | f(x) \ \forall\ f \in J\} \\
+        J & \mapsto \V_X(J) := \{x \in X | f(x) \ \forall\ f \in J\} \\
         \Phi^{-1} : G & \to A \\
         Y & \mapsto \I(Y)/\I(X)
     \end{align*}
