@@ -1,0 +1,1388 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../noeth_irred_spaces/">
+      
+      
+        <link rel="next" href="../../../dimensions/krull_dim_trans_deg/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Spectra - Curriculum Compendium</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/lemma.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/theorem.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/corollary.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/definition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/proposition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/remark.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/example.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/proof.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spectra" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Curriculum Compendium" class="md-header__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curriculum Compendium
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spectra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Curriculum Compendium" class="md-nav__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Curriculum Compendium
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algebra 2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algebra–geometry lexicon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra–geometry lexicon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1algebras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hilberts nullstellensatz
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hilberts nullstellensatz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hilberts_nullstellensatz/2lemma1.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lemma 1.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hilberts_nullstellensatz/3nullstellensatz_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 1st Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hilberts_nullstellensatz/4nullstellensatz_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 2nd Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hilberts_nullstellensatz/5coordinate_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coordinate Rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Noetherian and artinian rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Noetherian and artinian rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../noetherian_and_artinian_rings/6noetherian_and_artinian_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Noether and Artin Properties for Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../noetherian_and_artinian_rings/7noether_rings_modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zariski topology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Zariski topology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affine_varieties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Affine varieties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../noeth_irred_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian and Irreducible Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Spectra
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Spectra
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zariski-topology-on-spec-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zariski-topology on \(\Spec R\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-v_spec-r-and-i_r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of \(\V_{\Spec R}\) and \(\I_R\) 
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties of \(\V_{\Spec R}\) and \(\I_R\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finite-union-of-closed-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finite union of closed subsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arbitrary-intersection-of-closed-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arbitrary intersection of closed subsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radical-ideal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radical ideal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullstellensatz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nullstellensatz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bijection-between-radicals-and-closed-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bijection between radicals and closed subsets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closure
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dimensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dimensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensions/krull_dim_trans_deg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Krull Dimension and Transcendence Degree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fractal geometry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fractal geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/1dimensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hausdorff and box dimensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/2iterated_function_system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterated Function System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/3approximation_by_fractals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Approximation by fractal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Functional analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Functional analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/open_mapping_theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open mapping theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zariski-topology-on-spec-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zariski-topology on \(\Spec R\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-v_spec-r-and-i_r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of \(\V_{\Spec R}\) and \(\I_R\) 
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties of \(\V_{\Spec R}\) and \(\I_R\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finite-union-of-closed-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finite union of closed subsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arbitrary-intersection-of-closed-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arbitrary intersection of closed subsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radical-ideal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radical ideal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullstellensatz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nullstellensatz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bijection-between-radicals-and-closed-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bijection between radicals and closed subsets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closure
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="spectra">Spectra</h1>
+<details class="definition">
+<summary>Definition 3.5</summary>
+<p>Let <span class="arithmatex">\(S \subseteq R\)</span> be a subset</p>
+<div class="arithmatex">\[\V_{\Spec R}(S) = \V(S):=\{P \in \Spec R | S \subseteq P\}\]</div>
+<p>For <span class="arithmatex">\(X \subseteq \Spec R\)</span>:</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \I_R(X) &amp;= \I(X):= \cap X \ideal R \\
+    \I_R(\emptyset)&amp;:=R
+\end{align*}
+\]</div>
+<h2 id="zariski-topology-on-spec-r">Zariski-topology on <span class="arithmatex">\(\Spec R\)</span></h2>
+<p>A subset <span class="arithmatex">\(X \subseteq \Spec R\)</span> is called closed if <span class="arithmatex">\(X = \V(S)\)</span> for some <span class="arithmatex">\(S\subseteq R\)</span>.</p>
+</details>
+<details class="proposition">
+<summary>Proposition 3.6</summary>
+<h2 id="properties-of-v_spec-r-and-i_r">Properties of <span class="arithmatex">\(\V_{\Spec R}\)</span> and <span class="arithmatex">\(\I_R\)</span> <a id="p36"></a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">a)</label><label for="__tabbed_1_2">b)</label><label for="__tabbed_1_3">c)</label><label for="__tabbed_1_4">d)</label><label for="__tabbed_1_5">e)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="finite-union-of-closed-subsets">Finite union of closed subsets</h3>
+<p>Let <span class="arithmatex">\(S, T \subseteq R\)</span> be subsets.</p>
+<div class="arithmatex">\[\V(S) \cup \V(T) = \V\Big((S)_R \cap (T)_R\Big)\]</div>
+</div>
+<div class="tabbed-block">
+<h3 id="arbitrary-intersection-of-closed-subsets">Arbitrary intersection of closed subsets</h3>
+<p>For <span class="arithmatex">\(\emptyset \ne \M \subseteq P(R)\)</span>, a nonempty subset of the powerset:</p>
+<div class="arithmatex">\[\bigcap_{S\in\M} \V(S) = \V(\cup \M)\]</div>
+</div>
+<div class="tabbed-block">
+<h3 id="radical-ideal">Radical ideal</h3>
+<div class="arithmatex">\[\I(X) \ideal R \text{ is a radiacal ideal}\]</div>
+</div>
+<div class="tabbed-block">
+<h3 id="nullstellensatz">Nullstellensatz</h3>
+<p>For <span class="arithmatex">\(I \ideal R\)</span>:</p>
+<div class="arithmatex">\[\I(\V(I)) = \sqrt I\]</div>
+</div>
+<div class="tabbed-block">
+<h3 id="bijection-between-radicals-and-closed-subsets">Bijection between radicals and closed subsets</h3>
+<p>There exists a unique bijection between</p>
+<ul>
+<li>radical ideals in <span class="arithmatex">\(R\)</span></li>
+<li>closed subsets of <span class="arithmatex">\(\Spec R\)</span></li>
+</ul>
+<p>given by</p>
+<div class="arithmatex">\[
+\begin{align*}
+    I &amp; \mapsto \V(I) \\
+    X &amp;\mapsto \I(X)
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">a)</label><label for="__tabbed_2_2">b)</label><label for="__tabbed_2_3">c)</label><label for="__tabbed_2_4">d)</label><label for="__tabbed_2_5">e)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="arithmatex">\(\subseteq\)</span></label><label for="__tabbed_3_2"><span class="arithmatex">\(\supseteq\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(P \in \V(S)\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+    &amp;\implies S \subseteq P \\
+    &amp;\implies (S)_R \subseteq P\\
+    &amp;\implies (S)_R \cap (T)_R \subseteq P\\
+    &amp;\implies P \in P((S)_R \cap (T)_R)\\
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(P \in P((S)_R \cap (T)_R)\)</span></p>
+<p>Assume <span class="arithmatex">\(P \not\in \V(S)\)</span>. <span class="arithmatex">\(\implies \exists\ a\in S\backslash P\)</span>.</p>
+<p>Let <span class="arithmatex">\(b \in T\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+    &amp;\implies ab \in (S)_R \cap (T)_R) \\
+    &amp;\implies ab \in P \\
+    &amp;\implies a \in P \lor b \in P\\
+    &amp;\implies b \in P \\
+    &amp;\implies T \subseteq P \\
+    &amp;\implies P \in \V(T) &amp;&amp; \square
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p>"Trivial" tautology, by pure logic:</p>
+<p>Let <span class="arithmatex">\(P \in \Spec R\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+    P \in \bigcup_{S\in\M} \V(S)
+    &amp;\iff S \subseteq P &amp; \forall S \in\M \\
+    &amp;\iff \cup \M \subseteq P \\
+    &amp;\iff P \in \V(\cup \M) &amp;&amp; \square
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Prime ideals are radical ideals.</li>
+<li>Intersections of countable radicals stays radical. <span class="arithmatex">\(\tab\square\)</span></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>See <a href="../../hilberts_nullstellensatz/4nullstellensatz_2/#c112">C.1.12</a></p>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(X \subseteq \Spec R\)</span> be a closed subset.</p>
+<p>We need to show that <span class="arithmatex">\(\V(\I(X)) = X\)</span>.</p>
+<p>As <span class="arithmatex">\(X\)</span> is closed, we have <span class="arithmatex">\(X=\V(S)\)</span> for some <span class="arithmatex">\(S\subseteq R\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    &amp;\implies S \in P &amp; \forall\ P \in X \\
+    &amp;\implies S \subseteq \cap X = \I(X) \\
+    &amp;\implies \V(\I(X)) \subseteq \V(S) = X \subseteq \V(\cap X) = \V(\I(X)) &amp; \square
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+</details>
+</details>
+<details class="remark">
+<summary>Remark: Closure</summary>
+<h2 id="closure">Closure</h2>
+<p>Let <span class="arithmatex">\(X \subseteq \Spec R\)</span>.</p>
+<p>The closure <span class="arithmatex">\(\overline X\)</span> is given by</p>
+<div class="arithmatex">\[\overline X := \V(\I(X))\]</div>
+</details>
+<details class="remark">
+<summary>Remark: Point sets may not be closed</summary>
+<p>A point <span class="arithmatex">\(P\in\Spec R\)</span> is a prime ideal.</p>
+<p>It's closure is given by</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \overline{\{P\}}
+    &amp; =\V(\I\{P\}) \\
+    &amp;= \V(P) \\
+    &amp;= \{Q \in \Spec R | P \subseteq Q\}
+\end{align*}
+\]</div>
+<p>Thus, we have that</p>
+<div class="arithmatex">\[\{P\} \text{ is closed } \iff P \text{ is maximal}\]</div>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.tabs.link", "navigation.instant", "search.highlight", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
