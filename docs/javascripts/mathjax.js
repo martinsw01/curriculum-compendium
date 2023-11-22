@@ -31,6 +31,7 @@ window.MathJax = {
             V: "{\\mathcal{V}}", // Affine variety
             M: "{\\mathcal{M}}", // Fancy M
             F: "{\\mathcal{F}}", // Fancy F
+            A: "{\\mathfrak{A}}", // Fancy A
             a: "{\\mathfrak{a}}", // Fancy a
             H: "{\\mathcal H}", // Hausdorff measure
             Hauseps: ["{\\H_\\varepsilon^{#1}}", 1], // Hausdorff measure approximation
