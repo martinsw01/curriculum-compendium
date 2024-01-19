@@ -20,7 +20,7 @@
     === "Topological space"
         $\begin{align*}
             \text{Let } & X \text{ be a topological space} \\
-            & \M \text{ be a set of closed irreducible subsets of } X
+            & \M \text{ be the set of all closed irreducible subsets of } X
         \end{align*}$
 
         $$\dim X := \length \M$$
@@ -413,7 +413,7 @@
         $$
 
 
-???+ theorem "Theorem 4.11"
+??? theorem "Theorem 4.11"
 
     ## 0-dimensional affine algebras <a id="t411"></a>
 
@@ -427,7 +427,7 @@
     4. $A$ is Artinian
     5. $|\Specmax A| < \infty$
     
-    ???+ proof
+    ??? proof
         
         === "$(1) \implies (2)$"
             
@@ -479,3 +479,111 @@
                 \implies & \dim A = 0
             \end{align*}
             $$
+
+
+??? proposition "Proposition 4.12"
+
+    ## 0-dimensional pointsets <a id="p412"></a>
+
+    Let $X \subseteq K^n$ be a nonempty subset.
+
+    $$\dim X = 0 \iff |X| < \infty$$
+    
+    ??? proof
+        === "$\implies$"
+            As the dimention of $X$ is 0, $X$ is a Noetherian subspace.
+            Then, it has a finite set of irreducible components $\{Z_i\}_{i=1}^r$.
+
+            Choose any $x_i\in Z_i$
+
+            $$
+            \begin{align*}
+                \implies & \{x_i\} \subseteq Z_i \\
+                \overset{\dim=0}{\implies} &Z_i = \{x_i\} \\
+                \implies &X = \{x_1, ..., x_r\}
+            \end{align*}
+            $$
+        
+
+        === "$\impliedby$"
+            Let $X = \{x_1, ..., x_r\}$ be finite. Then, chains are of length 0.
+            Thus, the dimension is 0.
+
+
+??? theorem "Theorem 4.13"
+
+    ## Hypersurfaces <a id="t413"></a>
+
+    $\begin{align*}
+        \text{Let } & I \properideal K[x_1, ..., x_n] \\
+        & A:= K[x_1, ..., x_n]/I
+    \end{align*}$
+
+    Then, the following are equivalent.
+
+    1. $\Spec A$ is equidimensional of dimension $n-1$.
+    2. Every $P\in\Spec{K[\underline x]}$ that is minimal over $I$ is also minimal among nonzero primes. (Height 1)
+    3. $\sqrt I = (g)$ is a prime ideal.
+
+    ??? proof
+        Let $\M = \{P \in\Spec{K[\underline x]} | P \text{ minimally oer } I\}$.
+        Then, $\M$ is finite.
+
+        Note that $A$ is finitely generated, and thus Noetherian.
+
+        === "$(1) \implies (2)$"
+            The minimal primes of $A$ are the $P/I$ for $P\in\M$. We have from
+            [L.1.22](../../algebra–geometry_lexicon/hilberts_nullstellensatz/5coordinate_rings/#l122)
+            that $K[\underline x]/P \cong A/(P/I)$. Thus
+
+            $$\dim(A/(P/I)) = \dim(K[\underline x]/P) = n-1 \tab \forall P\in\M$$
+
+            which implies $P\neq\{0\}$.
+
+            Assume P is not minimal among the zero ideal, i.e. $\exists Q\in\Spec{K[\underline x]}$ s.t. $\{0\} \subsetneq Q \subsetneq P$.
+
+            Then, there exists a chain of length $n+1$, which is a contradiction to [C.4.7](#c47).
+
+        === "$(2) \implies (3)$"
+            For all $P\in \M$, let $g_P$ be a generator of $P$.
+
+            Then, by
+            [L.3.14d](../../algebra–geometry_lexicon/noetherian_and_artinian_rings/7noether_rings_modules/#l314),
+            we have that
+
+            $$\sqrt I = \bigcap_{P\in\M} P = \bigcap_{P\in\M} (g_P) = (g), \tab g=\prod_{P\in\M} g_P$$
+            
+            
+        === "$(3) \implies (1)$"
+            We have that
+
+            $$g=\prod_{i=1}^{r} g_i$$
+
+            with $g_i$ irreducible and
+
+            $$\sqrt I = \bigcap_{i=1}^{r} (g_i)$$
+
+            Then, by minimality, we get that $\M \subseteq \{(q_i)\}_{i=1}^r$
+
+            Using [T.4.9](#t49) + [P.4.10](#p410) on $x_i$, we get that $x_1, ..., x_n$ are algebraically
+            dependent, as $g_i(\underline x) \equiv 0 \mod q_i$. Thus, $\dim(K[\underline x]/(q_i)) < n$.
+
+            Let $x_j$ be a variable occuring in $g_i$. Then $\{x_i\}_{i\neq j}$ is algebraically independent
+            modulo $g_i$. Hence, $\dim(K[\underline x]/(g_i)) = n-1$ by [T.4.9](#t49) + [P.4.10](#p410).
+
+??? lemma "Lemma 4.14"
+
+    ## Height-one prime ideals in a factorial ring <a id="l414"></a>
+
+    $\begin{align*}
+        \text{Let } & R \text{ be a factorial ring} \\
+        & P \in \Spec R \text{ be minimal among nonzero primes} \\
+    \end{align*}$
+    
+    $$ \implies P = (a) \tab \text{ for some prime element } a\in R$$
+
+    ??? proof
+        
+        Let $a\in P$ be a prime element. Then, $\{0\} \subsetneq P \subseteq (a)$.
+
+        Then $(a)=P$, as $P$ is minimal among nonzero primes.
