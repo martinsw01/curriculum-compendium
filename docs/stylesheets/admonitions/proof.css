@@ -8,7 +8,27 @@
   padding-left: .6rem; /* Use the same padding on the left as on the right */
 }
 
+.md-typeset .proof .proof > summary {
+  font-weight: normal;
+}
+
 .md-typeset .proof > .admonition-title::before,
 .md-typeset .proof > summary::before {
   width: 0; /* Hide icon */
+}
+
+.proof:not([open])::after {
+  content: "";
+}
+
+.proof {
+  position: relative;
+}
+
+.proof::after {
+  content: "◻";
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.8rem;
+  font-size: 113.1%;
 }
