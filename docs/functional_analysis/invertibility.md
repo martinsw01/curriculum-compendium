@@ -49,7 +49,7 @@
 
     Moreover,
 
-    $$A^{-1} = \lim_{n\to\infty} \sum_{k=1}^{n} \tilde A^k, \tab \tilde A = \I-A$$
+    $$A^{-1} = \lim_{n\to\infty} \sum_{k=0}^{n} \tilde A^k, \tab \tilde A = \I-A$$
     
     ??? proof
         Let $\begin{align*}S_n:=\sum_{k=1}^{n} \tilde A^k\end{align*}$

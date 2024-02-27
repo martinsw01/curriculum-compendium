@@ -7,11 +7,15 @@ window.MathJax = {
             '[+]': ['html', 'newcommand']
         },
         macros: { // custom commands
+            sgn: "{\\operatorname{sgn}}", // signum
+            weakto: "{\\rightharpoonup}", // weak convergence
+            weakstarto: "{\\overset{\\ast}{\\rightharpoonup}}", // weak* convergence
             properideal: "{\\ \\mathbin{\\rlap{\\lneq}\\hspace{-0.6ex}\\trianglelefteq}} \\ ",
             subsetsim: "{\\ \\mathbin{\\rlap{\\raise{0.3ex}{\\subset}}\\raise{-0.6ex}{\\hspace{0.3ex}\\scriptstyle\\sim}}} \\ ",
             ideal: "{\\ \\trianglelefteq} \\ ",
             Ker: "{\\operatorname{Ker}}",
             coker: "{\\operatorname{coker}}", // co-kernel
+            codim: "{\\operatorname{codim}}", // co-dimension
             Span: "{\\operatorname{Span}}",
             Im: "{\\operatorname{Im}}",
             Range: "{\\operatorname{Range}}",
@@ -19,6 +23,7 @@ window.MathJax = {
             implieshref: ["{\\oversethref{#1}{#2}{\\implies}}", 2], // overset \implies with a link
             iffhref: ["{\\oversethref{#1}{#2}{\\iff}}", 2], // overset \iff with a link
             eqhref: ["{\\oversethref{#1}{#2}{=}}", 2], // overset = with a link
+            surjectiveto: "{\\to\\!\\!\\!\\!\\!\\to}", // surjective arrow
             Spec: ["{\\operatorname{Spec}\\left(#1\\right)}", 1], // Spectrum of a ring
             Specmax: ["{\\operatorname{Spec}_{max}\\left(#1\\right)}", 1], // Maximal spectrum of a ring
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
