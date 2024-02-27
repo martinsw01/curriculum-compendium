@@ -53,7 +53,7 @@
 
         This has to stop.
 
-        $\implies \Z$ is artinean
+        $\implies \Z$ is Noetherian
 
     === "$K[x]$"
         $K[x]$ is noetheriam by the same arguments as for $R=\Z$

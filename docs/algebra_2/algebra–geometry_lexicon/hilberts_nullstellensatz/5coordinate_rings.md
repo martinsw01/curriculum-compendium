@@ -25,7 +25,7 @@
 
 
 ??? lemma "Lemma 1.22"
-    ## Ideals in quotient rings
+    ## Ideals in quotient rings <a id="l122"></a>
 
     Let $I \ideal R$
 

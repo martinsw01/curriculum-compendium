@@ -74,7 +74,7 @@
         & M \text{ be an } R\text{-module}
     \end{align*}$
 
-    $$M \text{ is Noetherian} \iff m \text{ is finitely generated}$$
+    $$M \text{ is Noetherian} \iff M \text{ is finitely generated}$$
 
     ??? proof
         === "$\implies$"

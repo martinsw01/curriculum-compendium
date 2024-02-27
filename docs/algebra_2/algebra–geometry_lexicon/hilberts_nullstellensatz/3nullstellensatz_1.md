@@ -3,7 +3,7 @@
 ??? proposition "Proposition 1.2"
     ## Preimages of maximal ideals
 
-    Let $\phi A \to B$ be a homomorphism of $K$-algebras, 
+    Let $\phi : A \to B$ be a homomorphism of $K$-algebras, 
 
     and $B$ be f.g. 
 
