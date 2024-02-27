@@ -7,16 +7,20 @@ window.MathJax = {
             '[+]': ['html', 'newcommand']
         },
         macros: { // custom commands
+            Cfi: "{\\operatorname{C}}", // group of invertible fractional ideals
+            Cl: "{\\operatorname{Cl}}", // ideal class group
             sgn: "{\\operatorname{sgn}}", // signum
             weakto: "{\\rightharpoonup}", // weak convergence
             weakstarto: "{\\overset{\\ast}{\\rightharpoonup}}", // weak* convergence
             properideal: "{\\ \\mathbin{\\rlap{\\lneq}\\hspace{-0.6ex}\\trianglelefteq}} \\ ",
             subsetsim: "{\\ \\mathbin{\\rlap{\\raise{0.3ex}{\\subset}}\\raise{-0.6ex}{\\hspace{0.3ex}\\scriptstyle\\sim}}} \\ ",
+            supsetsim: "{\\ \\mathbin{\\rlap{\\raise{0.3ex}{\\supset}}\\raise{-0.6ex}{\\hspace{0.3ex}\\scriptstyle\\sim}}} \\ ",
             ideal: "{\\ \\trianglelefteq} \\ ",
             Ker: "{\\operatorname{Ker}}",
             coker: "{\\operatorname{coker}}", // co-kernel
             codim: "{\\operatorname{codim}}", // co-dimension
             Span: "{\\operatorname{Span}}",
+            rank: "{\\operatorname{rank}}", // rank of a matrix
             Im: "{\\operatorname{Im}}",
             Range: "{\\operatorname{Range}}",
             oversethref: ["{\\overset{\\href{#1}{\\text{#2}}}{#3}}", 3], // overset with link
@@ -29,6 +33,8 @@ window.MathJax = {
             Specrab: ["{\\operatorname{Spec}_{rab}\\left(#1\\right)}", 1], // Rabinowitsch spectrum of a ring
             ptspec: ["{\\operatorname{ptspec}\\left(#1\\right)}", 1], // Point-spectrum of a ring
             length: ["{\\operatorname{length}\\left(#1\\right)}", 1],
+            gr: ["{\\operatorname{gr}\\left(#1\\right)}", 1], // associated graded ring
+            ord: "{\\operatorname{ord}}", // order (of an element in a graded ring)
             trdeg: "{\\operatorname{trdeg}}", // transcendence degree
             Quot: "{\\operatorname{Quot}}", // Quotient a ring
             nil: "{\\operatorname{nil}}",

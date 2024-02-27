@@ -261,7 +261,12 @@
             \implies & \frac{a^n}{b^n} + a_1 \frac{a^{n-1}}{b^{n-1}} + \cdots + a_n = 0 \\
             & a^n + a_1 b a^{n-1} + \cdots + a_n b^n = 0 \\
             \implies & b \mid a^n \\
-            \implies & b \mid a \\
+            \implies & \text{Every prime factor in } b \text{ divides } a \\
+        \end{align*}$
+
+        However, by coprimality, $b$ has no prime factors. 
+
+        $\begin{align*}
             \implies &b \text{ is a unit in } R \\
             \implies & \frac{a}{b} \in R
         \end{align*}$
@@ -642,3 +647,162 @@
         (\xi_1, \xi_2) &\mapsto \xi_1 - \xi_2
     \end{align*}
     $$
+
+
+## 8.4 The Hilbert Function
+
+??? definition "Definition 8.17"
+    **Degree**
+
+    Let $t:=x_1^{e_1} \cdots x_n^{e_n} \in K[x_1, \dots, x_n]$.
+
+    $$ \deg(t) := \sum_{i=1}^{n} e_i $$
+
+    For $f \in K[x_1, \dots, x_n]$, we define
+
+    $$\deg(f) := \max\{\deg(t) \mid t \text{ is a monomial in } f\}$$
+
+    ---
+
+    **Hilbert function**
+
+    $\begin{align*}
+        \text{Let } & I \ideal K[x_1, \dots, x_n] \\
+        & A:=K[x_1, \dots, x_n]/I \\
+        & d \in \N_0 \\
+        & A_{\le d} := \{f + I \mid f \in K[x_1, \dots, x_n], \deg(f) \le d\}
+    \end{align*}$
+
+    Then, the **Hilbert function** of $I$ is defined as
+
+    $$h_I(d):= \dim_K(A_{\le d})$$
+
+
+??? remark "Remark 8.18"
+    $A \cong K[x_1, \dots, x_n]/I$
+
+    $h_A(d):=h_I(d)$ is not well defined.
+
+
+??? lemma "Lemma 8.19"
+    ###The Hilbert function of the zero ideal <a id="l819"></a>
+    For $\{0\} \ideal K[x_1, \dots, x_n]$, we have that
+
+    $$h_{\{0\}}(d) = \binom{n+d}{n}$$
+
+    ??? proof
+        For $\{0\} \ideal A:=K[x_1, \dots, x_n]$, denote $h_n(d):=h_{\{0\}}(d)$.
+
+        $n=0 \implies h_0(d) = 1 = \binom{0+d}{0}$
+
+        Now, let $n>0$. We have that
+
+        $$
+        \begin{align*}
+            &K[x_1, \dots, x_n]_{\le d} = \bigoplus_{i+j=d} K[x_1, \dots, x_n]_{\le i} \cdot x_n^j \\
+            &\implies h_n(d) = \sum_{i=0}^{d} h_{n-1}(i) = \sum_{i=0}^{d} \binom{n-1+i}{n-1} = \binom{n+d}{n}
+        \end{align*}
+        $$
+
+
+!!! definition "$\begin{align*}\delta(I):=\min\{\delta \in \N_0\cup\{-1\} \mid h_I(d) \le p\in \Q[x]_{\le \delta}\}\end{align*}$"
+
+??? lemma "Lemma 8.21"
+    <a id="l821"></a>
+    $\begin{align*}
+        \text{Let } & I \ideal K[x_1, \dots, x_n] \\
+        & J \ideal K[y_1, \dots, y_m] \text{ s.t.}\\
+        & A := K[x_1, \dots, x_n]/I \cong K[y_1, \dots, y_m]/J =: B
+    \end{align*}$
+
+    $$\implies \delta(I) = \delta(J)$$
+
+    ??? proof
+        $\begin{align*}
+            & \phi : A \to B \text{ is an isomorphism} \\
+            & \implies \exists\ g_1, \dots, g_m \in K[x_1, \dots, x_n] : \phi(g_i + I) = y_i + J
+        \end{align*}$
+
+        Set $k:=\max\{\deg(g_i)\}_{i=1}^{m}$.
+
+        $\begin{align*}
+            & \implies B_{\le d} \subseteq \phi(A_{\le kd}) \quad \forall\ d \\
+            & \implies h_J(d) \le \dim_K(\phi(A_{\le kd})) = h_I(kd) \\
+            & \implies \delta(J) \le \delta(I)
+        \end{align*}$
+
+        By symmetry, we have that $\delta(I) \le \delta(J)$, and thus
+
+        $$\delta(I) = \delta(J)$$
+
+
+??? theorem "Theorem 8.22"
+    ### The Krull dimension and $\delta(I)$ <a id="t822"></a>
+
+    Let $A \cong K[x_1, \dots, x_n]/I$
+
+    $$\implies \delta(I) = \dim(A)$$
+
+    ??? proof
+        Assume without loss that $A \neq \{0\}$.
+
+        $$
+        \begin{align*}
+            \implieshref{#c814}{C.8.14} \exists\ &c_1, \dots, c_m \in A \text{ algebraically independent and } m = \dim(A) \text{ s.t.} \\
+            & A \text{ is integral over } C:=K[c_1, \dots, c_m] \\
+            \implieshref{#t84}{T.8.4} \exists\ &b_1, \dots, b_n \in C \text{ s.t.} \\
+            & A = \sum_{j=1}^{r} C b_j \quad (*) \\
+        \end{align*}
+        $$
+
+        We may assume $b_1 = 1$.
+
+        Let $y_1, \dots, y_m$ and $z_1, \dots, z_r$ be indeterminates and $B:=K[\underline y, \underline z]$.
+    
+        === "$\delta(J)\ge\dim(A)$"
+            For the homomorphism
+    
+            $$
+            \begin{align*}
+                \phi : B:=K[\underline y, \underline z] &\to A \\
+                f(\underline y, \underline z) &\mapsto f(\underline c, \underline b)
+            \end{align*}
+            $$
+    
+            let $J:=\ker(\phi)$. Then, by [L.8.21](#l821), we get $\delta(I) = \delta(J)$.
+    
+            $\begin{align*}
+                \text{Let } & B_{\le d} := \{f \in K[\underline y, \underline z] \mid \deg(f) \le d\} \\
+                & C_{\le d} := \{f \in K[\underline y] \mid \deg(f) \le d\} \\
+            \end{align*}$
+    
+            $$
+            \begin{align*}
+                C_{\le d} \subseteq B_{\le d}
+                \implies & h_J(d) \ge \dim_K(C_{\le d}) \eqhref{#l819}{L.8.19} \binom{m+d}{d} \\
+                \implies & \delta(J) \ge m
+            \end{align*}
+            $$
+    
+        === "$\delta(J)\le\dim(A)$"
+            For $1 \le i \le j \le r$, we have
+    
+            $$b_i b_j \overset{(*)}{=} \sum_{k=1}^{r} a_{i,j,k} b_k \quad a_{i,j,k} \in C$$
+
+            and there exists $e>0$ such that $a_{i,j,k} \in C_{\le e}$, so
+
+            $$b_ib_j \in \sum_{k=1}^{r} C_{\le e} b_k$$
+
+            By induction, we have that
+
+            $$ \prod_{i=1}^{s} b_i \in \sum_{k=1}^{r} C_{\le (s-1(e} b_k $$
+
+            and it follows that
+
+            $$B_{\le d} \subseteq C_{\le de} \cdot b_1 + \sum_{s=1}^{d} \sum_{k=1}^{r} C_{\le d-s} \cdot C_{\le (s-1)e} \cdot b_k \subseteq \sum_{k=1}^{r} C_{\le de} \cdot b_k =: V_d$$
+
+            Then, we obtain
+
+            $$h_J(d) \le \dim_K(V_d) \le r \cdot \dim_K(C_{\le de}) = r \cdot \binom{m+de}{m}$$
+
+            so $\delta(J) \le m$.

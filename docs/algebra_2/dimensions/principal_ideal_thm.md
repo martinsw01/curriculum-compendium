@@ -42,7 +42,7 @@
 
 
 ??? theorem "Theorem 7.3"
-    ## Nakajama Lemma
+    ## Nakajama Lemma <a id="t73"></a>
 
     $\begin{align*}
         \text{Let } & M \text{ be a f.g. } R\text{-module} \\
