@@ -1,4 +1,4 @@
-# Iterated Function System
+# 2 Iterated Function System
 
 ??? definition "Definition: Iterated Function System (I.F.S.)"
     $\begin{align*}

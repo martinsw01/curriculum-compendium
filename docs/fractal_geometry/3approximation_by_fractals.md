@@ -1,4 +1,4 @@
-# Approximation by fractal
+# 3 Approximation by fractals
 
 ??? theorem "Theorem 1: Collage theorem"
     $\begin{align*}
@@ -147,9 +147,9 @@
 ??? definition "Definition: Code space"
     ## Code space
 
-    $$\Sigma_N := \{1, ..., N\}^\N$$
+    $$\S_N := \{1, ..., N\}^\N$$
 
-    Elements are given by $\sigma=(\sigma_1, \sigma_2, ...) \in \Sigma_N$, with $\sigma_i \in \{1, ..., N\}$
+    Elements are given by $\s=(\s_1, \s_2, ...) \in \S_N$, with $\s_i \in \{1, ..., N\}$
 
 
 ???+ notation "Notation"
@@ -162,19 +162,19 @@
     \end{align*}
     $$
 
-    Using elements from the code space $\Sigma_N$, we denote
+    Using elements from the code space $\S_N$, we denote
 
     $$\begin{align*}
-        \sigma(n)&:=(\sigma_1, ..., \sigma_n) \\
-        f_{\sigma(n)}&:=f_{\sigma_1} \circ ... \circ f_{\sigma_n}
+        \s(n)&:=(\s_1, ..., \s_n) \\
+        f_{\s(n)}&:=f_{\s_1} \circ ... \circ f_{\s_n}
     \end{align*}$$
 
     Using this notation, we can reformulate $(*)$ to  
 
     $$
     \begin{align*}
-        \F^n(A) &= \bigcup_{\sigma(n) \in \Sigma_N} f_{\sigma(n)}(A) \\
-        \A &= \lim_{n\to\infty} \bigcup_{\sigma(n) \in \Sigma_N} f_{\sigma(n)}(A)
+        \F^n(A) &= \bigcup_{\s(n) \in \S_N} f_{\s(n)}(A) \\
+        \A &= \lim_{n\to\infty} \bigcup_{\s(n) \in \S_N} f_{\s(n)}(A)
     \end{align*}
     $$
 
@@ -182,20 +182,20 @@
 ??? proposition "Proposition: Completeness of the code space"
     ## Completeness of the code space
     
-    Let the metric $d_F : \Sigma_N^2 \to \R$ be given by
+    Let the metric $d_F : \S_N^2 \to \R$ be given by
 
-    $$d_F(\sigma, \tau):=\sum_{i=1}^\infty \frac{|\sigma_i-\tau_i|}{(N+1)^i}$$
+    $$d_F(\s, \tau):=\sum_{i=1}^\infty \frac{|\s_i-\tau_i|}{(N+1)^i}$$
 
-    $\left(\Sigma_N, d_F\right)$ forms a complete metric space.
+    $\left(\S_N, d_F\right)$ forms a complete metric space.
 
 
-???+ theorem "Theorem 4"
+??? theorem "Theorem 4"
     Define
 
     $$
     \begin{align*}
-        \gamma : \Sigma_N & \to \alpha \\
-        \sigma & \mapsto \lim_{n\to\infty} f_{\sigma(n)} (x)
+        \gamma : \S_N & \to \alpha \\
+        \s & \mapsto \lim_{n\to\infty} f_{\s(n)} (x)
     \end{align*}
     $$
 
@@ -212,14 +212,14 @@
 
             $$
             \begin{align*}
-                \implies |f_{\sigma(n)}(x)-f_{\sigma(n)}(y)|
+                \implies |f_{\s(n)}(x)-f_{\s(n)}(y)|
                 & \le L^n |x-y| \\
                 & \le L^n \diam X \\
-                |f_{\sigma(m)}(x)-f_{\sigma(n)}(y)| & \le L^{n'} \diam X & n':=\min\{n, m\}
+                |f_{\s(m)}(x)-f_{\s(n)}(y)| & \le L^{n'} \diam X & n':=\min\{n, m\}
             \end{align*}
             $$
 
-            We get a cauchy sequence in $\Sigma_N$ independent of $x\in X$. Thus, the limit exists and is unique.
+            We get a cauchy sequence in $\S_N$ independent of $x\in X$. Thus, the limit exists and is unique.
             $\tab\square$
 
         === "Continuity"
@@ -236,18 +236,18 @@
             $$
 
             $\begin{align*}
-                \text{Let } & \sigma, \tau \in \Sigma_N \text{ s.t.} \\
-                & \sigma(n) = \tau(n)
+                \text{Let } & \s, \tau \in \S_N \text{ s.t.} \\
+                & \s(n) = \tau(n)
             \end{align*}$
 
             Then, we get
 
             $$
             \begin{align*}
-                d_F(\sigma, \tau)
+                d_F(\s, \tau)
                 &= \sum_{i=n+1}^\infty \frac{\varepsilon}{1-L} < \frac{1}{(N+1)^n} \\
-                \implies |\gamma(\sigma)-\gamma(\tau)|
-                &= \lim_{n\to\infty} |f_{\sigma(n)}(x)-f_{tau(n)}(y)| \\
+                \implies |\gamma(\s)-\gamma(\tau)|
+                &= \lim_{n\to\infty} |f_{\s(n)}(x)-f_{tau(n)}(y)| \\
                 & \le L^n \diam X < \varepsilon & \square
             \end{align*}
             $$
@@ -257,8 +257,105 @@
 
             $$
             \begin{align*}
-                \exists\ & (\sigma_\mu(n)) \subset \Sigma_N \text{ s.t.} \\
-                & y = \lim_{n\to\infty} f_{\sigma_\mu(n)}(x) \\
-                ...
+                \exists\ & (\s_\mu(n)) \subset \S_N \text{ s.t.} \\
+                & y = \lim_{n\to\infty} f_{\s_\mu(n)}(x) \\
             \end{align*}
             $$
+
+            As $\S_N$ is compact, we know that there exists a subsequence $(\s_{\nu_\mu})$
+            converging to some $\tau\in\S_N$, i.e. $d_F(\s_{\nu_\mu}, \tau) \to 0$
+
+            Let $c(\mu):=\left|\left\{\kappa \in \N : (\s_{\nu_\mu})_j = \tau_j, \ 1 \le j \le \kappa\right\}\right|$
+            be the number of elements in $\s_{\nu_\mu}$ agreeing with $\tau$.
+
+            $$
+            \begin{align*}
+                \implies & c(\mu) \overset{\mu \to \infty}{\to} \infty \\
+                \implies & |f_{\s_{\nu_\mu}(n)}(x) - f_{\tau(n)}(x)| \le L^{c(\mu)} \diam X \\
+                \implies & y = \gamma (\tau)
+            \end{align*}
+            $$
+
+
+???+ remark
+    - $\gamma$ is in general not surjective (consider a the sierpinski triangle)
+    - if $f_i(A) \cap f_j(A) = 0 \ \forall i \neq j$, then $\gamma$ is injective
+    - $\begin{align*}
+        \text{Let } & \s \in\S_N \\
+        & A \in \H(X) \\
+        & A_{\s(n)}:=f_{\s(n)}(A) \\
+        & \implies \gamma(\s) = \bigcap_{n=1}^{\infty} A_{\s(n)}
+    \end{align*}$
+
+
+??? definition "Definition: Address set"
+    ## Address set
+
+    Let $a \in \A$. The **address set** of $a$ is
+
+    $$\gamma^{-1}(a)$$
+
+    Each element of $\gamma^{-1}(a)$ is called an **address** of $a$.
+
+
+??? definition "Definition: Totally disconnected IFS"
+    ## Totally disconnected IFS
+
+    An IFS is called **totally disconnected** if $\forall a \in \A$
+
+    $$|\gamma^{-1}(a)|=1$$
+
+
+??? definition "Definition: Maximal address"
+    Which representative should be chosen from the address set?
+
+    Define the relation
+
+    $$\prec\ : \S_N \times \S_N$$
+
+    by
+
+    $$\s \prec \omega \iff w_i < \s_i, \tab i=\argmin{j} \s_j \neq \omega_j$$
+
+    1. $\s \not\prec \s$
+    2. $\s \prec \tau \land \tau \prec \omega \implies \s \prec \omega$
+
+    $\begin{align*}
+        \text{Let } & \iota .= 1\ 1\ 1 ... = \overline 1 \\
+        & \omega:= N\ N\ N ... = \overline N \\
+        \implies &\forall\ \iota \neq \s \neq \omega : \omega \prec \s \prec \iota
+    \end{align*}$
+
+
+??? proposition
+
+    ## Maximum of the address set
+
+    Let $a\in\A$. $\gamma^{-1}(a)$ has a mixaimal element with respect to $\prec$.
+    
+    ??? proof
+        Let $\s_1$ be the first component of all elements in $\gamma^{-1}(a)$.
+
+        Choose inductively $\s_i$ as the smallest $i$-th component of elements in $\gamma^{-1}(a)$
+        whose first $(i-1)$ components are $\s_1, ..., \s_{i-1}$
+
+        $$\implies (\s_1, ..., \s_{i-1}, ...) \text{ is the unique maxiaml point}$$
+
+
+??? definition "Definition: Tops code space"
+
+    ## Tops function
+
+    $$\tau(\A):=\max\{\gamma^{-1}(a)\}$$
+
+    ## Tops Code Space
+    
+    $$\Omega := \tau(\A) \subseteq \S_N$$
+
+
+??? remark
+    - $\tau$ is a bijection $\A \to \Omega$
+    - $\gamma \circ \tau = \tau \circ \gamma = \I_\A$
+    - $\tau^{-1}$ is continuous
+    - $\ta$ is not continuous
+        
