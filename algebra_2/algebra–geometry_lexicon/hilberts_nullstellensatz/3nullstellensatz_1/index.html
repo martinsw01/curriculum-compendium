@@ -1,0 +1,2030 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2lemma1.1/">
+      
+      
+        <link rel="next" href="../4nullstellensatz_2/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>Hilbert's 1st Nullstellensatz - Curriculum Compendium</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/lemma.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/theorem.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/corollary.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/definition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/proposition.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/remark.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/example.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/admonitions/proof.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hilberts-1st-nullstellensatz" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Curriculum Compendium" class="md-header__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curriculum Compendium
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hilbert's 1st Nullstellensatz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Curriculum Compendium" class="md-nav__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Curriculum Compendium
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algebra 2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algebra–geometry lexicon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra–geometry lexicon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1algebras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hilberts nullstellensatz
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hilberts nullstellensatz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2lemma1.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lemma 1.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hilbert's 1st Nullstellensatz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 1st Nullstellensatz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preimages-of-maximal-ideals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preimages of maximal ideals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lemma-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lemma 1.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximal-ideals-in-a-polynomial-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximal ideals in a polynomial ring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#affine-variety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affine variety 
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correspondence-pointsmaximal-ideals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correspondence points–maximal ideals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hilberts-nullstellsatz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hilbert's Nullstellsatz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4nullstellensatz_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 2nd Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5coordinate_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coordinate Rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Noetherian and artinian rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Noetherian and artinian rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../noetherian_and_artinian_rings/6noetherian_and_artinian_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Noether and Artin Properties for Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../noetherian_and_artinian_rings/7noether_rings_modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zariski topology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Zariski topology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zariski_topology/affine_varieties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Affine varieties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zariski_topology/noeth_irred_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian and Irreducible Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zariski_topology/spectra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dimensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dimensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensions/integral_extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Integral Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensions/krull_dim_trans_deg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Krull Dimension and Transcendence Degree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensions/localization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensions/principal_ideal_thm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 The Principal Ideal Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensions/tensor_product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Tensor product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Local rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Local rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../local_rings/dimension_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Rings of dimension 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../local_rings/dimension_theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 Dimension Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../local_rings/regular_local_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Regular local rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fractal geometry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fractal geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/IFS_with_probabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 IFS with Probabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/dynamical_systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Dynamical Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/fractal_surfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Fractal Surfaces in ℝ<sup>2</sup>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/julia_fatou_sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Julia and Fatou Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/refineable_shift-invariant_spaces_and_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Refinable Shift-Invariant Spaces and Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            1 Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/1_Introduction/1dimensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Hausdorff and box dimensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/1_Introduction/2iterated_function_system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Iterated Function System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/1_Introduction/3approximation_by_fractals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Approximation by fractals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/1_Introduction/4codespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Code space of an IFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Fractal Functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            2 Fractal Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/2_Fractal_Functions/1fractal_interp_funcs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Fractal Interpolation Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/2_Fractal_Functions/2local_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Local Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/2_Fractal_Functions/3basis_of_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Basis of Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/2_Fractal_Functions/4fractal_operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 The fractal Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fractal_geometry/2_Fractal_Functions/5box_dim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Box Dimension of Affine Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Functional analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Functional analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/duality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Duality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/duality_in_hilbert_space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 Duality in Hilbert spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/index_theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/invertibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Invertibility; notion of spectrum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/open_mapping_theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 Open mapping theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/spec_theory_of_comp_ops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Spectral theory of compact operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../functional_analysis/weak_convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Weak convergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preimages-of-maximal-ideals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preimages of maximal ideals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lemma-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lemma 1.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximal-ideals-in-a-polynomial-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximal ideals in a polynomial ring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#affine-variety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affine variety 
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correspondence-pointsmaximal-ideals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correspondence points–maximal ideals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hilberts-nullstellsatz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hilbert's Nullstellsatz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hilberts-1st-nullstellensatz">Hilbert's 1st Nullstellensatz</h1>
+<details class="proposition">
+<summary>Proposition 1.2</summary>
+<h2 id="preimages-of-maximal-ideals">Preimages of maximal ideals</h2>
+<p>Let <span class="arithmatex">\(\phi : A \to B\)</span> be a homomorphism of <span class="arithmatex">\(K\)</span>-algebras, </p>
+<p>and <span class="arithmatex">\(B\)</span> be f.g. </p>
+<div class="arithmatex">\[
+\begin{align*}
+\implies &amp; \text{For any maximal ideal } m \ideal B \\
+&amp; \phi^{-1}(m) \ideal A \text{ is also a maximal ideal}
+\end{align*}
+\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let</p>
+<div class="arithmatex">\[\begin{align*}
+    \gamma : A &amp; \to B/m \\
+    a &amp; \to \phi(a) + m
+\end{align*}\]</div>
+<p>be a homomorphism, and </p>
+<p><span class="arithmatex">\(n := \Ker \gamma = \phi^{-1}(m)\)</span> </p>
+<p>be it's kernel.</p>
+<div class="arithmatex">\[\begin{align*}
+    \implies &amp; A/n \cong \Im \gamma \subseteq B/m \text{, which is f.g.} \\
+    \implieshref{../2lemma1.1}{L.1.1b)} &amp; A/n \text{ is an algebraic domain} \\
+    \implieshref{../2lemma1.1}{L.1.1a)} &amp; A/n \text{ is a field} \\
+    \iff &amp; n \ideal A \text{ is a maximal ideal} &amp; \square
+\end{align*}\]</div>
+</details>
+</details>
+<details class="example">
+<summary>Example 1.3</summary>
+<p>Let <span class="arithmatex">\(A = K[x], B = K(x), m = \{0\} \ideal B\)</span> a maximal ideal.</p>
+<p><span class="arithmatex">\(A \cap m = \{0\} \ideal B\)</span> is prime, but not maximal.</p>
+</details>
+<details class="lemma">
+<summary>Lemma 1.4</summary>
+<h2 id="lemma-14">Lemma 1.4</h2>
+<p>Let <span class="arithmatex">\(p=(\xi_i)_1^n\in K^n\)</span></p>
+<p><span class="arithmatex">\(\implies m_p = (x_1-\xi_1, ..., x_n-\xi_n) \ideal K[\underline x]\)</span> is a maximal ideal.</p>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(\phi : K[\underline x] \to K\)</span> be the surjective vealuation homomorphism at <span class="arithmatex">\(\xi \in K^n\)</span>. </p>
+<p><span class="arithmatex">\(\implies \Ker \phi = m_p\)</span> </p>
+<p><span class="arithmatex">\(\implies K[\underline x]/m_p \cong \Im \phi = K\)</span> is a field </p>
+<p><span class="arithmatex">\(\iff m_p\)</span> is a maximal ideal.</p>
+</details>
+</details>
+<details class="proposition">
+<summary>Proposition 1.5</summary>
+<h2 id="maximal-ideals-in-a-polynomial-ring">Maximal ideals in a polynomial ring</h2>
+<p>Let <span class="arithmatex">\(K=\overline K\)</span> be algebraically closed, </p>
+<p>and <span class="arithmatex">\(m\ideal K[\underline x]\)</span> be a maximal ideal.</p>
+<p><span class="arithmatex">\(\implies \exists\ p=(\xi_i)_1^n \in K^n\)</span> such that <span class="arithmatex">\(m=m_p\)</span>.</p>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(\phi : K[x_i] \to K[\underline x]\)</span> be the identity hommomorphism. </p>
+<p><span class="arithmatex">\(\implieshref{#preimages-of-maximal-ideals}{L.1.2} K[x_i] \cap m = \phi^{-1}(m) \ideal K[x_i]\)</span> is maximal. </p>
+<p><span class="arithmatex">\(K[x_i]\)</span> is a p.i.d. </p>
+<p><span class="arithmatex">\(\implies p_i = x_i - \xi_i\)</span> must be a monomial </p>
+<p><span class="arithmatex">\(\implies x_i - \xi_i \in m\ \forall\ i\)</span> </p>
+<p><span class="arithmatex">\(m_p = (\underline x - \underline \xi) \subseteq m (*)\)</span> </p>
+<p><span class="arithmatex">\(\implieshref{#lemma-14}{L.1.4} m_p \ideal K[x]\)</span> is maximal <span class="arithmatex">\((**)\)</span> </p>
+<p><span class="arithmatex">\(\overset{(*)+(**)}{\implies} m_p = m\)</span></p>
+</details>
+</details>
+<details class="definition">
+<summary>Definition 1.6</summary>
+<h2 id="affine-variety">Affine variety <a id="d16"></a></h2>
+<p>Let <span class="arithmatex">\(K\)</span> be a field, and <span class="arithmatex">\(S \subseteq K[\underline x]\)</span> a subset.</p>
+<div class="arithmatex">\[
+     \mathcal V(S) = \mathcal V_{K^n}(S) := \{p=(\xi)_1^n\in K^n | f(p) = 0\ \forall\ f \in S\}
+\]</div>
+<p>is called the affine variety given by <span class="arithmatex">\(S\)</span>.</p>
+</details>
+<details class="theorem">
+<summary>Theorem 1.7</summary>
+<h2 id="correspondence-pointsmaximal-ideals">Correspondence points–maximal ideals</h2>
+<p>Let</p>
+<ul>
+<li><span class="arithmatex">\(K = \overline K\)</span> be algebraically closed</li>
+<li><span class="arithmatex">\(S \subseteq K[\underline x]\)</span> be a subset</li>
+<li><span class="arithmatex">\(\M_S := \{m \ideal K[\underline x] | m \text{ is maximal } \land S \subseteq m\}\)</span>
+be the set of maximal ideals containing S</li>
+<li><span class="arithmatex">\(\Phi : \V(S) \to \M_S\)</span> be the homomorphism given by <span class="arithmatex">\(p \mapsto m_p\)</span></li>
+</ul>
+<p><span class="arithmatex">\(\implies \Phi\)</span> is a bijection.</p>
+<details class="proof">
+<summary>Proof</summary>
+<p><em>Surjectivity:</em></p>
+<p>Let <span class="arithmatex">\(m \in \M_S\)</span></p>
+<div class="arithmatex">\[\begin{align*}
+    \implieshref{#maximal-ideals-in-a-polynomial-ring}{L.1.5}
+    &amp; \exists\ p \in K^n \text{ s.t.}\\ 
+    &amp; m = m_p \\
+    \implies &amp; f \in S \subseteq m_p \text{ is generated by functions with root in } p \\
+    \implies &amp; f(p) = 0 \\
+    \implies &amp; p\in \mathcal V(S) \\
+    \implies &amp; m = \Phi(p)
+\end{align*}\]</div>
+<p><em>Injectivity:</em></p>
+<p>Let <span class="arithmatex">\(P, Q \in \mathcal V(S)\)</span> s.t. <span class="arithmatex">\(\Phi(P) = \Phi(Q)\)</span>.</p>
+<div class="arithmatex">\[\begin{align*}
+    \implies &amp; x_i - \xi_i \in m_p = m_q \ni x_i - \eta_i \\
+    \implies &amp; (x_i - \xi_i) - (x_i - \eta_i) = \xi_i - \eta_i \in m_p \\
+    \implies &amp;\xi_i - \eta_i = 0\ \forall i &amp; \text{as } K \cap m_p = \emptyset \\
+    \implies &amp; P = Q &amp; &amp; \square
+\end{align*}\]</div>
+</details>
+</details>
+<details class="corollary" open="open">
+<summary>Corollary 1.8</summary>
+<h2 id="hilberts-nullstellsatz">Hilbert's Nullstellsatz</h2>
+<p>Let <span class="arithmatex">\(K=\overline K,\ I \properideal K[x]\)</span></p>
+<p><span class="arithmatex">\(\implies \mathcal V(I) \neq \emptyset\)</span></p>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(\M:=\{J \properideal K[\underline x] | I \subseteq J\}\)</span> be ordered by <span class="arithmatex">\(\subseteq\)</span> inclusion.
+and <span class="arithmatex">\(c \subseteq \M\)</span> be a chain.</p>
+<p>Need to find an upper bound to use Zorn's lemma (Z.L.).</p>
+<p>If <span class="arithmatex">\(c = \emptyset\)</span>, then any <span class="arithmatex">\(I \in \M\)</span> is an upper bound. </br>
+If not, then <span class="arithmatex">\(\overline J = \cup c \in \M\)</span> is an upper bound.</p>
+<div class="arithmatex">\[\begin{align*}
+    \implieshref{https://en.wikipedia.org/wiki/Zorn%27s_lemma}{Z.L.}
+    &amp; \M \text{ has a maximal element } m \in \M \\
+    \implies &amp; m \text{ is a maximal ideal} \\
+    \implieshref{#correspondence-pointsmaximal-ideals}{T.1.7}
+    &amp; \exists\ p \in \mathcal V(I) \text{ s.t. } \\ &amp; m=m_p \\
+    \implies &amp; \mathcal V(I) \neq \emptyset &amp; \square
+\end{align*}\]</div>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.tabs.link", "navigation.instant", "search.highlight", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

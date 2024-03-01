@@ -1,0 +1,18 @@
+:root {
+  --md-admonition-icon--proposition: url('../../icons/xicon.svg');
+}
+
+.md-typeset .admonition.proposition,
+.md-typeset details.proposition {
+  border-color: rgb(100, 221, 23);
+}
+.md-typeset .proposition > .admonition-title,
+.md-typeset .proposition > summary {
+  background-color: rgba(100, 221, 23, 0.1);
+}
+.md-typeset .proposition > .admonition-title::before,
+.md-typeset .proposition > summary::before {
+  background-color: rgb(100, 221, 23);
+  -webkit-mask-image: var(--md-admonition-icon--proposition);
+          mask-image: var(--md-admonition-icon--proposition);
+}
