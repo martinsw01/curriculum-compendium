@@ -23,6 +23,8 @@ window.MathJax = {
             rank: "{\\operatorname{rank}}", // rank of a matrix
             Im: "{\\operatorname{Im}}",
             Range: "{\\operatorname{Range}}",
+            clos: "{\\operatorname{clos}}", // closure
+            card: "{\\operatorname{card}}", // cardinality
             oversethref: ["{\\overset{\\href{#1}{\\text{#2}}}{#3}}", 3], // overset with link
             implieshref: ["{\\oversethref{#1}{#2}{\\implies}}", 2], // overset \implies with a link
             iffhref: ["{\\oversethref{#1}{#2}{\\iff}}", 2], // overset \iff with a link
@@ -46,6 +48,7 @@ window.MathJax = {
             Ann: "{\\operatorname{Ann}}", // annihilator
             Supp: "{\\operatorname{Supp}}", // Support
             ind: "{\\operatorname{ind}\\ }", // Index
+            d: "{\\operatorname{d}}", // differential
             N: "\\mathbb{N}", // Natural numbers
             Z: "\\mathbb{Z}", // Integers
             R: "\\mathbb{R}", // Reals
@@ -58,11 +61,13 @@ window.MathJax = {
             m: "{\\mathfrak{m}}", // Fancy m (e.g. maximal ideal)
             n: "{\\mathfrak{n}}", // Fancy n (e.g. another maximal ideal)
             F: "{\\mathcal{F}}", // Fancy F
+            G: "{\\mathfrak{G}}", // Fancy G
             A: "{\\mathfrak{A}}", // Fancy A
             a: "{\\mathfrak{a}}", // Fancy a
             H: "{\\mathcal H}", // Hausdorff measure
             S: "{\\Sigma}", // Capital sigma
             s: "{\\sigma}", // Lower case sigma
+            Chi: "{\\mathcal{X}}", // Chi
             inner: ["{\\left\\langle #1, #2 \\right\\rangle}", 2], // Inner product
             toself: "{\\ \\mathbin{\\rlap{\\raise{0.2ex}{\\supset}}\\raise{1.13ex}{\\tiny\\blacktriangleleft}}} \\ ", // Arrow to self
             Hauseps: ["{\\H_\\varepsilon^{#1}}", 1], // Hausdorff measure approximation
