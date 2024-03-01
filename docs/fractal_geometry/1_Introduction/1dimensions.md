@@ -1,4 +1,4 @@
-# 1 Hausdorff and box dimensions
+# 1.1 Hausdorff and box dimensions
 
 ???+ definition "Definition: Hausdorff (outer) measure"
     $$\begin{align*}

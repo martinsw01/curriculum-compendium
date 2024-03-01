@@ -1,4 +1,4 @@
-# 3 Approximation by fractals
+# 1.3 Approximation by fractals
 
 ??? theorem "Theorem 1: Collage theorem"
     $\begin{align*}
