@@ -87,7 +87,7 @@ $$
 \end{align*}
 $$
 
-so $T$ is a contraction on $B(X;Y) if $s < 1$. This yields the fixed point equation
+so $T$ is a contraction on $B(X,Y)$ if $s < 1$. This yields the fixed point equation
 
 $$f^* \circ u_i^{-1} = \lambda_i + S_i \cdot f^*$$
 

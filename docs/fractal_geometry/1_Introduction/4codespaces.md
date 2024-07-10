@@ -12,31 +12,31 @@ To simplify the notation, we define the code space of the IFS:
 
     $$\Sigma_N := \{1, \dots, N\}^{\N}$$
 
-    Elements $\sigma, \tau, \dots$ are codes
+    Elements $\s, \tau, \dots$ are codes
 
-    $$\sigma = (\sigma_1, \sigma_2, \dots)$$
+    $$\s = (\sigma_1, \sigma_2, \dots)$$
 
     with $\sigma_i\in \{1, \dots, N\}$. Denote the first $n$ elements of $\sigma$ by
 
-    $$\sigma(n) := (\sigma_1, \sigma_2, \dots, \sigma_n)$$
+    $$\s(n) := (\sigma_1, \sigma_2, \dots, \sigma_n)$$
 
 Then, we can denote
 
-$$f_{\sigma(n)} := f_{\sigma_1}\circ\cdots\circ f_{\sigma_n}$$
+$$f_{\s(n)} := f_{\sigma_1}\circ\cdots\circ f_{\sigma_n}$$
 
 and
 
 $$
 \begin{align*}
-    \F^n(A) &= \bigcup_{\sigma\in\Sigma_N} f_{\sigma(n)}(A)\\
-    \A &= \lim_{n\to\infty} \bigcup_{\sigma\in\Sigma_N} f_{\sigma(n)}(A) \\
-    A_{\sigma(n)} &:= f_{\sigma(n)}(A)
+    \F^n(A) &= \bigcup_{\s\in\Sigma_N} f_{\s(n)}(A)\\
+    \A &= \lim_{n\to\infty} \bigcup_{\s\in\Sigma_N} f_{\s(n)}(A) \\
+    A_{\s(n)} &:= f_{\s(n)}(A)
 \end{align*}
 $$
 
 Furthermore, $\Sigma_N$ can be made into a metric space by the Fréchet metric:
 
-$$d_F(\sigma, \tau) := \sum_{i=1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i}$$
+$$d_F(\s, \tau) := \sum_{i=1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i}$$
 
 
 ???+ theorem "Theorem 4"
@@ -47,21 +47,21 @@ $$d_F(\sigma, \tau) := \sum_{i=1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i}$$
     $$
     \begin{align*}
         \gamma : \Sigma_N &\to \A \\
-        \sigma &\mapsto \lim_{n\to\infty} f_{\sigma(n)}(x)
+        \s &\mapsto \lim_{n\to\infty} f_{\s(n)}(x)
     \end{align*}
     $$
 
     where the limit is independent of $x\in X$.
 
     ??? proof
-        By problem set 3, $(\Sigma, d_F)$ is a compact metric space.
+        By problem set 3, $(\s, d_F)$ is a compact metric space.
 
         $\begin{align*}
             \text{Let } & x, y \in X \\
             & L := \max_{i=1, \dots, N} \Lip(f_i)
         \end{align*}$
 
-        $$\implies |f_{\sigma(n)}(x) - f_{\sigma(n)}(y)| \leq L^n|x-y|$$
+        $$\implies |f_{\s(n)}(x) - f_{\s(n)}(y)| \leq L^n|x-y|$$
 
         Assume w.l.o.g that $X$ is compact
         (Let $K\in\H(X)$ and define $\hat K:=\clos_{\H(X)}\bigcup_{i\in\N_0}\F^i(K)$).
@@ -71,23 +71,23 @@ $$d_F(\sigma, \tau) := \sum_{i=1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i}$$
     
             $$
             \begin{align*}
-                |f_{\sigma(n)}(x) - f_{\sigma(n)}(y)| &\leq L^n \diam(X) \\
-                |f_{\sigma(n)}(x) - f_{\sigma(m)}(y)| &\leq L^{\min\{n,m\}} \diam(X) \\        
+                |f_{\s(n)}(x) - f_{\s(n)}(y)| &\leq L^n \diam(X) \\
+                |f_{\s(n)}(x) - f_{\s(m)}(y)| &\leq L^{\min\{n,m\}} \diam(X) \\        
             \end{align*}
             $$
     
-            Moreover, we have $|\gamma(\sigma(n)) - \gamma(\sigma(m))| = |f_{\sigma(n)}(x) - f_{\sigma(m)}(y)|$,
+            Moreover, we have $|\gamma(\s(n)) - \gamma(\s(m))| = |f_{\s(n)}(x) - f_{\s(m)}(y)|$,
             so the limit exists and is independent of $x\in X$.
 
         === "Continuity"
             Let $\varepsilon > 0$. $\implies \exists\ n : L^n \diam(X) < \varepsilon$.
 
-            Let $\sigma, \tau\in\Sigma_N$ with $\sigma(n) = \tau(n)$ and $\sigma_{n+1} \neq \tau_{n+1}$.
+            Let $\s, \tau\in\Sigma_N$ with $\s(n) = \tau(n)$ and $\sigma_{n+1} \neq \tau_{n+1}$.
 
             $$
             \begin{align*}
-                \implies & d_F(\sigma, \tau) = \sum_{i=n+1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i} < \frac{1}{(N+1)^n} \\
-                \implies & |\gamma(\sigma) - \gamma(\tau)| = \lim_{n\to\infty} |f_{\sigma(n)}(x) - f_{\tau(n)}(x)| \le L^n \diam(X) < \varepsilon
+                \implies & d_F(\s, \tau) = \sum_{i=n+1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i} < \frac{1}{(N+1)^n} \\
+                \implies & |\gamma(\s) - \gamma(\tau)| = \lim_{n\to\infty} |f_{\s(n)}(x) - f_{\tau(n)}(x)| \le L^n \diam(X) < \varepsilon
             \end{align*}
             $$
 
@@ -110,9 +110,9 @@ $$d_F(\sigma, \tau) := \sum_{i=1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i}$$
 ???+ remark
     1. $\gamma$ is in general not injective (Sierpinski triangle).
     2. $\forall i\neq j\in\{1,\dots,N\} : f_i(A_0) \cap f_j(A_0) = \emptyset \implies \gamma$ is injective.
-    3. Let $\sigma \in \Sigma_N, A\in\H(X)$
+    3. Let $\s \in \Sigma_N, A\in\H(X)$
 
-    $$\implies \gamma(\sigma) = \bigcap_{n\in\N} A_{\sigma(n)}$$
+    $$\implies \gamma(\s) = \bigcap_{n\in\N} A_{\s(n)}$$
 
 
 ???+ definition
@@ -129,18 +129,18 @@ $$d_F(\sigma, \tau) := \sum_{i=1}^\infty \frac{|\sigma_i - \tau_i|}{(N+1)^i}$$
     An IFS is called totally disconnected if $\gamma^{-1}(\a)$ is a singleton for all $\a\in\A$.
 
 
-For $\sigma, \omega\in\Sigma_N$, let $i$ be the first index for which $\sigma_i\neq\sigma_i$
+For $\s, \omega\in\Sigma_N$, let $i$ be the first index for which $\sigma_i\neq\sigma_i$
 and define the binary operation $\prec$ by
 
-$$\sigma\prec\omega \iff \omega_i < \sigma_i$$
+$$\s\prec\omega \iff \omega_i < \sigma_i$$
 
 Then, $\prec \subset \Sigma_N\times\Sigma_N$ is a strict linear order:
 
-1. $\forall \sigma\in\Sigma_N : \sigma\nprec\sigma$
-2. $\forall \sigma, \omega, \tau\in\Sigma_N : \sigma\prec\tau \land \tau\prec\omega \implies \sigma\prec\omega$
+1. $\forall \s\in\Sigma_N : \s\nprec\sigma$
+2. $\forall \s, \omega, \tau\in\Sigma_N : \s\prec\tau \land \tau\prec\omega \implies \s\prec\omega$
 
 Let $\iota := (1, 1, \dots) = \overline 1$ and $\overline\omega := (N, N, \dots) = \overline N$. Then,
-$\forall\iota\neq\sigma\neq\overline\omega : \iota\prec\sigma\prec\overline\omega$.
+$\forall\iota\neq\s\neq\overline\omega : \iota\prec\s\prec\overline\omega$.
 
 
 ???+ proposition
@@ -151,7 +151,7 @@ $\forall\iota\neq\sigma\neq\overline\omega : \iota\prec\sigma\prec\overline\omeg
         2. Choose inductively $\sigma_i$ to be the smallest $i$-th component of elements in
         $\gamma^{-1}(\a)$ whose first $i-1$ components are $\sigma_1, \dots, \sigma_{i-1}$.
 
-        Then, $\sigma := (\sigma_1, \sigma_2, \dots)$ is the unique maximal code.
+        Then, $\s := (\sigma_1, \sigma_2, \dots)$ is the unique maximal code.
 
 
 ???+ definition

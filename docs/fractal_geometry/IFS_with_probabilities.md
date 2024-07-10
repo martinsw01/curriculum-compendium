@@ -2,7 +2,7 @@
 
 $\begin{align*}
     \text{Let } & (X, d) \text{ be a complete metric space} \\
-    & B(X) \text{ be it's Borel } \sigma\text{-algebra} \\
+    & B(X) \text{ be it's Borel } \s\text{-algebra} \\
     & (X, B(X)) \text{ be a measurable space} \\
     & (X, B(X), \mu) \text{ be a (Borel) measure space.}
 \end{align*}$
@@ -156,7 +156,7 @@ $$\m(A) = \lim_{k \to \infty} \frac{|A \cap \{x_n\}_{n=1}^{k}|}{k+1}$$
 ???+ remark
     <sup>(1)</sup> With respect to the measure on the code spce $(\Sigma_N, d_F, \nu)$<sup>(2)</sup>.</br>
     <sup>(2)</sup> Consider the cylinder set
-    $Z(\sigma_1, \dots, \sigma_k):=\{\omega \in \Sigma_N \mid \omega(k) = \sigma(k)\}$ and define
+    $Z(\sigma_1, \dots, \sigma_k):=\{\omega \in \Sigma_N \mid \omega(k) = \s(k)\}$ and define
     the measeure $\nu(Z(\sigma_1, \dots, \sigma_k)) = \prod_{j=1}^{k} p_{\sigma_j}$
 
 ???+ remark
@@ -165,7 +165,7 @@ $$\m(A) = \lim_{k \to \infty} \frac{|A \cap \{x_n\}_{n=1}^{k}|}{k+1}$$
     $$
     \begin{align*}
         s_i : \Sigma_N &\to \Sigma_N \\
-        \sigma &\mapsto i \sigma
+        \s &\mapsto i \s
     \end{align*}
     $$
 
