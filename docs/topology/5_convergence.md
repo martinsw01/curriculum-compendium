@@ -677,8 +677,10 @@
         Let $\Phi = \{\G \mid \G \text{ is a filter on } X, \F \subseteq \G\}$.
 
         ??? proof "Claim: $(\Phi, \subseteq)$ satisfies the conditions of [Z.L.](#l539)"
-            $\newcommand{\E}{\mathcal{E}}$
-            $\newcommand{\U}{\mathcal{U}}$
+            <span display="none">
+                $\newcommand{\E}{\mathcal{E}}$
+                $\newcommand{\U}{\mathcal{U}}$
+            </span>
             $\begin{align*}
                 \text{Let } & \Psi \subseteq \Phi \text{ be a totally ordered subset} \\
                 & \U := \bigcup_{\E \in \Psi} \E \\

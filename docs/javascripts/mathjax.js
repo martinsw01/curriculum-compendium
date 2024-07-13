@@ -13,6 +13,7 @@ window.MathJax = {
             wtilde: ["\\widetilde{#1}", 1],
             pr: "\\operatorname{pr}", // projection
             id: "\\operatorname{id}", // identity map
+            Id: "\\operatorname{Id}", // identity map
             B: "\\mathcal{B}", // (Neighbourhood) Basis
             O: "\\mathcal{O}", // Big O or topology
             Neigh: "\\mathcal{N}", // Neighbourhood
@@ -85,6 +86,10 @@ window.MathJax = {
             H: "\\mathcal H", // Hausdorff measure
             S: "\\Sigma", // Capital sigma
             s: "\\sigma", // Lower case sigma
+            Cat: "\\mathcal{C}", // Category
+            Ob: "\\operatorname{Ob}", // Objects
+            op: "\\operatorname{op}", // opposite
+            Hom: "\\operatorname{Hom}", // morphisms
             Chi: "\\mathcal{X}",
             Tau: "\\mathcal{T}",
             inner: ["\\left\\langle #1, #2 \\right\\rangle", 2], // Inner product
