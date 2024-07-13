@@ -1,6 +1,8 @@
 # 5 Convergence
 
-$\newcommand{\G}{\mathcal{G}}$s
+<span style="display: none">
+    $\newcommand{\G}{\mathcal{G}}$
+</span>
 
 ## Sequences in metric spaces
 

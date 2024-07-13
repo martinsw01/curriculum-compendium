@@ -492,7 +492,7 @@
 
     $$
     \begin{align*}
-        (1) & \quad \text{The fineal topology is the finest topology on } Y \text{ such that the }
+        (1) & \quad \text{The final topology is the finest topology on } Y \text{ such that the }
         f_i \text{ are continuous for all } i \in I \\ \\
         (2) & \quad \text{For any topological space } Z, \text{ and any map } g : Y \to Z, \\
         & \quad g \text{ is continuous } \iff g \circ f_i \text{ is continuous } \forall\ i \in I \\ \\

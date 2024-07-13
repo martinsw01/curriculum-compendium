@@ -22,7 +22,7 @@
             x \in U, y \in V \\
             U \cap V = \emptyset \\
         \end{cases} \\ \\
-        T_3 \quad & \forall\, x \in X\ \exists\, C \subseteq X \text{ closed}, x \notin C \\
+        T_3 \quad & \forall\, x \in X, C \subseteq X \text{ closed}, x \notin C \\
         & \exists\, U, V \in \O : \\
         & \begin{cases}
             x \in U \\
