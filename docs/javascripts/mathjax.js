@@ -10,6 +10,7 @@ window.MathJax = {
           centernot: ['centernot']
         },
         macros: { // custom commands
+            rel: "\\mathrel{\\operatorname{rel}}",
             wtilde: ["\\widetilde{#1}", 1],
             pr: "\\operatorname{pr}", // projection
             id: "\\operatorname{id}", // identity map

@@ -26,7 +26,7 @@
     A category $\Cat$ consists of the following data:
     
     - A class of objects $Ob(\Cat)$.
-    - A class $\Hom_Cat(X, Y)$ of morphisms for each pair $X, Y$ of $Ob(\Cat)$,
+    - A class $\Hom_\Cat(X, Y)$ of morphisms for each pair $X, Y$ of $Ob(\Cat)$,
     including a special *identity* morphism $\Id_X \in \Hom(X, X)$ for each
     object $X$.
     - A *composition* operation
@@ -39,7 +39,7 @@
     - A morphism $f ∶ X \to Y$ is an *isomorphism* if there is another morphism
     $f^{−1} ∶ Y \to X$ such that $f^{−1} \circ f = \Id_X$ and $f \circ f^{−1} = \Id_Y$.
     - A *full subcategory* of a category $\Cat$ is a category $\Cat′$ whose objects are a
-    subclass of $\Ob(\Cat)$, and $\Hom_{\Cat′}(X, Y) = \Hom_Cat (X, Y)$.
+    subclass of $\Ob(\Cat)$, and $\Hom_{\Cat′}(X, Y) = \Hom_\Cat (X, Y)$.
     - Every category $\Cat$ has an *opposite category* $\Cat^\op$:
         - The objects are the same: $\Ob(\Cat^\op) = \Ob(\Cat)$.
         - The morphisms are formally reversed: $\Hom_{\Cat^\op} (X, Y) = \Hom_\Cat (Y, X)$.
@@ -214,7 +214,7 @@ Given two categories $\Cat, \D$, the functors from $\Cat$ to $\D$ form a categor
 
 ??? example "Example 7.13"
     A pullback is a limit over a diagram of the shape $A \to B \gets C$ (a cospan);</br>
-    a pushout is a colimit over over a diagram diagram of the shape $A \gets B \to C$ (a span).
+    a pushout is a colimit over a diagram of the shape $A \gets B \to C$ (a span).
 
     ---
 
