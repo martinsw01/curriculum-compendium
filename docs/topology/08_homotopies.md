@@ -477,7 +477,7 @@
 
         $$M_f \times J \surjectiveto M_f \times \{0\} \cup X \times \{1\} \times J$$
 
-        By [P.6.31](../6_compactness#p623), taking products with $J$ preserves the pushout
+        By [P.6.31](../06_compactness#p623), taking products with $J$ preserves the pushout
         property of the mapping cylinder:
 
         ![Pushout diagrams](8_homotopies_images/pushout_diagrams_l828_1.png)

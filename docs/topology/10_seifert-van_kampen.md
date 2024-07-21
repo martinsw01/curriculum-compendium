@@ -460,7 +460,7 @@
             Both $r_U, r_V$ extend from $r_{U\cap V}$, so they agree on objects and morphisms
             in $U\cap V$.
 
-        Thus, by [L.8.27](../8_homotopies#l827), we get a double pushout diagram:
+        Thus, by [L.8.27](../08_homotopies#l827), we get a double pushout diagram:
 
         <div class="cc-tikzjax">
             \begin{tikzcd}
@@ -524,4 +524,4 @@
     $$\pi_1(S^1, 1) = \Hom_{\Pi(S^1, A)}(1, 1) = \{\beta^k \mid k \in \Z\} \cong \Z$$
 
     Recall that $[\beta^k]$ is the homotopy class of the loop
-    $\gamma_k : S^1 \to S^1, z \mapsto z^k$ from [E.9.8](../9_fundamental_group#e98). 
+    $\gamma_k : S^1 \to S^1, z \mapsto z^k$ from [E.9.8](../09_fundamental_group#e98). 
