@@ -2,7 +2,7 @@
 
 ## Homotopies
 
-???+ definition "Definition 8.1"
+??? definition "Definition 8.1"
     ### Homotopy
 
     $\begin{align*}
@@ -26,27 +26,27 @@
     $F$ is called a **homotopy** from $f_0$ to $f_1$.
 
 
-???+ remark "Remark 8.2"
+??? remark "Remark 8.2"
     Homotopy is an equivalence relation on the set of continuous maps $X \to Y$.
 
     Denoty by $[X, Y]$ the set of equivalence classes, and the homotopy class of $f$ by $[f]$.
 
 
-???+ example "Example 8.3"
+??? example "Example 8.3"
     The identity map $S^1 \to S^1$ and the map $z \mapsto z^2$ are not homotopic.
 
     ---
 
     $[z \mapsto z^n]$ are disctinct homotopy classes which generated $[S^1, S^1]$.
 
-???+ definition "Definition 8.4"
+??? definition "Definition 8.4"
     ### Nullhomotopic and essential maps
 
     A map is **nullhomotopic** if it is homotopic to a constant map, and **essential**
     otherwise.
 
 
-???+ example "Example 8.5"
+??? example "Example 8.5"
     1. The identity map is essential on $S^1$, and nullhomotopic on $\R^n$.
     2. The inclusion $S^1 \hookrightarrow S^2$ is nullhomotopic. In fact, any map
     $S^1 \to S^2$ is nullhomotopic.
@@ -54,7 +54,7 @@
 
 ## Homotopy equivalence
 
-???+ definition "Definition 8.6"
+??? definition "Definition 8.6"
     ### Homotopy equivalence
 
     $X, Y$ are **homotopy equivalent** $(X \simeq Y)$ if
@@ -73,14 +73,14 @@
     $f$ and $g$ are called **homotopy equivalences**.
 
 
-???+ example "Example 8.7"
+??? example "Example 8.7"
     1. The circle, the cylinder, and the Moebius strip are homotopy equivalent.
     2. 
 
     ![Homotopy equivalences](8_homotopies_images/homotopy_equivalences_e87.png)
 
 
-???+ remark "Remark 8.8"
+??? remark "Remark 8.8"
     $\simeq$ is an equivalence relation. The equivalence classes are called **homotopy types**.
 
     ---
@@ -102,19 +102,19 @@
     Two spaces are equivalent in $\operatorname{hoTop} \iff$ they are homotopy equivalent.
 
 
-???+ definition "Definition 8.9"
+??? definition "Definition 8.9"
     ### Contractible space
 
     A space is **contractible** if it is homotopy equivalent to a one-point space $*$.
 
 
-???+ remark "Remark 8.10"
+??? remark "Remark 8.10"
     If $X$ is contractible, then for all topological spaces $T$, we have
 
     $$[X, T] \cong [*, T] \cong * \cong [T, *] \cong [T, X]$$
 
 
-???+ example "Example 8.11"
+??? example "Example 8.11"
     1. $\R^n$ is contractible.
     2. $S^n$ is not contractible.
     3. The *dunce hat* is contractible.
@@ -122,7 +122,7 @@
 
 ## Retracts and deformation retracts
 
-???+ definition "Definition 8.12"
+??? definition "Definition 8.12"
     ### Relative homotopy
 
     $\begin{align*}
@@ -141,7 +141,7 @@
     $$
 
 
-???+ definition "Definition 8.13"
+??? definition "Definition 8.13"
     ### Retract, (strong) deformation retraction
 
     $\begin{align*}
@@ -156,18 +156,18 @@
     particular, $X$ and $A$ are homotopy equivalent.
 
 
-???+ example "Example 8.14"
+??? example "Example 8.14"
     ![Deformation retractions](8_homotopies_images/deformation_retractions_e814.png)
     
 
-???+ theorem "Theorem 8.15"
+??? theorem "Theorem 8.15"
     ### Retracts and extensions of maps <a id="t815"></a>
 
     Let $A \subseteq X.$
 
     $$A \text{ is a retract of } X \iff \text{ any map on } A \text{ extends to } X.$$
 
-    ???+ proof
+    ??? proof
         === "$\implies$"
             $\begin{align*}
                 \text{Let } & r : X \to A \text{ be a retraction} \\
@@ -185,7 +185,7 @@
             $\id_A$ extends to a map $r : X \to A$, and $r$ is a retraction.
 
 
-???+ theorem "Theorem 8.16"
+??? theorem "Theorem 8.16"
     ### Deformation retracts and unique extensions of maps <a id="t816"></a>
 
     Let $A \subseteq X$ be a subspace.
@@ -193,7 +193,7 @@
     $$A \text{ is a (strong) deformation retract of } X \iff \text{ any map on } A
     \text{ extends to } X \text{ uniquelly up to homotopy} (\rel A).$$
 
-    ???+ proof
+    ??? proof
         === "$\implies$"
             $\begin{align*}
                 \text{Let } & r : X \to A \text{ be a retraction } :
@@ -208,7 +208,7 @@
             $\id_A$ extends to a map $r : X \to A$. Both $i \circ r$ and $\id_X$ are extensions
             of $i : A \hookrightarrow X$. By hypothesis, they are homotopic relative to $A$,
 
-???+ remark "Remark 8.17"
+??? remark "Remark 8.17"
     Even if $i : A \hookrightarrow X$ is a homotopy equivalence, $A$ is not always a
     deformation retract on $X$. For example, there may exist $r : X \to A$ such that
     $r \circ i \simeq \id_A$, but $r$ may not fix the points of $A$.
@@ -216,7 +216,7 @@
 
 ## Homotopy extension property
 
-???+ definition "Definition 8.18"
+??? definition "Definition 8.18"
     ### Mapping cylinder
 
     Let $f : X \to Y$ be a continuous map. The **mapping cylinder** of $f$ is the
@@ -225,14 +225,14 @@
     ![Pushout square](8_homotopies_images/pushout_square_d818.png)
 
 
-???+ remark "Remark 8.19"
+??? remark "Remark 8.19"
     <a id="r819"></a>$Y$ is a strong deformation retract of $M_f$. Hence, any map $f : X \to Y$ factors
     into an inclusion and a homotopy equivalence:
 
     ![](8_homotopies_images/r819.png)
 
 
-???+ definition "Definition 8.20"
+??? definition "Definition 8.20"
     ### Homotopy extension property (HEP)
 
     Let $(A \subseteq X)$ be a closed subspace. The pair $(X, A)$ has the **homotopy
@@ -248,7 +248,7 @@
     ![HEP diagram](8_homotopies_images/hep_diagram_r820.png)
 
 
-???+ lemma "Lemma 8.21"
+??? lemma "Lemma 8.21"
     ### HEP and inclusion mapping cylinder <a id="l821"></a>
 
     Let $R = A \times [0, 1] \cup X \times \{0\}$.
@@ -256,7 +256,7 @@
     $$\text{The pair } (X, A) \text{ has the HEP} \iff R \text{ is a deformation retract of }
     X \times [0,1]$$
 
-    ???+ proof
+    ??? proof
         === "$\implies$"
             $\begin{align*}
                 \text{Let } & F : A \times [0, 1] \hookrightarrow R \\
@@ -285,25 +285,25 @@
             $f_0$.
 
 
-???+ corollary "Corollary 8.22"
+??? corollary "Corollary 8.22"
     ### Products preserve the HEP <a id="c822"></a>
 
     If $(X, A)$ has the HEP, then so does $W \times X, W \times A)$ for all spaces $W$.
 
-    ???+ proof
+    ??? proof
         If $r : X \times I \to R$ is a retraction, then so is
         $\id_W \times r : W \times (X \times I) \to W \times R$.
 
 
 ## Deformation retractions via the homotopy extension property
 
-???+ theorem "Theorem 8.23"
+??? theorem "Theorem 8.23"
     ### Strong deformation retract from HEP <a id="t823"></a>
 
     If $(X, A)$ has the HEP and $i : A \hookrightarrow X$ is a homotopy equivalence, then
     $A$ is a strong deformation retract of $X$.
 
-    ???+ proof
+    ??? proof
         **Step 1:** $A$ is a deformation retract of $X$.
 
         Let $g : X \to A$ be a homotopy inverse of $i$.
@@ -383,22 +383,22 @@
 
 ## Homotopy equivalences and gluing
 
-???+ lemma "Lemma 8.24"
+??? lemma "Lemma 8.24"
     ### Inclusion mapping cylinder is strong deformation retract <a id="l824"></a>
 
     If $(X, A)$ has the HEP, then the inclusion mapping cylinder
     $R = A \times [0, 1] \cup X \times \{0\}$ is a strong deformation retract of
     $X \times [0, 1]$.
 
-    ???+ proof
-        ???+ proof "Claim: $R \hookrightarrow X \times I$ is a homotopy equivalence"
+    ??? proof
+        ??? proof "Claim: $R \hookrightarrow X \times I$ is a homotopy equivalence"
             Both $R, X \times I$ deformation retract to $X \times \{0\}$.
 
         Let
         $S := R \times I \times J \cup X \times 
         \Big(I \times \{0\} \cup \{0\} \times J\Big)$.
 
-        ???+ proof "Claim: $S$ is a retract of $(X \times I) \times J$"
+        ??? proof "Claim: $S$ is a retract of $(X \times I) \times J$"
             We can reformulate $S$ as
 
             $$S = A \times I \times J \cup X \times \Big(I \times \{0\} \cup \{0\} \times J\Big)$$
@@ -415,12 +415,12 @@
         $R$ is a strong deformation retract of $X \times I$.
 
 
-???+ theorem "Theorem 8.25"
+??? theorem "Theorem 8.25"
     ### Homotopic attaching maps yields homotopy equivalent spaces <a id="t825"></a>
 
     $(X, A)$ has the HEP and $f \simeq g : A \to B \iff B \cup_f X \simeq B \cup_g X$.
 
-    ???+ proof
+    ??? proof
         By [L.8.24](#l824), $A \times I \cup X \times \{0\}$ is a strong deformation retract
         of $X \times I$.
 
@@ -436,13 +436,13 @@
         $B \cup_F (A \times I \cup X \times \{0\})$.
 
 
-???+ corollary "Corollary 8.26"
+??? corollary "Corollary 8.26"
     The dunce hat is contractible.
 
 
 ## Homotopy equivalence by deformation retractions
 
-???+ lemma "Lemma 8.27"
+??? lemma "Lemma 8.27"
     ### Pushout and retractions <a id="l827"></a>
 
     In any category,
@@ -459,7 +459,7 @@
     $$\text{The outer square is a pushout} \iff r \text{ is a retraction.}$$
 
 
-???+ lemma "Lemma 8.28"
+??? lemma "Lemma 8.28"
     ### HEP of a mapping cylinder and domain <a id="l828"></a>
 
     $\begin{align*}
@@ -469,7 +469,7 @@
 
     $$\implies (M_f, X) \text{ has the HEP}$$
 
-    ???+ proof
+    ??? proof
         $$(M_f, X) \text{ has the HEP} \iffhref{#l821}{L.8.21}
         R = X \times I \cup M_f \times \{0\} \text{ is a retract of } M_f \times I$$
 
@@ -503,13 +503,13 @@
         a retraction.
 
 
-???+ theorem "Theorem 8.29"
+??? theorem "Theorem 8.29"
     ### Deformation retracts from homotopy equivalence <a id="t829"></a>
 
     If $X \simeq Y$, then there is a space $Z$ having both $X$ and $Y$ as strong deformation
     retracts.
 
-    ???+ proof
+    ??? proof
         Let $f : X \to Y$ be a homotopy equivalence.
 
         Then, by [R.8.19](#r819), $Z = M_f$ has $Y$ as a strong deformation retract.

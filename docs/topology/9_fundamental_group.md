@@ -2,7 +2,7 @@
 
 ## Path homotopies
 
-???+ definition "Definition 9.1"
+??? definition "Definition 9.1"
     ### Path homotopy
 
     A **path** in $X$ from $p$ to $q$ is a continuous map $\gamma : [0, 1] \to X$ with 
@@ -22,7 +22,7 @@
     A **pth homotopy** is a homomomorphism of paths relative to $A = \{0,1\} \subset [0, 1]$
 
 
-???+ remark "Remark 9.2"
+??? remark "Remark 9.2"
     There is a homotopy of paths
 
     $$H : [0, 1]\times [0, 1] \to X$$
@@ -40,7 +40,7 @@
     for all $t\in [0, 1]$.
 
 
-???+ example "Example 9.3"
+??? example "Example 9.3"
     <a id="e93"></a>Using the loop
 
     $$
@@ -70,7 +70,7 @@
 
 ## Concatenation of paths
 
-???+ definition "Definition 9.4"
+??? definition "Definition 9.4"
     ### Concatenation of paths
 
     The concatenation of the paths $\alpha : x \leadsto y, \beta : y \leadsto z$ is
@@ -83,7 +83,7 @@
     This is continuous by the pasting lemma.
 
 
-???+ remark "Remark 9.5"
+??? remark "Remark 9.5"
     Let $\alpha \simeq \alpha' : x \leadsto y, \beta \simeq \beta' : y \leadsto z$ be
     path homotopies. Then, we have
 
@@ -94,7 +94,7 @@
     $$[\alpha] * [\beta] := [\alpha * \beta]$$
 
 
-???+ theorem "Theorem 9.6"
+??? theorem "Theorem 9.6"
     ### Algebraic properties of path concatenation <a id="t96"></a>
 
     $\begin{align*}
@@ -166,7 +166,7 @@
 
 ## The fundamental group
 
-???+ definition "Definition 9.7"
+??? definition "Definition 9.7"
     ### Fundamental group
 
     Let $x \in X$. The **fundamental group** $\pi_1(X, x)$ of $X$ based at $x$ is the
@@ -177,7 +177,7 @@
     with group operation $*$ given by concatenation of paths.
 
 
-???+ example "Example 9.7"
+??? example "Example 9.8"
     Define the map
 
     $$
@@ -219,7 +219,7 @@
 
 ## The fundamental groupoid
 
-???+ definition "Definition 9.9"
+??? definition "Definition 9.9"
     ### Fundamental groupoid
 
     Let $X$ be a topological space. Its **fundamental groupoid** $\Pi(X)$ is the
@@ -230,7 +230,7 @@
     - composition: concatenation of equivalence classes of paths
 
 
-???+ remark "Remark 9.10"
+??? remark "Remark 9.10"
     $\Pi(X)$ is a groupoid. It follows from [T.9.6](#t96):
 
     - Compositions of morphisms are well-defined [R.9.5](#r95). 
@@ -238,7 +238,7 @@
     - For every object $x$, we have by an identity morphism $e_x$.
     - Every morphism has an inverse.
 
-???+ remark "Remark 9.11"
+??? remark "Remark 9.11"
     The isomorphism classes of objects in $\Pi(X)$ are exactly $\pi_0(X)$:
 
     $$x \text{ is isomorphic to } y \text{ in } \Pi(X) \iff \exists\, \gamma : x \leadsto y$$
@@ -251,7 +251,7 @@
     Isomorphic objects in any category have isomorphic groups of automorphisms.
 
 
-???+ lemma "Lemma 9.12"
+??? lemma "Lemma 9.12"
     ### Change of base point <a id="l912"></a>
 
     Let $\alpha : x \leadsto y$ be a path in $X$. The map
@@ -266,7 +266,7 @@
     is a group isomorphism. The assignement $\alpha \mapsto \psi_\alpha$ defines a functor
     $\Pi(X) \to \bm{\operatorname{Grp}}$.
 
-    ???+ proof
+    ??? proof
         === "Homomorphism"
             $$
             \begin{align*}
@@ -292,18 +292,18 @@
             $$
 
 
-???+ remark "Remark 9.13"
+??? remark "Remark 9.13"
     The particular isomorphism $\psi_\alpha$ depends on the chosen path $\alpha$.
 
 
-???+ corollary "Corollary 9.14"
+??? corollary "Corollary 9.14"
     ### Base point independence <a id="c914"></a>
 
     Let $X$ be a path-connected topological space. Then, the fundamental group $\pi_1(X, x)$
     is independent of the choice of base pooint $x$ up to a non-unique isomorphism.
 
 
-???+ remark "Remark 9.15"
+??? remark "Remark 9.15"
     For all $x\in X$, the fundamental group $\pi_1(X, x)$ is a full subcategory of the
     fundamental groupoid $\Pi(X)$.
 
@@ -331,7 +331,7 @@
       isomorphisms induced by paths between the base points.
 
 
-???+ proposition "Proposition 9.16"
+??? proposition "Proposition 9.16"
     ### Functoriality of the fundamental groupoid <a id="p916"></a>
 
     $\begin{align*}
@@ -361,7 +361,7 @@
 
     $$\Pi : \bm{\operatorname{Top}} \to \bm{\operatorname{Grpd}}$$
 
-    ???+ proof
+    ??? proof
         $\begin{align*}
             \text{Let } & x, y, z \in X \\
             & \alpha : x \leadsto y \\
@@ -379,7 +379,7 @@
         Additionally, we have $f_*(e_x) = [f \circ e_x] = [e_{f(x)}]$.
 
 
-???+ corollary "Corollary 9.17"
+??? corollary "Corollary 9.17"
     In particular, we get a group homomorphism
 
     $$
@@ -394,7 +394,7 @@
 
 ## Homotopy invariance
 
-???+ proposition "Proposition 9.18"
+??? proposition "Proposition 9.18"
     ### Induced homomorphism of homotopic maps <a id="p918"></a>
 
     Let $H$ be a homotopy between maps $f, g : X \to Y$. Further, let $x\in X$, and
@@ -410,10 +410,10 @@
     If $H$ is a homotopy relative to $\{x\}$, then $f,g$ induce the same homomorphism
     of fundamental groups.
 
-    ???+ proof
+    ??? proof
         ?
 
-???+ corollary "Corollary 9.19"
+??? corollary "Corollary 9.19"
     If $f : X \to Y$ is a homotopy equivalence, then $f_*$ is a group isomorphism. Furthermore,
     $\pi_1(X, x)$ is a homotopy invariant of pointed spaces.
 
@@ -422,7 +422,7 @@
     Contractible spaces have trivial fundamental groups.
 
 
-???+ example "Example 9.20"
+??? example "Example 9.20"
     $\R^n$ ha trivial fundamental groups for any base point. Any star-shaped region
     has a trivial fundamental group.
 
@@ -432,7 +432,7 @@
     $\pi_1(\R^{n+1}\setminus\{0\}, x) \cong \pi_1(S^n, x)$, which is trivial.
 
 
-???+ proposition "Proposition 9.21"
+??? proposition "Proposition 9.21"
     ### Homotopic maps and groupoids <a id="p921"></a>
 
     Let $H$ be a homotopy between $f, g : X \to Y$.
@@ -441,7 +441,7 @@
 
     $$\Pi(f), \Pi(g) : \Pi(X) \to \Pi(Y)$$
 
-    ???+ proof
+    ??? proof
         Let $a_x : t \mapsto H(x,t) \in Y$ for any $x\in X$. Then, $([a_x])_{x\in X}$
         defines a natural transformation $\Pi(f) \Rightarrow \Pi(g)\quad(i)$.
 
@@ -462,14 +462,14 @@
         
 
 
-???+ corollary "Corollary 9.22"
+??? corollary "Corollary 9.22"
     $f : X \to Y$ is a homotopy equivalence $\implies \Pi(f) : \Pi(X) \to \Pi(Y)$ is an
     equivalence of categories.
 
     In particular, contractible spaces have have trivial fundamental groupoids.
 
 
-???+ definition "Definition 9.23"
+??? definition "Definition 9.23"
     ### Simply connected
 
     A topological space $X$ is **simply connected** if it is path-connected and has
