@@ -2,6 +2,7 @@ site_name: Curriculum Compendium
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.tabs.link # Proof and theorem/lemma/... are on the same tab
     - navigation.instant
@@ -26,6 +27,8 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Prepare tikz code for tikzjax
+  - javascripts/convert_to_tikzjax_script.js
 
 
 extra_css:
@@ -37,3 +40,5 @@ extra_css:
   - stylesheets/admonitions/remark.css
   - stylesheets/admonitions/example.css
   - stylesheets/admonitions/proof.css
+  # Convert tikz code to svg
+  - https://tikzjax.com/v1/fonts.css
