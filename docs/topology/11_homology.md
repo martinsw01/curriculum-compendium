@@ -6,7 +6,7 @@
 
 ## Singular simplices
 
-???+ definition "Definition 11.1"
+??? definition "Definition 11.1"
     ### Standard *n*-simplex
 
     For $n\in\N$, the **standard $\bm n$-simplex** is the subspace
@@ -20,10 +20,10 @@
     ![0, 1, 2, 3-simplex](11_homology_images/standard_n-simplices_d111.png)
 
 
-???+ remark "Remark 11.2"
+??? remark "Remark 11.2"
     The standard $n$-simplex is the convex hull of its vertices, standard basis vectors.
 
-???+ definition "Definition 11.3"
+??? definition "Definition 11.3"
     ### Singular *n*-simplex
 
     A **singular $\bm n$-simplex** in $X$ is a continuous map $\sigma:\Delta^n\to X$.
@@ -40,7 +40,7 @@
     ![Faces, singular n-simplices and vertices of a triangle](11_homology_images/d113.png)
     
 
-???+ remark "Remark 11.4"
+??? remark "Remark 11.4"
     - *Singular* indicates that $\sigma$ does not need to be an embedding.
     - A singular $0$-simplex is essentially a point.
     - A singular $1$-simplex is essentially a path $\gamma$ (after identifying
@@ -51,7 +51,7 @@
 
 ## Singular chains
 
-???+ definition "Definition 11.5"
+??? definition "Definition 11.5"
     ### Free abelian group
 
     For a set $S$, the **free abelian group** on $S$ is
@@ -63,7 +63,7 @@
     If $|S| = r < \infty$, we say that $\Z S$ has rank $r$.
 
 
-???+ remark "Remark 11.6"
+??? remark "Remark 11.6"
     This group is free in the following sense:
 
     - Every homomorphism of abelian groups $\Z S \to A$ is uniquely determined by map of
@@ -73,7 +73,7 @@
     $U : \mathbf{Ab} \to \mathbf{Set}$ similarly to vector spaces.
 
 
-???+ definition "Definition 11.7"
+??? definition "Definition 11.7"
     ### Singular chain
 
     The group of **singular $\bm n$-chains** $\Csing_n(X)$ of $X$ is the free abelian group
@@ -93,12 +93,12 @@
     ![Singular boundary of a triangle](11_homology_images/differential_d117.png)
 
 
-???+ lemma "Lemma 11.8"
+??? lemma "Lemma 11.8"
     ### Every boundary is a cycle <a id="l118"></a>
 
     $$\partial^2 = 0$$
 
-    ???+ proof
+    ??? proof
         Observe that
 
         $$d_jd_i(\s) = d_{i-1}d_j(\s) \quad \text{for } j < i.$$
@@ -122,7 +122,7 @@
 
 ## Chain complexes
 
-???+ definition "Definition 11.9"
+??? definition "Definition 11.9"
     ### Chain complex
 
     A **chain complex of abelian groups** is a pair $(C_\bullet, \partial)$ where
@@ -137,7 +137,7 @@
     We say that $C_n$ is in **degree** $n$.
 
 
-???+ example "Example 11.10"
+??? example "Example 11.10"
     <a id="e1110"></a>**1.**
 
     Denote by $\Z[k]$ the chain complex
@@ -183,7 +183,7 @@
 
 ## Homology
 
-???+ definition "Definition 11.11"
+??? definition "Definition 11.11"
     ### Homology group
 
     Let $C = (C_\bullet, \partial)$ be a chain complex.
@@ -204,7 +204,7 @@
     $$H_n(C) = Z_n(C) / B_n(C).$$
 
 
-???+ example "Example 11.12"
+??? example "Example 11.12"
     Recall the chain complexes in [E.11.10](#e1110).
 
     **1.**
@@ -264,7 +264,7 @@
 
 ## Functoriality of singular homology
 
-???+ definition "Definition 11.13"
+??? definition "Definition 11.13"
     ### Chain map
 
     If $C = (C_\bullet, \partial_C)$ and $D = (D_\bullet, \partial_D)$ are chain complexes,
@@ -277,7 +277,7 @@
     $$\partial f_n = f_{n-1} \partial.$$
 
 
-???+ lemma "Lemma 11.14"
+??? lemma "Lemma 11.14"
     ### Chain maps descends to homology <a id="l1114"></a>
 
     $\begin{align*}
@@ -293,7 +293,7 @@
     \end{align*}
     $$
 
-    ???+ proof
+    ??? proof
         We claim that $f_\bullet$ restricts to cycles and boundaries:
 
         Let $z$ be an $n$-cycle in $C$.
@@ -314,7 +314,7 @@
         So $f_\bullet$ descends to the quotients, the homologies.
 
 
-???+ definition "Definition 11.15"
+??? definition "Definition 11.15"
     ### Induced morphisms of singular chains
 
     Let $f : X \to Y$ be a continuous map.
@@ -326,7 +326,7 @@
     $$f_* : (f_*)_n : \Csing_n(X) \to \Csing_n(Y).$$
 
 
-???+ proposition "Proposition 11.16"
+??? proposition "Proposition 11.16"
     ### Functoriality of singular homology
 
     1. $f_*$ is a chain map.
@@ -339,7 +339,7 @@
     \end{align*}
     $$
 
-    ???+ proof
+    ??? proof
         === "$(1)$"
             Let $\displaystyle z = \sum_j n_j \s_j \in \Csing_n(X)$.
 
@@ -371,7 +371,7 @@
 
 ## Δ-complexes
 
-???+ definition "Definition 11.17"
+??? definition "Definition 11.17"
     ### Δ-complex structure <a id="d1117"></a>
 
     A **$\bm\Delta$-complex structure** on a space $X$ is a collection of simplices of $X$
@@ -394,7 +394,7 @@
     $$
 
 
-???+ example "Example 11.18"
+??? example "Example 11.18"
     Consider the following $\Delta$-complex structure on the torus and the Klein bottle:
 
     ![Torus and Klein bottle Δ-structure](11_homology_images/delta-structure_torus_klein_bottle_e1118.png)
@@ -414,7 +414,7 @@
     important information.
 
 
-???+ remark "Remark 11.19"
+??? remark "Remark 11.19"
     The conditions for a $\Delta$-complex on $X$ ensure that we can recover $X$ from the
     simplices if we know what the faces of the simplices are.
 
@@ -424,14 +424,14 @@
     Not all spaces arise this way: any $\Delta$-complex is a CW-complex.
 
 
-???+ definition "Definition 11.20"
+??? definition "Definition 11.20"
     Let $(X, \Delta_X)$ be a $\Delta$-complex, and let
 
     $$C_n^\Delta(X, \Delta_X) \subset \Csing_n(X)$$
 
     be the subgroup spanned by $n$-simplices which lies in $\Delta_X$.
 
-???+ remark "Remark 11.21"
+??? remark "Remark 11.21"
     The properties $(1)$ and $(2)$ of the $\Delta$-complex structure ([D.11.17](#d1117))
     ensure that the differential $\partial_n$ of $\Csing_n(X)$ restricts to
     $C_n^\Delta(X, \Delta_X)$.
@@ -442,7 +442,7 @@
     $$C_\bullet^\Delta(X, \Delta_X) = (C_n^\Delta(X, \Delta_X), \partial).$$
 
 
-???+ definition "Definition 11.22"
+??? definition "Definition 11.22"
     ### Simplicial chain complex
 
     The **simplicial chain complex** of a $\Delta$-complex $(X, \Delta_X)$ is
@@ -454,7 +454,7 @@
     $$H_n^\Delta(X, \Delta_X) = H(C_n^\Delta(X, \Delta_X)).$$
 
 
-???+ example "Example 11.23"
+??? example "Example 11.23"
     Recall the $\Delta$-complex structure on a torus:
 
     ![Torus Δ-structure](11_homology_images/delta-structure_torus_e1123.png)
@@ -514,7 +514,7 @@
     bottle is not orientable and $H_2$ has rank $2$.
 
 
-???+ remark "Remark 11.24"
+??? remark "Remark 11.24"
     **Advantages of simplicial homology**:
 
     - By construction, if $\Delta_X$ contains only $k$-simplices for $k\le n$, then
@@ -525,12 +525,12 @@
     prove properties like homotopy invariance directly.
 
 
-???+ remark "Remark 11.25"
+??? remark "Remark 11.25"
     Choose two $\Delta$-structures on a space and compute simplicial homology for both of
     them. Notice that you get isomorphic homology groups.
 
 
-???+ theorem "Theorem 11.26"
+??? theorem "Theorem 11.26"
     The map induced by the inclusion of simplices
 
     $$C_\bullet^\Delta(X, \Delta_X) \to \Csing_\bullet(X)$$
