@@ -215,7 +215,7 @@ $$
         \implies & \forall\, \mu\ge \gamma, f\in L^2(\Omega)\ \exists! u \in H_0^1(\Omega)
         \text{ solution of } \\
         & \quad \left\{\begin{aligned}
-            Lu &= f && \text{in } \Omega \\
+            Lu + \mu u&= f && \text{in } \Omega \\
             u &= 0 && \text{on } \partial\Omega
         \end{aligned}\right.
     \end{align*}

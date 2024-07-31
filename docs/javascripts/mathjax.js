@@ -100,7 +100,8 @@ window.MathJax = {
             tab: "\\ \\ \\ \\ ",
             esssup: ["\\underset{#1}{\\operatorname{ess-sup}}", 1], // essential supremum
             argmax: ["\\underset{#1}{\\arg \\max}", 1],
-            argmin: ["\\underset{#1}{\\arg \\min}", 1]
+            argmin: ["\\underset{#1}{\\arg \\min}", 1],
+            dhrarrow: "\\hookrightarrow\\hookrightarrow", // compact embedding
         },
         environments: {
                 rcases: ['\\left.\\begin{aligned}', '\\end{aligned}\\right\\rbrace', ''],
