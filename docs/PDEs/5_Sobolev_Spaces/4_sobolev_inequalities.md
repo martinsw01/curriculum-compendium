@@ -362,7 +362,7 @@
 
 
 ???+ theorem "Theorem 5.28"
-    ## Relllich-Kondrachov
+    ## Relllich-Kondrachov <a id="t528"></a>
 
     $\begin{align*}
         \text{Let } & \Omega \subset \R^n \text{ be open and bounded s.t.} \\
@@ -372,13 +372,58 @@
 
     $$
     \begin{align*}
-        p < n & \implies W^{1,p}(\Omega) \hookrightarrow\hookrightarrow L^q(\Omega)
+        p < n & \implies W^{1,p}(\Omega) \dhrarrow L^q(\Omega)
         && \forall\, q \in [1, p^*] \quad \frac{1}{p^*} = \frac{1}{p} - \frac{1}{n} \\ \\
-        p = n & \implies W^{1,p}(\Omega) \hookrightarrow\hookrightarrow L^q(\Omega)
+        p = n & \implies W^{1,p}(\Omega) \dhrarrow L^q(\Omega)
         && \forall\, q \in [1, \infty) \\ \\
-        p > n & \implies W^{1,p}(\Omega) \hookrightarrow\hookrightarrow C^{0,\alpha}(\overline \Omega)
+        p > n & \implies W^{1,p}(\Omega) \dhrarrow C^{0,\alpha}(\overline \Omega)
         && \forall\, \alpha \in \left[0, 1-\frac{n}{p}\right)
     \end{align*}
     $$
 
+
+???+ theorem "Theorem 5.27"
+    ## Poincaré-Wirtinger inequality <a id="t527"></a>
     
+    $\begin{align*}
+        \text{Let } & \Omega \subset \R^n \text{ be bounded, open, connected s.t.} \\
+        & \partial \Omega \in C^1 \\
+        & 1 \le p \le \infty
+    \end{align*}$
+
+    Then, there exists $0 < C = C(n,p,\Omega)$ such that for all $u \in W^{1,p}(\Omega)$
+
+    $$\|u - (u)_\Omega\|_{L^p(\Omega)} \leq C \|Du\|_{L^p(\Omega)}$$
+
+    where $(u)_\Omega := \displaystyle \fint_\Omega u$.
+
+    ???+ proof
+        Assume the contrary, and let $(u_k)_k \subset W^{1,p}(\Omega)$ be a sequence such
+        that
+
+        $$\|u_k - (u_k)_\Omega\|_{L^p(\Omega)} > k \|Du_k\|_{L^p(\Omega)} \tag{i}$$
+
+        We may assume $\|u_k\|_{L^p(\Omega)} = 1$ and $(u_k)_{\Omega} = 0$ for all $k$.
+
+        ???+ proof "Claim: $W^{1,p}(\Omega) \dhrarrow L^p(\Omega)$"
+            
+        $\begin{align*}
+            & \implies \exists\, (u_{k_j})_j \subseteq (u_k)_k :
+            u_{k_j} \to u \text{ in } L^p(\Omega) \\
+            & \implies \|u\|_{L^p(\Omega)} & 1 \\
+            & \text{Let } \phi \in C_c^\infty(\Omega)
+        \end{align*}$
+
+        $\begin{align*}
+            \overset{(i)}{\implies} \int_\Omega u \phi_x\,dx
+            &= \lim_{j\to\infty} \int_\Omega u_{k_j} \phi_{x_i}\,dx \\
+            &= \lim_{j\to\infty} -\int_\Omega (u_{k_j})_{x_i} \phi\,dx \\
+            &= 0
+        \end{align*}$
+
+        $\begin{align*}
+            & \implies u \in W^{1,p}(\Omega), \quad Du = 0 \text{ a.e. in } \Omega \\
+            & \implies u \text{ is constant} & \contradiction
+        \end{align*}$
+
+

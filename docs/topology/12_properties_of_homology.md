@@ -6,14 +6,14 @@
 
 ## Singular homology for simple examples
 
-???+ example "Example 12.2"
+??? example "Example 12.2"
     Let $X = \emptyset$. Then, there are no maps from any $n$-simplex to $X$, so
     $\Csing_n(X) = 0$ for all $n$. Then, we can conclude that
 
     $$H_\bullet(X) = 0.$$
 
 
-???+ example "Example 12.3"
+??? example "Example 12.3"
     Let $X = \{*\}$ be a singleton.
 
     $$\implies H_n(*) = \begin{cases}
@@ -21,7 +21,7 @@
         0 & n \neq 0
     \end{cases}$$
 
-    ???+ proof
+    ??? proof
         $\begin{align*}
             & \forall\, n \ge 0\ \exists! \s_n : \Delta_n \to \{*\} \\
             & \implies \Csing_n(*) = \Z \s_n \cong \Z \\
@@ -42,7 +42,7 @@
 
 ## Additivity
 
-???+ definition "Definition 12.4"
+??? definition "Definition 12.4"
     ### Direct product, direct sum
 
     Let $\{G_i\}_{i \in I}$ be a family of abelian groups.
@@ -64,7 +64,7 @@
 
 
 
-???+ remark "Remark 12.5"
+??? remark "Remark 12.5"
     In the category of abelian groups,
 
     - the direct product is a product, and
@@ -75,7 +75,7 @@
     is an isomorphism.
 
 
-???+ theorem "Theorem 12.6"
+??? theorem "Theorem 12.6"
     ### Additivity of homology <a id="t126"></a>
 
     Let $(X_i)_{i \in I}$ be the path-components of $X$. Then, the map
@@ -84,7 +84,7 @@
 
     induced by the inclusions $X_i \hookrightarrow X$ is an isomorphism.
 
-    ???+ proof
+    ??? proof
         Images of any singular simplex is path-connected. Thus, $\Csing_n(X)$ splits
         as a direct sum of the subgroups $\Csing_n(X_i)$, i.e.,
 
@@ -101,14 +101,14 @@
 
 ## Zeroth homology counts path-components
 
-???+ proposition "Proposition 12.7"
+??? proposition "Proposition 12.7"
     ### H₀ of a path-connected space <a id="p127"></a>
 
     Let $X \neq \emptyset$ be a path-connected space.
 
     $$\implies H_0(X) \cong \Z$$
 
-    ???+ proof
+    ??? proof
         We have that $\partial_0 = 0$, so $C_0(X) = \ker \partial_0$ and
         $H_0(X) = C_0(X) / \Im \partial_1$.
 
@@ -123,12 +123,12 @@
 
         As $X\neq\emptyset$, $\epsilon$ is surjective.
 
-        ???+ proof "Claim: $\ker\epsilon \supseteq \Im \partial_1$"
+        ??? proof "Claim: $\ker\epsilon \supseteq \Im \partial_1$"
             Let $\s \in \Csing_1(X)$.
 
             $$\implies \epsilon \circ \partial_1(\s) = \epsilon(d_0(\s) - d_1(\s)) = 1-1 = 0$$
 
-        ???+ proof "Claim: $\ker\epsilon \subseteq \Im \partial_1$"
+        ??? proof "Claim: $\ker\epsilon \subseteq \Im \partial_1$"
             Assume $0 = \epsilon(\sum_i n_i \s_i) = \sum_i n_i$.
 
             Identify the singular $0$-simplices $\s_i$ with their image points
@@ -154,18 +154,18 @@
         \cong \Im \epsilon = \Z$$
 
 
-???+ corollary "Corollary 12.8"
+??? corollary "Corollary 12.8"
     <a id="c128"></a>
 
     $$H_0(X) = \bigoplus_{c \in \pi_0(X)} \Z$$
 
-    ???+ proof
+    ??? proof
         [P.12.7](#p127) + [T.12.6](#t126)
 
 
 ## Homotopy invariance
 
-???+ theorem "Theorem 12.9"
+??? theorem "Theorem 12.9"
     ### Homotopy invariance of homology <a id="t129"></a>
 
     Let $f, g : X \to Y$ be homotopic maps. Then, the maps
@@ -175,7 +175,7 @@
     are equal. In particular, if $f$ is a homotopy equivalence, then $H_\bullet(f)$ is an
     isomorphism.
 
-    ???+ proof "Sketch of proof"
+    ??? proof "Sketch of proof"
         Let $F : X \times [0,1] \to Y$ be a homotopy between $f$ and $g$. Equip
         $\Delta^n \times [0,1]$ with a $\Delta$-complex structure. Composing the
         $(n+1)$-simplices of this $\Delta$-complex with $F$, we can construct a *prism
@@ -192,7 +192,7 @@
 
 ## Exact sequences
 
-???+ definition "Definition 12.10"
+??? definition "Definition 12.10"
     ### Exactness
 
     Let $A \xrightarrow{f} B \xrightarrow{g} C$ be two homomorphisms of abelian groups.
@@ -203,7 +203,7 @@
     $C_n$. That is, $H_n = 0$ for all $n$.
 
 
-???+ theorem "Theorem 12.11"
+??? theorem "Theorem 12.11"
     ### Short exact sequence
 
     A **short exact sequence** of abelian groups is an exact sequence of the form
@@ -217,10 +217,10 @@
     - $g$ is surjective.
 
 
-???+ remark "Remark 12.12"
+??? remark "Remark 12.12"
     Exactness makes sense whenever we have kernels and images.
 
-???+ remark "Remark 12.13"
+??? remark "Remark 12.13"
     A short exact sequence of chain complexes is an exact sequence
 
     $$0 \to A_\bullet \xrightarrow{f} B_\bullet \xrightarrow{g} C_\bullet \to 0$$
@@ -241,7 +241,7 @@
 
 ## The long exact homology sequence
 
-???+ lemma "Lemma 12.14"
+??? lemma "Lemma 12.14"
     ### Zig-zag lemma <a id="l1219"></a>
 
     A short exact sequence of chain complexes
@@ -262,7 +262,7 @@
 
 
 
-???+ definition "Definition 12.15"
+??? definition "Definition 12.15"
     ### Connecting homomorphism
 
     The **connecting homomorphism** $\partial_n$ in the homology long exact sequence is defined as
@@ -289,12 +289,12 @@
 
 ## Diagram chases
 
-???+ lemma "Lemma 12.16"
+??? lemma "Lemma 12.16"
     <a id="l1216"></a>
 
     $\partial_*$ is a well-defined homomorphism.
 
-    ???+ proof
+    ??? proof
         $\begin{align*}
             \text{Let } e_p' \in \ker \partial : E_p \to E_{p-1} \\
         \end{align*}$
@@ -342,12 +342,12 @@
             </div>
         
 
-???+ lemma "Lemma 12.17"
+??? lemma "Lemma 12.17"
     The long homology sequence is exact at $H_p(C)$
 
     $$\dots \to H_p(E) \xrightarrow{\partial_*} H_{p-1}(C) \xrightarrow{\phi_*} H_{p-1}(D) \to \dots$$
 
-    ???+ proof
+    ??? proof
         Let $\beta = [c_{p-1}] \in H_{p-1}(C)$ for some cycle $c_{p-1}$.
 
         First assume that $\beta \in \ker \phi_*$. We have that
@@ -376,15 +376,15 @@
         $$\phi_*(\beta) = [\phi(c_{p-1})] = [\partial d_p] = 0$$
 
 
-???+ lemma "Lemma 12.18"
+??? lemma "Lemma 12.18"
     The long homology sequence is exact at $H_p(D)$
 
     $$\dots \to H_p(C) \xrightarrow{\phi_*} H_p(D) \xrightarrow{\psi_*} H_p(E) \to \dots$$
 
-    ???+ proof
+    ??? proof
         Let $\gamma = [d_p] \in H_p(D)$ for some cycle $d_p$.
 
-        ???+ proof "Claim: $\Im \phi_* \subseteq \ker \psi_*$"
+        ??? proof "Claim: $\Im \phi_* \subseteq \ker \psi_*$"
             $\begin{align*}
                 & \psi \circ \psi = 0 \\
                 & \implies \psi_* \circ \psi_* = 0 \\
@@ -417,16 +417,16 @@
         \end{align*}$
 
 
-???+ lemma "Lemma 12.19"
+??? lemma "Lemma 12.19"
     The long homology sequence is exact at $H_p(E)$
 
     $$\dots \to H_p(D) \xrightarrow{\psi_*} H_p(E) \xrightarrow{\partial_*} H_{p-1}(C) \to \dots$$
 
-    ???+ proof
+    ??? proof
         Exercise
 
 
-???+ remark "Remark 12.20"
+??? remark "Remark 12.20"
     The long homology sequence is functorial: a commutative diagram of chain complexes wit
     exact rows
 
@@ -449,7 +449,7 @@
 
 ## The Mayer-Vietoris sequence
 
-???+ theorem "Theorem 12.21"
+??? theorem "Theorem 12.21"
     ### Mayer-Vietoris sequence <a id="t1221"></a>
 
     Let $\{U, V\}$ be an open cover of $X$. Then, there is a long exact sequence
@@ -465,7 +465,7 @@
 
     where all horizontal morphisms are induced by the inclusions.
 
-    ???+ proof
+    ??? proof
         Let $\mathcal U = \{U, V\}$, and consider the short exact sequence of chain complexas
 
         $$0 \to \Csing_\bullet(U \cap V) \to \Csing_\bullet(U) \oplus \Csing_\bullet(V) \xrightarrow{j} \Csing_\bullet(\mathcal U) \to 0$$
@@ -477,7 +477,7 @@
         By [T.12.23](#t1223), $H_n(\mathcal U) \cong H_n(X)$, and the result follows.
 
 
-???+ remark "Remark 12.22"
+??? remark "Remark 12.22"
     Exactness of the Mayer-Vietoris sequence is not immediate. Consider the exact sequence
     (induced by the inclusions)
 
@@ -490,7 +490,7 @@
     The problem can be solved by subdividing the simplex, as we will see in the next theorem.
 
 
-???+ theorem "Theorem 12.23"
+??? theorem "Theorem 12.23"
     ### Locality <id="t1223"></a>
 
     Consider an open cover $\mathcal U = (U_i)_{i \in I}$ of $X$. Let
@@ -508,12 +508,12 @@
 
 Given: finite sample $P \subset X$ of unknown shape $X \subset \R^n$.
 
-???+ problem "Problem 12.24"
+??? problem "Problem 12.24"
     ### Homology inference
 
     Determine the homology $H_*(X)$.
 
-???+ problem "Problem 12.25"
+??? problem "Problem 12.25"
     ### Homological reconstruction
 
     Construct a shape $R$ with $H_*(R) \cong H_*(X)$ via a canonical isomorphism.
@@ -527,7 +527,7 @@ that covers $X$. This can work, but requires string assumptions.
 ![Thickening of X](12_properties_of_homology_images/thickening_of_X.png)
 
 
-???+ theorem "Theorem 12.26"
+??? theorem "Theorem 12.26"
     ### Cohen-Steiner, Edelsbrunner, Harer 2005 <a id="t1226"></a>
 
     Let $P \subset \R^n$ be a finite sample of a shape $X \subset \R^n$. Further, let
@@ -539,7 +539,7 @@ that covers $X$. This can work, but requires string assumptions.
 
     $$\implies H_*(X) \cong \Im H_*(P_\delta \hookrightarrow P_{2\delta})$$
 
-    ???+ proof
+    ??? proof
         ![Thickenings P_delta and P_2delta](12_properties_of_homology_images/thickening_of_X_t1225.png)
 
         <div class="cc-tikzjax">
