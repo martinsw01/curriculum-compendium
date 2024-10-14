@@ -1,0 +1,4429 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../dimension_1/">
+      
+      
+        <link rel="next" href="../regular_local_rings/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+
+    
+      
+        <title>9 Dimension Theory - Curriculum Compendium</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/lemma.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/theorem.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/corollary.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/definition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/proposition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/remark.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/example.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/admonitions/proof.css">
+    
+      <link rel="stylesheet" href="https://tikzjax.com/v1/fonts.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-dimension-theory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Curriculum Compendium" class="md-header__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curriculum Compendium
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9 Dimension Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Curriculum Compendium" class="md-nav__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Curriculum Compendium
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FEM/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    FEM
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            FEM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            1 introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/1_introduction/1_poisson_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Poisson equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/1_introduction/2_maxwell_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Maxwell equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/1_introduction/3_de_rahm_hodge-laplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 The de Rham sequence and the Hodge-Laplace equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Finite elements preserving the Hodge Helmholtz structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Finite elements preserving the Hodge Helmholtz structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/1_de_rahm_closed_hilbert_complex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 The de Rahm sequence as a closed Hilbert complex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/2_hodge_helmholtz_decomp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Continuous Hodge-Helmholtz decompositions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/3_cont_disc_de_Rham_seqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Continuous and discrete de Rham sequences in 2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/4_comp_projs_struct_of_harm_fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Computing projections and the structure of harmonic fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/5_1st_order_FE_in_2d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 First order Finite Elements in 2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/6_commuting_projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Commuting projections with geometric interpolations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    3 Well posedness of Hodge Laplacian problems in closed Hilbert compleces
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 Well posedness of Hodge Laplacian problems in closed Hilbert compleces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/1_closed_hilbert_complex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Closed Hilbert complexes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/2_FEM_approximation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 FEM approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/3_well-posedness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Well-posedness of the Hodge-Laplace problem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/4_poincare-friedrichs_inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Poincaré-Friedrichs inequalities and Stability through commuting projections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    4 High order spline finite elements on multipatch domains
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            4 High order spline finite elements on multipatch domains
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/1_seqs_of_tensor-product_spline_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1 Sequences of tensor-product spline spaces on cartesian cells
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/2_tensor_prod_spline_basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 Tensor-product spline basis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/3_extension_to_multi-pathc_domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Extension to the multi-patch domain Ω
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../PDEs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    PDEs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PDEs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Laplace and poisson equation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Laplace and poisson equation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/2_Laplace_and_poisson_equation/1_sol_lap_poiss_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Solution of the Laplace and Poisson equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/2_Laplace_and_poisson_equation/2_mean_value_props/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Mean value properties of Harmonic functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/2_Laplace_and_poisson_equation/3_regularity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Regularity of Harmonic Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/2_Laplace_and_poisson_equation/4_greens_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Green's Function Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 Heat equation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 Heat equation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/3_Heat_equation/1_solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Solutions to the heat equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/3_Heat_equation/2_uniqueness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Uniqueness of solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4 Scalar Conservation Laws and First Order Equations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            4 Scalar Conservation Laws and First Order Equations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/1_transport_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1 The transport equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/2_traffic_dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 An example from traffic dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/3_shock_wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Example of shockwave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/5_weaker_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.5 Towards a weaker definition of solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/6_rh_condition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6 Rankine-Hugoniot (R-H) Condition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/7_entropy_cond_and_riemann_problem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.7 Entropy condition and the Riemann problem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5 Sobolev Spaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            5 Sobolev Spaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/5_Sobolev_Spaces/1_elementary_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1 Elementary properties of Sobolev Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/5_Sobolev_Spaces/2_as_functions_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2 Sobolev Spaces as function spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/5_Sobolev_Spaces/3_extensions_traces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3 Extensions and traces of Sobolev functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/5_Sobolev_Spaces/4_sobolev_inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4 Sobolev Inequalities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../PDEs/6_Second_order_Elliptic_PDEs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    6 Second order Elliptic PDEs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            6 Second order Elliptic PDEs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/6_Second_order_Elliptic_PDEs/1_weak_solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1 Weak solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/6_Second_order_Elliptic_PDEs/2_regularity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2 Regularity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PDEs/6_Second_order_Elliptic_PDEs/3_maximum_principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3 Maximum Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algebra 2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algebra–geometry lexicon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra–geometry lexicon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/1algebras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hilberts nullstellensatz
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hilberts nullstellensatz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/2lemma1.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lemma 1.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/3nullstellensatz_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 1st Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/4nullstellensatz_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 2nd Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/5coordinate_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coordinate Rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Noetherian and artinian rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Noetherian and artinian rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/noetherian_and_artinian_rings/6noetherian_and_artinian_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Noether and Artin Properties for Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/noetherian_and_artinian_rings/7noether_rings_modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zariski topology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Zariski topology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/zariski_topology/affine_varieties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Affine varieties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/zariski_topology/noeth_irred_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian and Irreducible Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra%E2%80%93geometry_lexicon/zariski_topology/spectra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dimensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dimensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimensions/integral_extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Integral Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimensions/krull_dim_trans_deg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Krull Dimension and Transcendence Degree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimensions/localization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimensions/principal_ideal_thm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 The Principal Ideal Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimensions/tensor_product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Tensor product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Local rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Local rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dimension_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Rings of dimension 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9 Dimension Theory
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    9 Dimension Theory
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-the-lenght-of-a-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 The lenght of a module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1 The lenght of a module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-facts-about-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic facts about length
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-the-associated-graded-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 The Associated Graded Ring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 The Associated Graded Ring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graded-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graded ring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hilbert-samuel-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hilbert-Samuel function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-graded-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard graded ring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artin-rees-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artin-Rees Lemma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-dimensions-of-r-and-gr-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      The dimensions of \(R\) and \(\gr R\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#krulls-intersection-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Krull's Intersection Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-passing-from-grr-to-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties passing from gr(R) to R
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regular_local_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Regular local rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fractal geometry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fractal geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/IFS_with_probabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 IFS with Probabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/dynamical_systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Dynamical Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/fractal_surfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Fractal Surfaces in ℝ2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/julia_fatou_sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Julia and Fatou Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/refineable_shift-invariant_spaces_and_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Refinable Shift-Invariant Spaces and Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            1 Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/1_Introduction/1dimensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Hausdorff and box dimensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/1_Introduction/2iterated_function_system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Iterated Function System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/1_Introduction/3approximation_by_fractals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Approximation by fractals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/1_Introduction/4codespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Code space of an IFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Fractal Functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            2 Fractal Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/2_Fractal_Functions/1fractal_interp_funcs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Fractal Interpolation Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/2_Fractal_Functions/2local_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Local Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/2_Fractal_Functions/3basis_of_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Basis of Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/2_Fractal_Functions/4fractal_operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 The fractal Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fractal_geometry/2_Fractal_Functions/5box_dim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Box Dimension of Affine Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Functional analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Functional analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/duality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Duality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/duality_in_hilbert_space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 Duality in Hilbert spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/index_theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/invertibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Invertibility; notion of spectrum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/open_mapping_theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 Open mapping theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/spec_theory_of_comp_ops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Spectral theory of compact operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../functional_analysis/weak_convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Weak convergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../macroeconomics/1_Macroeconomic_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Macroeconomic variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../macroeconomics/2_Market/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Market
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../macroeconomics/3_Financial_markets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Financial markets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../macroeconomics/4_IS-LM_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 IS-LM model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exercises
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../macroeconomics/exercises/es01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise Sheet 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../topology/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Topology
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Topology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/01_concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/02_constructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Constructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/03_connectedness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Connectedness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/04_separation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Separation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/05_convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 Convergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/06_compactness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Compactness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/07_categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/08_homotopies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Homotopies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/09_fundamental_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 The fundamental group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/10_seifert-van_kampen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 The Seifert-Van Kampen Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/11_homology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Homology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/12_properties_of_homology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 Properties of homology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-the-lenght-of-a-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 The lenght of a module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1 The lenght of a module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-facts-about-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic facts about length
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-the-associated-graded-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 The Associated Graded Ring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 The Associated Graded Ring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graded-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graded ring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hilbert-samuel-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hilbert-Samuel function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-graded-ring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard graded ring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artin-rees-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artin-Rees Lemma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-dimensions-of-r-and-gr-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      The dimensions of \(R\) and \(\gr R\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#krulls-intersection-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Krull's Intersection Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-passing-from-grr-to-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties passing from gr(R) to R
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="9-dimension-theory">9 Dimension Theory</h1>
+<h2 id="91-the-lenght-of-a-module">9.1 The lenght of a module</h2>
+<details class="definition">
+<summary>Definition 9.1</summary>
+<p>Let <span class="arithmatex">\(M\)</span> be an <span class="arithmatex">\(R\)</span>-module.</p>
+<div class="arithmatex">\[\length M := \sup\{n \in \N \mid \exists\ \text{chain of submodules } M_0 \subsetneq M_1 \subsetneq \cdots \subsetneq M_n \subseteq M\}\]</div>
+</details>
+<details class="example">
+<summary>Example 9.2</summary>
+<p><strong>(1)</strong></p>
+<p>Let <span class="arithmatex">\(m=\prod_{i=1}^{n} p_i^{r_i}\)</span> with <span class="arithmatex">\(p_i \neq p_j \iff i \neq j\)</span> and <span class="arithmatex">\(r_i &gt; 0\)</span>.</p>
+<p><span class="arithmatex">\(\implies \length {\Z/m\Z} = n\)</span> </p>
+<p><strong>(2)</strong></p>
+<p><span class="arithmatex">\(\length{\Z} = \infty \text{ as a module over itself}\)</span></p>
+<p><strong>(3)</strong></p>
+<p><span class="arithmatex">\(\begin{align*}
+    \text{Let } &amp; R=K \\
+    &amp; V \text{ be a vector space over } K
+\end{align*}\)</span></p>
+<p><span class="arithmatex">\(\implies \length V = \dim_K(V)\)</span></p>
+<p><strong>(4)</strong></p>
+<p><span class="arithmatex">\(M\)</span> is simple <span class="arithmatex">\(\iff \length M = 1\)</span></p>
+<p><span class="arithmatex">\(M=\{0\} \iff \length M = 0\)</span></p>
+</details>
+<details class="theorem">
+<summary>Theorem 9.3</summary>
+<h3 id="basic-facts-about-length">Basic facts about length <a id="t93"></a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">(a)</label><label for="__tabbed_1_2">(b)</label><label for="__tabbed_1_3">(c)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(M_0 \subsetneq M_1 \subsetneq \cdots \subsetneq M_n \subseteq M\)</span> be a maximal chain of submodules.</p>
+<div class="arithmatex">\[\implies \length M = n\]</div>
+<p>Moreover, all maximal chains have equal length.</p>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[\length M \le \infty \iff M \text{ is Artinian and Noetherian}\]</div>
+</div>
+<div class="tabbed-block">
+<p>For a submodule <span class="arithmatex">\(N \subseteq M\)</span>:</p>
+<div class="arithmatex">\[\length M = \length N + \length{M/N}\]</div>
+</div>
+</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">(a)</label><label for="__tabbed_2_2">(b)</label><label for="__tabbed_2_3">(c)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Induction on <span class="arithmatex">\(n\)</span>:</p>
+<p><span class="arithmatex">\(n=0 \implies M=\{0\}\)</span></p>
+<p><span class="arithmatex">\(n&gt;0\)</span>:</p>
+<p>Consider the submodule <span class="arithmatex">\(N \subsetneq M\)</span>, and form <span class="arithmatex">\(N_i:= N \cap M_i\)</span>.</p>
+<div class="arithmatex">\[\implies \{0\} = N_0 \subseteq N_1 \subseteq \cdots \subseteq N_n = N\]</div>
+<p>Let <span class="arithmatex">\(C:=\{N_i\}_{i=0}^n\)</span> be a chain of submodules of <span class="arithmatex">\(N\)</span>. We have the homomorphism</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \phi_i : N_i &amp;\to M_i/M_{i-1} \\
+    \eta &amp;\mapsto \eta + M_{i-1}
+\end{align*}
+\]</div>
+<p><span class="arithmatex">\(\begin{align*}
+    \implies &amp; \ker \phi_i = N_{i-1} \\
+    \implies &amp; N_i/N_{i-1} \subsetsim M_i/M_{i-1} \text{ simple} \\
+    \implies &amp; N_i = N_{i-1} \lor N_i/N_{i-1} \text{ simple} \\
+    \implies &amp; C \text{ is a maximal chain of submodules of } N \\
+    \implies &amp; \length C \le n
+\end{align*}\)</span></p>
+<details class="proof">
+<summary>Claim: <span class="arithmatex">\(\length C &lt; n\)</span></summary>
+<p>Assume <span class="arithmatex">\(\length C = n\)</span>. We want to show by induction on <span class="arithmatex">\(i\)</span> that it implies <span class="arithmatex">\(M_i=N_i\)</span>.</p>
+<p>It is tirvially true for <span class="arithmatex">\(i=0\)</span>. For <span class="arithmatex">\(i&gt;0\)</span>, we have by assumption that <span class="arithmatex">\(N_i/N_{i-1} \neq \{0\}\)</span>,
+so the map <span class="arithmatex">\(\phi_i\)</span> is surjective.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    \implies &amp; N_i/N_{i-1} \cong M_i/M_{i-1} \\
+    \overset{\text{ind }i}{\implies} &amp; N_i/M_{i-1} \cong M_i/M_{i-1} \\
+    \implies &amp; M_i \subseteq N_i + M_{i-1} \overset{\text{ind }i}{=} N_i + N_{i-1} = N_i \subseteq M_i \\
+    \implies &amp; M_i = N_i \\
+    \implies &amp; M = N \quad \contradiction \\
+    \implies &amp; \length C &lt; n \\
+\end{align*}\)</span></p>
+</details>
+<p><span class="arithmatex">\(\begin{align*}
+    \overset{\text{ind } n}{\implies} &amp; \length N &lt; n \\
+    \implies &amp; \length M \le n \\
+    \implies &amp; \length M = n
+\end{align*}\)</span></p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="arithmatex">\(\impliedby\)</span></label><label for="__tabbed_3_2"><span class="arithmatex">\(\implies\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A assume M neither Artinian nor Noetherian.</p>
+<div class="arithmatex">\[\implies \length M = \infty\]</div>
+</div>
+<div class="tabbed-block">
+<p>Assume without loss <span class="arithmatex">\(M \neq \{0\}\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies &amp; \exists\ M_1 \subsetneq M \text{ with nothing inbetween} \\
+    &amp; \vdots \\
+    \implies &amp; \exists\ M_k = \{0\} \subsetneq M_{k-1} \text{ with nothing inbetween} \\
+    \overset{\text{(a)}}{\implies} &amp; \length M = k &lt; \infty
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p>For <span class="arithmatex">\(\length N = \infty\)</span> or <span class="arithmatex">\(\length {M/N} = \infty\)</span>, the equality is trivial.</p>
+<p>Assume <span class="arithmatex">\(\length N &lt; \infty\)</span> and <span class="arithmatex">\(\length {M/N} &lt; \infty\)</span>.</p>
+<p>Then, there exist maximal chains <span class="arithmatex">\(C_N\)</span> and <span class="arithmatex">\(C_{M/N}\)</span>. Putting these together, we get by (a)</p>
+<div class="arithmatex">\[\length M = \length N + \length {M/N}\]</div>
+</div>
+</div>
+</div>
+</details>
+</details>
+<details class="lemma">
+<summary>Lemma 9.4</summary>
+<p>Let <span class="arithmatex">\((R, \m)\)</span> be a local Noetherian ring.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies \exists\ &amp; p \in \Q[x] \text{ s.t.} \\
+    &amp; \length {R/\m^d} \le p(d) \land \deg p = \dim R
+\end{align*}
+\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>By <a href="../dimensions/integral_extensions/#c89">C.8.9</a>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \exists\ &amp; a_1, \dots, a_n \in \m \text{ s.t.} \\
+    &amp; m = \sqrt{(a_1, \dots, a_n)} \\
+\end{align*}
+\]</div>
+<p>Let <span class="arithmatex">\(q:=(a_1, \dots, a_n)\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies &amp; g \subseteq m \\
+    \implies &amp; q^d \subseteq \m^d \\
+    \implies &amp; \text{ Obtain } R/q^d \surjectiveto R/\m^d \\
+    \implieshref{#t93}{T.9.3(c)} &amp; \length {R/\m^d} \le \length {R/q^d} \quad (*)
+\end{align*}
+\]</div>
+<p>We have a chain</p>
+<div class="arithmatex">\[\{0\} = q^d/q^d \subseteq q^{d-1}/q^d \subseteq \cdots \subseteq q/q^d \subseteq R/q^d\]</div>
+<p>with factors <span class="arithmatex">\(q^i/q^{i+1}\)</span>. For every <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(q^i\)</span> is generated by monomials of degree <span class="arithmatex">\(i\)</span> in <span class="arithmatex">\(a_1, \dots, a_n\)</span>.
+By <a href="../dimensions/integral_extensions/#l819">L.8.19</a>,
+there are <span class="arithmatex">\(k_i:=\binom{i+n}{n} - \binom{i+n-1}{n}\)</span> such monomials. Hence, <span class="arithmatex">\(q^i/q^{i+1}\)</span> can
+be generated by <span class="arithmatex">\(k_i\)</span> elements as an <span class="arithmatex">\(R/q\)</span>-module, yielding <span class="arithmatex">\((R/q)^{k_i} \surjectiveto q^i/q^{i+1}\)</span>. Then,
+by <span class="arithmatex">\((*)\)</span> and <a href="#t93">T.9.3(c)</a>, we get</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \length {R/\m^d} &amp;\le \length {R/q^d} \\
+    &amp;= \sum_{i=0}^{d-1} \length {q^i/q^{i+1}} \\
+    &amp;\le \length {(R/q)^{k_i}} \\
+    &amp;= \sum_{i=0}^{d-1} k_i \length {R/q} \\
+    &amp;= \binom{d-1+n}{n} \length {R/q} =: p(d)
+\end{align*}
+\]</div>
+</details>
+</details>
+<h2 id="92-the-associated-graded-ring">9.2 The Associated Graded Ring</h2>
+<details class="definition">
+<summary>Definition: Graded ring</summary>
+<h3 id="graded-ring">Graded ring <a id="d92"></a></h3>
+<p>A ring <span class="arithmatex">\(S\)</span> such that</p>
+<div class="arithmatex">\[S = \bigoplus_{d \in \N_0} S_d\]</div>
+<p>with <span class="arithmatex">\(S_d\)</span> abelian groups and <span class="arithmatex">\(\forall\ i,j : S_i \cdot S_j \subseteq S_{j+i}\)</span> 
+is called a <strong>graded ring</strong>.</p>
+<p>Elements from <span class="arithmatex">\(S_d\)</span> are called <strong>homogeneous of degree <span class="arithmatex">\(d\)</span></strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: <span class="arithmatex">\(R[t]\)</span> with <span class="arithmatex">\(R[t]_d:=R \cdot t^d\)</span> is a graded ring</p>
+</div>
+</details>
+<details class="definition">
+<summary>Definition: Associated Graded Ring</summary>
+<p>Let <span class="arithmatex">\((R, \m)\)</span> be a local ring. Then the ring</p>
+<div class="arithmatex">\[\gr R := R^*/(\m)_{R^*}\]</div>
+<p>is called the <strong>associated graded ring</strong> of <span class="arithmatex">\(R\)</span>.</p>
+<p>The graded components are given by</p>
+<div class="arithmatex">\[\gr{R}_d := R_d^*/(R_d^* \cdot \m) \cong \m^d/\m^{d+1}\]</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark: <span class="arithmatex">\(\gr R\)</span> is a Noetherian ring</p>
+<p>As <span class="arithmatex">\(R\)</span> is Noetherian, <span class="arithmatex">\(\m=(c_1, \dots, c_n)_R\)</span> is finitely generated as an <span class="arithmatex">\(R\)</span>-module, making</p>
+<div class="arithmatex">\[R^* = R[\m t] = R[c_1 t, \dots, c_n t]\]</div>
+<p>a Noetherian ring.</p>
+</div>
+</details>
+<details class="definition">
+<summary>Definition: Hilbert-Samuel function of <span class="arithmatex">\(R\)</span></summary>
+<h3 id="hilbert-samuel-function">Hilbert-Samuel function</h3>
+<div class="arithmatex">\[h_R(d):= \length {R/\m^{d+1}}\]</div>
+</details>
+<details class="definition">
+<summary>Definition: Standard graded ring</summary>
+<h3 id="standard-graded-ring">Standard graded ring</h3>
+<p>A graded ring <span class="arithmatex">\(A\)</span>, with <span class="arithmatex">\(A_0 = K\)</span> being a field and <span class="arithmatex">\(A\)</span> being finitely generated by
+elements of <span class="arithmatex">\(A_1\)</span> as a <span class="arithmatex">\(K\)</span>-algebra, is called a <strong>standard graded ring</strong>.</p>
+</details>
+<details class="theorem">
+<summary>Theorem 9.5</summary>
+<p><a id="t95"></a>
+Let <span class="arithmatex">\(A\)</span> be a standard graded ring.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies \exists\ &amp; p_A \in \Q[x] \text{ s.t.} \\
+    &amp; \dim_K(A_d) = p_A(d) \quad \forall\ d \text{ large enough}
+\end{align*}
+\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Proving a stronger assertion: For a finitely generated <span class="arithmatex">\(A\)</span>-module <span class="arithmatex">\(M\)</span>, <span class="arithmatex">\(\dim_K(M_d)\)</span> can be given by a
+polynomial for large enough <span class="arithmatex">\(d\)</span>.</p>
+<p>Note, that the generators of <span class="arithmatex">\(M\)</span> can be chosen honogeneous, so (for some reason) each <span class="arithmatex">\(M_d\)</span> are
+finite-dimensional <span class="arithmatex">\(K\)</span>-vector spaces.</p>
+<p>We have that <span class="arithmatex">\(A:=K[a_1, \dots, a_n]\)</span> with <span class="arithmatex">\(a_i \in A_1\)</span>. We use induction on <span class="arithmatex">\(n\)</span>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><span class="arithmatex">\(n=0\)</span></label><label for="__tabbed_4_2"><span class="arithmatex">\(n&gt;0\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+    \implieshref{../../dimensions/krull_dim_trans_deg/#t411}{T.4.11}
+    &amp; \dim_K(A) &lt; \infty \\
+    \implies &amp; \dim_K(M) &lt; \infty \text{ as } M \text{ is f.g.}\\
+    \implies &amp; \dim_K(M_d) = 0 \quad \forall\ d \text{ large enough}
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>Consider the map</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \phi : M &amp;\to M \\
+    m &amp;\mapsto a_1 m
+\end{align*}
+\]</div>
+<p>Then, <span class="arithmatex">\(L:=\ker \phi\)</span> and <span class="arithmatex">\(N:=\Im \phi\)</span> are graded submodules of <span class="arithmatex">\(M\)</span>, and f.g.
+as <span class="arithmatex">\(A\)</span> is Noetherian.</p>
+<p>Moreover, <span class="arithmatex">\(N_{d+1} \cong M_d/L_d\)</span> (?), so</p>
+<div class="arithmatex">\[\dim_K(N_{d+1}) = \dim_K(M_d) - \dim_K(L_d)\]</div>
+<p>The factor module <span class="arithmatex">\(Q:=M/N\)</span> is also f.g. and graded and we get the recursion relation</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \dim_K(M_{d+1}) &amp;= \dim_K(Q_{d+1}) + \dim_K(N_{d+1}) \\
+    &amp;= \dim_K(Q_{d+1}) + \dim_K(M_d) - \dim_K(L_d)
+\end{align*}
+\]</div>
+<p>This yields</p>
+<div class="arithmatex">\[\dim_K(M_d) = \dim_K(M_0) + \sum_{i=1}^{d} \dim_K(Q_i) - \sum_{i=0}^{d-1} \dim_K(L_i)\]</div>
+<p><span class="arithmatex">\(\begin{align*}
+    &amp; a_1 \text{ annihilates } L \text{ and } Q \\
+    &amp; \!\!\implies N \text{ and } Q \text{ are } A/a_1 \text{-modules. }
+    A/a_1 \text{ is a standard graded ring with } n-1 \text{ generators} \\
+    &amp; \!\!\overset{\text{ind}}{\implies} \dim_K(M_d) \text{ is given by a polynomial for large enough } d
+\end{align*}\)</span></p>
+</div>
+</div>
+</div>
+</details>
+</details>
+<details class="remark">
+<summary>Remark</summary>
+<p><a href="#t95">T.9.5</a> shows that the hilbert polynomial is given by a polynomial in <span class="arithmatex">\(\Q[x]\)</span> for large <span class="arithmatex">\(d\)</span>.</p>
+<div class="arithmatex">\[\exists\ p_R \in \Q[x] : h_R(d) = \length {R/\m^{d+1}} = p_R(d)\]</div>
+</details>
+<details class="lemma">
+<summary>Lemma 9.6</summary>
+<h3 id="artin-rees-lemma">Artin-Rees Lemma <a id="l96"></a></h3>
+<p>Let <span class="arithmatex">\(I \ideal R\)</span> be an ideal.</p>
+<div class="arithmatex">\[\implies \exists\ r \in \N : I \cap \m^n = \m^{n-r} \cdot (I \cap \m^r) \quad \forall\ n \ge r\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p><span class="arithmatex">\(\begin{align*}
+    \text{Let } &amp; R^* := R[\m t] \\
+    &amp; J_d:= \sum_{i=0}^{d} R^* (I \cap \m^i) t^i \ideal R^*
+\end{align*}\)</span></p>
+<p>Then, <span class="arithmatex">\(R^*\)</span> is Noetherian, as it is finitely generated over a noetherian ring.</p>
+<div class="arithmatex">\[\implies \exists\ r\ge 0 : J_d = J_r \quad \forall\ d \ge r\]</div>
+<p>Moreover, observe that <span class="arithmatex">\((I \cap \m^n) t^n \subseteq R_n^*\)</span> is of degree <span class="arithmatex">\(n\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies (I \cap \m^n) t^n \subseteq R_n^* \cap J_n &amp;= \sum_{i=0}^{r} R_{n-i}^* (I \cap \m^i) t^i \\
+    &amp;= \sum_{i=0}^{r} \m^{n-i} (I \cap \m^i) t^n \\
+    &amp;= \sum_{i=0}^{r} \m^{n-r} \m^{r-i}(I \cap \m^i) t^n \\
+    &amp;\subseteq \m^{n-r} \cdot (I \cap \m^r) t^n
+\end{align*}
+\]</div>
+<p>So we have</p>
+<div class="arithmatex">\[\m^{n-r} \cdot (I \cap \m^r) \subseteq I \cap \m^n \subseteq \m^{n-r} \cdot (I \cap \m^r)\]</div>
+</details>
+</details>
+<details class="lemma">
+<summary>Lemma 9.7</summary>
+<p>Let <span class="arithmatex">\(a \in \m\)</span> not be a zero divisor.</p>
+<div class="arithmatex">\[\implies \dim(\gr {R/Ra}) &lt; \dim(\gr R)\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<div class="arithmatex">\[
+\begin{align*}
+    \m \in \Specmax R &amp;\implies \m/Ra \in \Specmax {R/Ra} \\
+    &amp;\implies h_{R/Ra}(d) = \length {M_d}, \quad M_d:= (R/Ra)/(\m/Ra)^{d+1} \\
+\end{align*}
+\]</div>
+<p>The natural epimorphism <span class="arithmatex">\(R \surjectiveto M_d\)</span> has kernel <span class="arithmatex">\(Ra + m^{d+1}\)</span>, so we obtain an epimorphism
+<span class="arithmatex">\(R/\m^{d+1} \surjectiveto M_d\)</span> with kernel</p>
+<div class="arithmatex">\[(Ra + \m^{d+1})/\m^{d+1} \cong Ra/(Ra \cap \m^{d+1})\]</div>
+<p>Then, by <a href="#t93">T.9.3(c)</a>, we get</p>
+<div class="arithmatex">\[\length {M_d} = \length {R/\m^{d+1}} - \length {Ra/(Ra \cap \m^{d+1})}\]</div>
+<p>By <a href="#l96">L.9.6</a>, we have</p>
+<div class="arithmatex">\[\exists\ r\ge 0 : Ra \cap \m^{d+1} = \m^{d+1-r} \cdot (Ra \cap \m^r) \subseteq m^{d+1-r} a, \quad d&gt;r\]</div>
+<p>which yields an epimorphism <span class="arithmatex">\(Ra/(Ra \cap \m^{d+1}) \surjectiveto Ra/\m^{d+1-r} a \cong R/\m^{d+1-r}\)</span>.
+Thus, we get a lower bound for the length of <span class="arithmatex">\(Ra/\left(Ra \cap \m^{d+1}\right)\)</span>:</p>
+<div class="arithmatex">\[
+\begin{align*}
+    h_{R/Ra}(d) &amp;= \length {M_d} \\
+    &amp;\le \length {R/\m^{d+1}} -  \length {R/\m^{d+1-r}} \\
+    &amp;= h_R(d) - h_R(d-r)
+\end{align*}
+\]</div>
+<p>for large enough <span class="arithmatex">\(d\)</span>. Now, using <a href="../../dimensions/integral_extensions/#t822">T.8.22</a>, we get</p>
+<div class="arithmatex">\[\dim(\gr R) = \deg h_{R/Ra} &lt; \deg h_R = \dim(\gr R)\]</div>
+</details>
+</details>
+<details class="theorem">
+<summary>Theorem 9.8</summary>
+<h3 id="the-dimensions-of-r-and-gr-r">The dimensions of <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(\gr R\)</span> <a id="t98"></a></h3>
+<p>Let <span class="arithmatex">\(R\)</span> be a local Noetherian ring.</p>
+<div class="arithmatex">\[ \implies \dim(\gr R) = \dim R\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><span class="arithmatex">\(\le\)</span></label><label for="__tabbed_5_2"><span class="arithmatex">\(\ge\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Follows from <a href="../../dimensions/integral_extensions/#t822">T.8.22</a> and <a href="#l94">L.9.4</a>.</p>
+</div>
+<div class="tabbed-block">
+<details class="proof">
+<summary>Claim: We may assume <span class="arithmatex">\(R\)</span> to be an integral domain</summary>
+<p>Let <span class="arithmatex">\(P \in \Spec R\)</span>.</p>
+<p>We have an epimorphism <span class="arithmatex">\(R/\m^{d+1} \surjectiveto (R/P)/(\m/P)^{d+1}\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies &amp; h_R(d) \ge h_{R/P}(d) \\
+    \implies &amp; \deg (h_R) \ge \deg (h_{R/P}) \\
+    \implies &amp; \dim(R/P) \ge \dim(\gr {R/P})
+\end{align*}
+\]</div>
+<p>so we may assume <span class="arithmatex">\(R\)</span> to be an integral domain.</p>
+</details>
+<p>Induction on <span class="arithmatex">\(\dim (\gr R) =: n\)</span>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><span class="arithmatex">\(n=0\)</span></label><label for="__tabbed_6_2"><span class="arithmatex">\(n&gt;0\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+    \implieshref{../../algebra–geometry_lexicon/noetherian_and_artinian_rings/7noether_rings_modules/#t411}{T.4.11}
+    &amp; \dim_K(\gr R) &lt; \infty \\
+    \implies &amp; \gr{R}_d = \{0\} \quad \forall\ d \text{ large enough} \\
+    \implies &amp; \m^d / \m^{d+1} = \{0\} \\
+    \implies &amp; \m^d = \m \cdot \m^d \\
+    \implieshref{../../dimensions/principal_ideal_thm/#nakajama-lemma}{N.L.}
+    &amp; \m^d = \{0\} \\
+    \implies &amp; \m = \{0\} \\
+    \implies &amp; R \text{ is a field} \\
+    \implies &amp; \dim R = 0
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(P_0 \subsetneq P_1 \subsetneq \cdots \subsetneq P_k \in \Spec R\)</span> be a chain.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    \implies &amp; \exists\ a \in P_1 \setminus \{0\} \\
+    \implieshref{#l97}{L.9.7} &amp;\dim(\gr{R/Ra}) &lt; \dim(\gr R) \\
+    \overset{\text{ind}}{\implies} &amp; \dim(R/Ra) \ge \dim(\gr{R/Ra}) \\
+    \implies &amp; \dim(\gr R) &gt; k-1 \\
+    \implies &amp; \dim(\gr R) \ge k
+\end{align*}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+</details>
+<details class="theorem">
+<summary>Theorem 9.9</summary>
+<h3 id="krulls-intersection-theorem">Krull's Intersection Theorem <a id="t99"></a></h3>
+<div class="arithmatex">\[ \bigcap_{d\in\N_0} \m^d = \{0\}\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p><span class="arithmatex">\(\begin{align*}
+    &amp;\text{Let } I:=\bigcap_{d\in\N_0} m^d \\
+    &amp;\implieshref{#l96}{A.R.} \exists\ r : I \cap \m^n = \m^{n-r} \cdot (I \cap \m^r) \quad \forall\ n \ge r \\
+    &amp;\implies\! I = \m I \\
+    &amp;\implieshref{../../dimensions/principal_ideal_thm/#nakajama-lemma}{N.L.}
+    I = \{0\}
+\end{align*}\)</span></p>
+</details>
+</details>
+<details class="definition">
+<summary>Definition: Order</summary>
+<p>Let <span class="arithmatex">\(a \in R\)</span>. Then there exists <span class="arithmatex">\(d\in \N_0\)</span> s.t. <span class="arithmatex">\(a \in \m^d \setminus \m^{d+1}\)</span>. We call this
+number the <strong>order</strong> of <span class="arithmatex">\(a\)</span>:</p>
+<div class="arithmatex">\[\ord(a) := d\]</div>
+<p>From the isomorphism <span class="arithmatex">\(\gr{R}_d \cong \m^d/\m^{d+1}\)</span>, we can define</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \gr a &amp;:= a + \m^{d+1} \in \gr{R}_d \setminus \{0\} \\
+    \gr 0 &amp;:= 0
+\end{align*}
+\]</div>
+<details class="remark" open="open">
+<summary>Remark</summary>
+<p>For <span class="arithmatex">\(a, b \in R\)</span> with nonzero orders <span class="arithmatex">\(\ord(a) = d\)</span> and <span class="arithmatex">\(\ord(b) = e\)</span>, we have</p>
+<div class="arithmatex">\[\gr{ab} = \gr a \gr b = ab + \m^{d+e+1} \in \gr{R}_{d+e}\]</div>
+<p>If one of <span class="arithmatex">\(a\)</span> or <span class="arithmatex">\(b\)</span> has order <span class="arithmatex">\(0\)</span>, then <span class="arithmatex">\(\gr{ab} = 0\)</span>, and the above equality does not hold.</p>
+</details>
+</details>
+<details class="theorem">
+<summary>Theorem 9.10</summary>
+<h3 id="properties-passing-from-grr-to-r">Properties passing from gr(R) to R <a id="t910"></a></h3>
+<p><strong>(a)</strong> <span class="arithmatex">\(\gr R\)</span> is an integral domain <span class="arithmatex">\(\implies R\)</span> is an integral domain.</p>
+<p><strong>(b)</strong> <span class="arithmatex">\(\gr R\)</span> is a normal domain <span class="arithmatex">\(\implies R\)</span> is a normal domain.</p>
+<details class="proof">
+<summary>Proof</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">(a)</label><label for="__tabbed_7_2">(b)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(a, b \in R\)</span> with order <span class="arithmatex">\(d\)</span> and <span class="arithmatex">\(e\)</span>.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    &amp; \overset{\text{hyp}}{\implies} \gr{a} \gr{b} \neq 0 \\
+    &amp; \implies ab \notin \m^{d+e+1} \\
+    &amp; \implies ab \neq 0
+\end{align*}\)</span></p>
+</div>
+<div class="tabbed-block">
+<p>From <strong>(a)</strong>, we know that <span class="arithmatex">\(R\)</span> is an integral domain, and thus, we can define the field of fractions.</p>
+<p>Let <span class="arithmatex">\(\frac{a}{b} \in \Quot(R)\)</span> be integral over <span class="arithmatex">\(R\)</span>. R.T.P: <span class="arithmatex">\(a \in (b)_R\)</span>.</p>
+<details class="proof">
+<summary>Claim: <span class="arithmatex">\(\forall\ n\in\N_0 : a \in m^n + (b)_R\)</span></summary>
+<p>Using induction on <span class="arithmatex">\(n\)</span>. For <span class="arithmatex">\(n=0\)</span>, this is trivial.</p>
+<p>Let <span class="arithmatex">\(n&gt;0\)</span>. By induction, we have that <span class="arithmatex">\(a \in \m^{n-1} + (b)_R\)</span>, so we can write
+<span class="arithmatex">\(a = \tilde a + rb\)</span> with <span class="arithmatex">\(\tilde a \in \m^{n-1}\)</span> and <span class="arithmatex">\(r \in R\)</span>.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    \implies&amp; \frac{\tilde a}{b} = \frac{a}{b} - r \in \Quot(R) \text{ is integral} \\
+    \implieshref{../../dimensions/integral_extensions/#l8.11}{L.8.11}&amp;
+    \frac{\tilde a}{b} \text{ is almost integral} \\
+    \implies&amp; c \tilde a^l = r_l b^l \\
+    \implies&amp; \gr c \gr{\tilde a}^l = \gr{r_l} \gr b^l \\
+    \implies&amp; \frac{\gr {\tilde a}}{\gr b} \in \Quot(\gr R) \text{ is almost integral} \\
+    \implieshref{../../dimensions/integral_extensions/#l8.11}{L.8.11}&amp;
+    \frac{\gr {\tilde a}}{\gr b} \text{ is integral} \\
+    \overset{\text{hyp}}{\implies} &amp;
+    \frac{\gr {\tilde a}}{\gr b} \in \gr R \\
+    \implies&amp; \gr {\tilde a} = g \cdot \gr b, \quad g \in \gr R \\
+    \implies&amp; g \in \gr{R}_{n-1-\ord(b)} \\
+    \implies&amp; g \in \m^{n-1-\ord(b)} \setminus \m^{n-\ord(b)} \\
+\end{align*}\)</span></p>
+<p>So we can write <span class="arithmatex">\(g = s + \m^{n-\ord(b)}\)</span> with <span class="arithmatex">\(s \in \m^{n-1-\ord(b)}\)</span>.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    \implies&amp; \gr a = \gr s \gr b \\
+    \implies&amp; \tilde a + \m^n = sb + \m^n \\
+    \implies&amp; a = (\tilde a - sb) + (r + s) b \in \m^n + (b)_R
+\end{align*}\)</span></p>
+</details>
+<p>Let <span class="arithmatex">\(\overline R:= R/(b)\)</span></p>
+<p><span class="arithmatex">\(b \notin \m \implies b \in R^\times \implies a \in (b)\)</span></p>
+<p>Assume <span class="arithmatex">\(b \in \m\)</span>.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    \overset{\text{claim}}{\implies}&amp; \overline a \in \overline \m^n, \quad \forall\ n\in\N \\
+    \implieshref{#t9.9}{T.9.9}&amp; \overline a = 0 \\
+    \implies&amp; a \in (b)_R
+\end{align*}\)</span></p>
+</div>
+</div>
+</div>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "navigation.instant", "search.highlight", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/convert_to_tikzjax_script.js"></script>
+      
+    
+  </body>
+</html>

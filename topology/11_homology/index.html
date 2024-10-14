@@ -1,0 +1,4594 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../10_seifert-van_kampen/">
+      
+      
+        <link rel="next" href="../12_properties_of_homology/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+
+    
+      
+        <title>11 Homology - Curriculum Compendium</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/lemma.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/theorem.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/corollary.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/definition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/proposition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/remark.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/example.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions/proof.css">
+    
+      <link rel="stylesheet" href="https://tikzjax.com/v1/fonts.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11-homology" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Curriculum Compendium" class="md-header__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curriculum Compendium
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11 Homology
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curriculum Compendium" class="md-nav__button md-logo" aria-label="Curriculum Compendium" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Curriculum Compendium
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../FEM/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    FEM
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            FEM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            1 introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/1_introduction/1_poisson_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Poisson equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/1_introduction/2_maxwell_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Maxwell equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/1_introduction/3_de_rahm_hodge-laplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 The de Rham sequence and the Hodge-Laplace equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Finite elements preserving the Hodge Helmholtz structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Finite elements preserving the Hodge Helmholtz structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/1_de_rahm_closed_hilbert_complex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 The de Rahm sequence as a closed Hilbert complex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/2_hodge_helmholtz_decomp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Continuous Hodge-Helmholtz decompositions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/3_cont_disc_de_Rham_seqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Continuous and discrete de Rham sequences in 2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/4_comp_projs_struct_of_harm_fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Computing projections and the structure of harmonic fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/5_1st_order_FE_in_2d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 First order Finite Elements in 2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/2_Finite_elements_preserving_the_Hodge-Helmholtz_structure/6_commuting_projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Commuting projections with geometric interpolations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    3 Well posedness of Hodge Laplacian problems in closed Hilbert compleces
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 Well posedness of Hodge Laplacian problems in closed Hilbert compleces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/1_closed_hilbert_complex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Closed Hilbert complexes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/2_FEM_approximation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 FEM approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/3_well-posedness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Well-posedness of the Hodge-Laplace problem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/3_Well-posedness_of_Hodge-Laplacian_problems_in_closed_Hilbert_compleces/4_poincare-friedrichs_inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Poincaré-Friedrichs inequalities and Stability through commuting projections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    4 High order spline finite elements on multipatch domains
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            4 High order spline finite elements on multipatch domains
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/1_seqs_of_tensor-product_spline_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1 Sequences of tensor-product spline spaces on cartesian cells
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/2_tensor_prod_spline_basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 Tensor-product spline basis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FEM/4_High_order_spline_finite_elements_on_multipatch_domains/3_extension_to_multi-pathc_domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Extension to the multi-patch domain Ω
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../PDEs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    PDEs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PDEs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Laplace and poisson equation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 Laplace and poisson equation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/2_Laplace_and_poisson_equation/1_sol_lap_poiss_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Solution of the Laplace and Poisson equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/2_Laplace_and_poisson_equation/2_mean_value_props/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Mean value properties of Harmonic functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/2_Laplace_and_poisson_equation/3_regularity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Regularity of Harmonic Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/2_Laplace_and_poisson_equation/4_greens_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Green's Function Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 Heat equation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 Heat equation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/3_Heat_equation/1_solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Solutions to the heat equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/3_Heat_equation/2_uniqueness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Uniqueness of solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4 Scalar Conservation Laws and First Order Equations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            4 Scalar Conservation Laws and First Order Equations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/1_transport_eq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1 The transport equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/2_traffic_dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 An example from traffic dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/3_shock_wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Example of shockwave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/5_weaker_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.5 Towards a weaker definition of solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/6_rh_condition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6 Rankine-Hugoniot (R-H) Condition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/4_Scalar_Conservation_Laws_and_First-Order_Equations/7_entropy_cond_and_riemann_problem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.7 Entropy condition and the Riemann problem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5 Sobolev Spaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            5 Sobolev Spaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/5_Sobolev_Spaces/1_elementary_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1 Elementary properties of Sobolev Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/5_Sobolev_Spaces/2_as_functions_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2 Sobolev Spaces as function spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/5_Sobolev_Spaces/3_extensions_traces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3 Extensions and traces of Sobolev functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/5_Sobolev_Spaces/4_sobolev_inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4 Sobolev Inequalities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../PDEs/6_Second_order_Elliptic_PDEs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    6 Second order Elliptic PDEs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            6 Second order Elliptic PDEs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/6_Second_order_Elliptic_PDEs/1_weak_solutions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1 Weak solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/6_Second_order_Elliptic_PDEs/2_regularity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2 Regularity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PDEs/6_Second_order_Elliptic_PDEs/3_maximum_principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3 Maximum Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../algebra_2/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algebra 2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algebra–geometry lexicon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algebra–geometry lexicon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/1algebras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hilberts nullstellensatz
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hilberts nullstellensatz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/2lemma1.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lemma 1.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/3nullstellensatz_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 1st Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/4nullstellensatz_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert's 2nd Nullstellensatz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/hilberts_nullstellensatz/5coordinate_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coordinate Rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Noetherian and artinian rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Noetherian and artinian rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/noetherian_and_artinian_rings/6noetherian_and_artinian_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Noether and Artin Properties for Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/noetherian_and_artinian_rings/7noether_rings_modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian Rings and Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zariski topology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Zariski topology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/zariski_topology/affine_varieties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Affine varieties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/zariski_topology/noeth_irred_spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Noetherian and Irreducible Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/algebra%E2%80%93geometry_lexicon/zariski_topology/spectra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dimensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dimensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/dimensions/integral_extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Integral Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/dimensions/krull_dim_trans_deg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Krull Dimension and Transcendence Degree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/dimensions/localization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/dimensions/principal_ideal_thm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 The Principal Ideal Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/dimensions/tensor_product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Tensor product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Local rings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Local rings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/local_rings/dimension_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Rings of dimension 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/local_rings/dimension_theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 Dimension Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algebra_2/local_rings/regular_local_rings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Regular local rings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fractal geometry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fractal geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/IFS_with_probabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 IFS with Probabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/dynamical_systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Dynamical Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/fractal_surfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Fractal Surfaces in ℝ2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/julia_fatou_sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Julia and Fatou Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/refineable_shift-invariant_spaces_and_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Refinable Shift-Invariant Spaces and Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            1 Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/1_Introduction/1dimensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Hausdorff and box dimensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/1_Introduction/2iterated_function_system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Iterated Function System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/1_Introduction/3approximation_by_fractals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Approximation by fractals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/1_Introduction/4codespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Code space of an IFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Fractal Functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            2 Fractal Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/2_Fractal_Functions/1fractal_interp_funcs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Fractal Interpolation Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/2_Fractal_Functions/2local_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Local Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/2_Fractal_Functions/3basis_of_fractal_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Basis of Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/2_Fractal_Functions/4fractal_operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 The fractal Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fractal_geometry/2_Fractal_Functions/5box_dim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Box Dimension of Affine Fractal Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Functional analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Functional analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/duality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Duality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/duality_in_hilbert_space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 Duality in Hilbert spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/index_theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/invertibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Invertibility; notion of spectrum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/open_mapping_theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 Open mapping theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/spec_theory_of_comp_ops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Spectral theory of compact operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functional_analysis/weak_convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Weak convergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macroeconomics/1_Macroeconomic_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Macroeconomic variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macroeconomics/2_Market/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Market
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macroeconomics/3_Financial_markets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Financial markets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macroeconomics/4_IS-LM_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 IS-LM model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exercises
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macroeconomics/exercises/es01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercise Sheet 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Topology
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Topology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_constructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Constructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_connectedness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Connectedness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_separation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Separation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 Convergence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_compactness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Compactness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_categories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_homotopies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8 Homotopies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_fundamental_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 The fundamental group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_seifert-van_kampen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 The Seifert-Van Kampen Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    11 Homology
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    11 Homology
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#singular-simplices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular simplices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Singular simplices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-n-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard n-simplex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-n-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular n-simplex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singular-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular chains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Singular chains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#free-abelian-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free abelian group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular chain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#every-boundary-is-a-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Every boundary is a cycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chain-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain complexes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain complexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chain-complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain complex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homology-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homology group
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functoriality-of-singular-homology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functoriality of singular homology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functoriality of singular homology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chain-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-maps-descends-to-homology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain maps descends to homology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#induced-morphisms-of-singular-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Induced morphisms of singular chains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functoriality-of-singular-homology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functoriality of singular homology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Δ-complexes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Δ-complexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-complex-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Δ-complex structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicial-chain-complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplicial chain complex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_properties_of_homology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 Properties of homology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#singular-simplices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular simplices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Singular simplices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-n-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard n-simplex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-n-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular n-simplex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singular-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular chains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Singular chains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#free-abelian-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free abelian group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singular chain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#every-boundary-is-a-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Every boundary is a cycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chain-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain complexes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chain complexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chain-complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain complex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homology-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homology group
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functoriality-of-singular-homology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functoriality of singular homology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functoriality of singular homology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chain-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-maps-descends-to-homology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain maps descends to homology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#induced-morphisms-of-singular-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Induced morphisms of singular chains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functoriality-of-singular-homology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functoriality of singular homology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Δ-complexes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Δ-complexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-complex-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Δ-complex structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicial-chain-complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplicial chain complex
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="11-homology">11 Homology</h1>
+<p><span style="display: none">
+    <span class="arithmatex">\(\newcommand{\Csing}{C^\text{sing}}\)</span>
+</span></p>
+<h2 id="singular-simplices">Singular simplices</h2>
+<details class="definition">
+<summary>Definition 11.1</summary>
+<h3 id="standard-n-simplex">Standard <em>n</em>-simplex</h3>
+<p>For <span class="arithmatex">\(n\in\N\)</span>, the <strong>standard <span class="arithmatex">\(\bm n\)</span>-simplex</strong> is the subspace</p>
+<div class="arithmatex">\[\Delta^n = \left\{(t_0,\dots, t_n)\in\R^n \mid t_i \ge 0, \sum_{i=0}^n t_i = 1\right\}
+\subseteq \R^{n+1}.\]</div>
+<p>For <span class="arithmatex">\(0 \le i \le n\)</span>, the <strong><span class="arithmatex">\(\bm i\)</span>-th vertex</strong> <span class="arithmatex">\(v_i\)</span> of <span class="arithmatex">\(\Delta^n\)</span> is the standard basis
+vector <span class="arithmatex">\(e_{i+1} \in \R^{n+1}\)</span>.</p>
+<p><img alt="0, 1, 2, 3-simplex" src="../11_homology_images/standard_n-simplices_d111.png" /></p>
+</details>
+<details class="remark">
+<summary>Remark 11.2</summary>
+<p>The standard <span class="arithmatex">\(n\)</span>-simplex is the convex hull of its vertices, standard basis vectors.</p>
+</details>
+<details class="definition">
+<summary>Definition 11.3</summary>
+<h3 id="singular-n-simplex">Singular <em>n</em>-simplex</h3>
+<p>A <strong>singular <span class="arithmatex">\(\bm n\)</span>-simplex</strong> in <span class="arithmatex">\(X\)</span> is a continuous map <span class="arithmatex">\(\sigma:\Delta^n\to X\)</span>.</p>
+<p>Let <span class="arithmatex">\(\delta^i : \Delta^{n-1} \hookrightarrow \Delta^n\)</span> be the embedding that maps
+the vertices <span class="arithmatex">\((v_0, \dots, v_{n-1})\)</span> of <span class="arithmatex">\(\Delta^{n-1}\)</span> affinely to the vertices
+<span class="arithmatex">\((w_0, \dots, w_{i-1}, w_{i+1}, \dots, w_n)\)</span> of <span class="arithmatex">\(\Delta^n\)</span>.</p>
+<p>The <strong><span class="arithmatex">\(\bm i\)</span>-th face</strong> <span class="arithmatex">\(d_i(\sigma)\)</span> of a singular <span class="arithmatex">\(n\)</span>-simplex <span class="arithmatex">\(\sigma\)</span> is the
+restriction of <span class="arithmatex">\(\sigma\)</span> via the embedding <span class="arithmatex">\(\delta^i\)</span></p>
+<div class="arithmatex">\[d_i(\sigma) = \sigma \circ \delta^i : \Delta^{n-1} \to X.\]</div>
+<p><img alt="Faces, singular n-simplices and vertices of a triangle" src="../11_homology_images/d113.png" /></p>
+</details>
+<details class="remark">
+<summary>Remark 11.4</summary>
+<ul>
+<li><em>Singular</em> indicates that <span class="arithmatex">\(\sigma\)</span> does not need to be an embedding.</li>
+<li>A singular <span class="arithmatex">\(0\)</span>-simplex is essentially a point.</li>
+<li>A singular <span class="arithmatex">\(1\)</span>-simplex is essentially a path <span class="arithmatex">\(\gamma\)</span> (after identifying
+<span class="arithmatex">\(\Delta^1 \cong [0,1]\)</span>).<ul>
+<li>Its <span class="arithmatex">\(0\)</span>-th face is the endpoint <span class="arithmatex">\(\gamma(0)\)</span>.</li>
+<li>Its <span class="arithmatex">\(1\)</span>-st face is the endpoint <span class="arithmatex">\(\gamma(1)\)</span>.</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="singular-chains">Singular chains</h2>
+<details class="definition">
+<summary>Definition 11.5</summary>
+<h3 id="free-abelian-group">Free abelian group</h3>
+<p>For a set <span class="arithmatex">\(S\)</span>, the <strong>free abelian group</strong> on <span class="arithmatex">\(S\)</span> is</p>
+<div class="arithmatex">\[\Z S = \bigoplus_{s\in S} \Z =
+\left\{ \sum_{s\in S} n_s s \mid n_s\in\Z,
+n_s = 0 \text{ for all but finitely many } s \right\}.\]</div>
+<p>If <span class="arithmatex">\(|S| = r &lt; \infty\)</span>, we say that <span class="arithmatex">\(\Z S\)</span> has rank <span class="arithmatex">\(r\)</span>.</p>
+</details>
+<details class="remark">
+<summary>Remark 11.6</summary>
+<p>This group is free in the following sense:</p>
+<ul>
+<li>Every homomorphism of abelian groups <span class="arithmatex">\(\Z S \to A\)</span> is uniquely determined by map of
+sets <span class="arithmatex">\(S \to A\)</span> using the canonical inclusion <span class="arithmatex">\(S \hookrightarrow \Z S\)</span>.</li>
+<li>This can be expressed by an adjunction <span class="arithmatex">\(F \dashv U\)</span> of a free functor
+<span class="arithmatex">\(F : \mathbf{Set} \to \mathbf{Ab}\)</span> and a forgetful functor
+<span class="arithmatex">\(U : \mathbf{Ab} \to \mathbf{Set}\)</span> similarly to vector spaces.</li>
+</ul>
+</details>
+<details class="definition">
+<summary>Definition 11.7</summary>
+<h3 id="singular-chain">Singular chain</h3>
+<p>The group of <strong>singular <span class="arithmatex">\(\bm n\)</span>-chains</strong> <span class="arithmatex">\(\Csing_n(X)\)</span> of <span class="arithmatex">\(X\)</span> is the free abelian group
+generatoed by the singular <span class="arithmatex">\(n\)</span>-simplices in <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[\Csing_n(X) = \Z\{\sigma : \Delta^n \to X\}.\]</div>
+<p>The <strong><span class="arithmatex">\(\bm n\)</span>-th boundary map</strong> <span class="arithmatex">\(\partial_n : \Csing_n(X) \to \Csing_{n-1}(X)\)</span> is the
+homomorphism defined uniquelly by</p>
+<div class="arithmatex">\[\partial_n(\sigma) = \sum_{i=0}^n (-1)^i d_i(\sigma).\]</div>
+<p>A chain with zero boundary <span class="arithmatex">\(\s \in \ker \partial_n\)</span> is called a <strong>singular cycle</strong>.</p>
+<p>A chain <span class="arithmatex">\(\s \in \Im \partial_{n+1}\)</span> is called a <strong>singular boundary</strong>.</p>
+<p><img alt="Singular boundary of a triangle" src="../11_homology_images/differential_d117.png" /></p>
+</details>
+<details class="lemma">
+<summary>Lemma 11.8</summary>
+<h3 id="every-boundary-is-a-cycle">Every boundary is a cycle <a id="l118"></a></h3>
+<div class="arithmatex">\[\partial^2 = 0\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Observe that</p>
+<div class="arithmatex">\[d_jd_i(\s) = d_{i-1}d_j(\s) \quad \text{for } j &lt; i.\]</div>
+<p>Then we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \partial^2(\s)
+    &amp;=\partial \left(\sum_{i=0}^n (-1)^i d_i(\s)\right) \\
+    &amp;=\sum_{i=0}^n \partial d_i(\s) \\
+    &amp;= \sum_{i=0}^n \sum_{j=0}^n (-1)^j d_jd_i(\s) \\
+    &amp;= \sum_{i=0}^n (-1)^i \sum_{j=0}^{i-1} (-1)^j d_{i-1}d_j(\s)
+    + \sum_{i=0}^n (-1)^i \sum_{j=i}^{n-1} (-1)^j d_jd_i(\s) \\
+    &amp;= \sum_{0 \le j &lt; i \le n} (-1)^{i+j} d_{i-1}d_j(\s)
+    + \sum_{0 \le i &lt; k \le n} (-1)^{i+k-1} d_{k-1}d_i(\s) \\
+    &amp;= 0.
+\end{align*}
+\]</div>
+</details>
+</details>
+<h2 id="chain-complexes">Chain complexes</h2>
+<details class="definition">
+<summary>Definition 11.9</summary>
+<h3 id="chain-complex">Chain complex</h3>
+<p>A <strong>chain complex of abelian groups</strong> is a pair <span class="arithmatex">\((C_\bullet, \partial)\)</span> where</p>
+<ul>
+<li><span class="arithmatex">\(C_\bullet\)</span> is a <strong>graded abelian group</strong>, i.e. a family <span class="arithmatex">\((C_n)_{n\in\Z}\)</span> of abelian
+groups</li>
+<li><span class="arithmatex">\(\partial\)</span> is a differential: For every <span class="arithmatex">\(n\in\Z\)</span>, we have a homomorphism</li>
+</ul>
+<div class="arithmatex">\[\partial = \partial_n : C_n \to C_{n-1} \text{ s.t. }
+\partial^2 = \partial_n \circ \partial_{n+1} = 0.\]</div>
+<p>We say that <span class="arithmatex">\(C_n\)</span> is in <strong>degree</strong> <span class="arithmatex">\(n\)</span>.</p>
+</details>
+<details class="example">
+<summary>Example 11.10</summary>
+<p><a id="e1110"></a><strong>1.</strong></p>
+<p>Denote by <span class="arithmatex">\(\Z[k]\)</span> the chain complex</p>
+<div class="arithmatex">\[\dots \to 0 \to 0 \to \Z \to 0 \to 0 \to \dots.\]</div>
+<p>where the only non-trivial abelian group is in degree k.</p>
+<hr />
+<p><strong>2.</strong></p>
+<p>Consider the chain complex</p>
+<div class="arithmatex">\[\dots \to 0 \to 0 \to \Z \xrightarrow{\partial} \Z \to 0 \to 0 \to \dots.\]</div>
+<p>where th only non-trivial entries are in degrees 0 and 1. Then, the differential
+<span class="arithmatex">\(\partial\)</span> can be any homomorphism <span class="arithmatex">\(\Z \to \Z\)</span>, so it is multiplication by some integer
+<span class="arithmatex">\(d \in \Z\)</span>.</p>
+<hr />
+<p><strong>3.</strong></p>
+<p>Consider the chain complex</p>
+<div class="arithmatex">\[\dots \to 0 \to \Z t \xrightarrow{\partial_2} \Z a \oplus \Z b \oplus \Z c
+\xrightarrow{\partial_1} \Z x \oplus \Z y \oplus \Z z \to 0 \to \dots.\]</div>
+<p>where the differentials are given by</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \partial_2(t) &amp;= a + b - c \\
+    \partial_1(a) &amp;= y - x &amp; \partial_1(b) &amp;= z - y &amp; \partial_1(c) &amp;= z - x.
+\end{align*}
+\]</div>
+<p>Then, we have</p>
+<div class="arithmatex">\[\partial_1 \circ \partial_2(t) = \partial_1(a + b - c) = (y-x) + (z-y) - (z-x) = 0.\]</div>
+</details>
+<h2 id="homology">Homology</h2>
+<details class="definition">
+<summary>Definition 11.11</summary>
+<h3 id="homology-group">Homology group</h3>
+<p>Let <span class="arithmatex">\(C = (C_\bullet, \partial)\)</span> be a chain complex.</p>
+<p>The <strong><span class="arithmatex">\(\bm n\)</span>-cycles</strong> and <strong><span class="arithmatex">\(\bm n\)</span>-boundaries</strong> are respactively the subgroups</p>
+<div class="arithmatex">\[
+\begin{align*}
+    Z_n(C) &amp;= \ker (\partial_n : C_n \to C_{n-1}), \\
+    B_n(C) &amp;= \Im (\partial_{n+1} : C_{n+1} \to C_n).
+\end{align*}
+\]</div>
+<p>As <span class="arithmatex">\(\partial^2 = 0\)</span>, we have <span class="arithmatex">\(B_n(C) \subseteq Z_n(C)\)</span>.</p>
+<p>The <strong><span class="arithmatex">\(\bm n\)</span>-th homology group</strong> of <span class="arithmatex">\(C\)</span> is the quotient group</p>
+<div class="arithmatex">\[H_n(C) = Z_n(C) / B_n(C).\]</div>
+</details>
+<details class="example">
+<summary>Example 11.12</summary>
+<p>Recall the chain complexes in <a href="#e1110">E.11.10</a>.</p>
+<p><strong>1.</strong></p>
+<p>Only <span class="arithmatex">\(\partial_k\)</span> has non-trivial kernel, and all maps are <span class="arithmatex">\(0\)</span>. Thus,</p>
+<ul>
+<li>all chains are cycles,</li>
+<li>all boundaries are zero</li>
+</ul>
+<div class="arithmatex">\[
+H_n(\Z[k]) =
+\begin{cases}
+    \Z, &amp;\quad n = k, \\
+    0, &amp;\quad n \ne k.
+\end{cases}
+\]</div>
+<hr />
+<p><strong>2.</strong></p>
+<p>Consider the chain complex with <span class="arithmatex">\(\partial_1\)</span> being multiplication by <span class="arithmatex">\(d\neq 0\)</span>:</p>
+<div class="arithmatex">\[\dots \to 0 \to 0 \to \Z \xrightarrow{\partial_1} \Z
+\xrightarrow{\partial_0} 0 \to \dots.\]</div>
+<p>Then, we have</p>
+<ul>
+<li><span class="arithmatex">\(\partial_0\)</span> has the only non-trivial kernel: <span class="arithmatex">\(\ker \partial_0 = \Z\)</span>,</li>
+<li><span class="arithmatex">\(\partial_1\)</span> has the only non-trivial image: <span class="arithmatex">\(\Im \partial_1 = d\Z\)</span>.</li>
+</ul>
+<div class="arithmatex">\[
+H_n =
+\begin{cases}
+    \Z/d\Z, &amp;\quad n = 0, \\
+    0, &amp;\quad n \ne 0.
+\end{cases}
+\]</div>
+<hr />
+<p><strong>3.</strong></p>
+<p>We have that <span class="arithmatex">\(x - y = (y - x) - (x-y)\)</span>, so <span class="arithmatex">\(\Im \partial_1 = (y-x) \Z \oplus (z-x) \Z\)</span>.</p>
+<p>Then, we have</p>
+<div class="arithmatex">\[H_0 = \Z x \oplus \Z y \oplus \Z z / \Im \partial_1
+\cong \Z x \oplus \Z (y-x) \oplus \Z (z-x) / \Im \partial_1
+\cong \Z.\]</div>
+<p>Additionally, we have <span class="arithmatex">\(\ker \partial_1 = (a + b - c) \Z = \Im \partial_2\)</span> and
+<span class="arithmatex">\(\ker \partial_2 = 0\)</span>, so we get</p>
+<div class="arithmatex">\[H_1 = 0 = H_2.\]</div>
+</details>
+<h2 id="functoriality-of-singular-homology">Functoriality of singular homology</h2>
+<details class="definition">
+<summary>Definition 11.13</summary>
+<h3 id="chain-map">Chain map</h3>
+<p>If <span class="arithmatex">\(C = (C_\bullet, \partial_C)\)</span> and <span class="arithmatex">\(D = (D_\bullet, \partial_D)\)</span> are chain complexes,
+as sequence of maps (homomorphisms)</p>
+<div class="arithmatex">\[f_n : C_n \to D_n\]</div>
+<p>is called a <strong>chain map</strong> of a <strong>map of chain complexes</strong> if for all <span class="arithmatex">\(n\)</span>, we have</p>
+<div class="arithmatex">\[\partial f_n = f_{n-1} \partial.\]</div>
+</details>
+<details class="lemma">
+<summary>Lemma 11.14</summary>
+<h3 id="chain-maps-descends-to-homology">Chain maps descends to homology <a id="l1114"></a></h3>
+<p><span class="arithmatex">\(\begin{align*}
+    \text{Let } &amp; C = (C_\bullet, \partial_C), (D_\bullet, \partial_D)
+    \text{ be chain complexes,} \\
+    &amp; f_\bullet : C_\bullet \to D_\bullet \text{ be a chain map.} 
+\end{align*}\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+    \implies &amp; f_\bullet \text{ induces a map} \\
+    &amp; f_\bullet : H_\bullet(C) \to H_\bullet(D).
+\end{align*}
+\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>We claim that <span class="arithmatex">\(f_\bullet\)</span> restricts to cycles and boundaries:</p>
+<p>Let <span class="arithmatex">\(z\)</span> be an <span class="arithmatex">\(n\)</span>-cycle in <span class="arithmatex">\(C\)</span>.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    &amp; \iff \partial z = 0 \\
+    &amp; \implies \partial (f_n z) = f_{n-1} \partial z = 0 \\
+    &amp; \implies f_n z \text{ is an } n\text{-cycle in } D.
+\end{align*}\)</span></p>
+<p>Now, let <span class="arithmatex">\(z = \partial w\)</span> be an <span class="arithmatex">\(n\)</span>-boundary in <span class="arithmatex">\(C\)</span>.</p>
+<p><span class="arithmatex">\(\begin{align*}
+    &amp; \implies f_n z = \partial f_{n+1} w \\
+    &amp; \implies f_n z \text{ is an } n\text{-boundary in } D.
+\end{align*}\)</span></p>
+<p>So <span class="arithmatex">\(f_\bullet\)</span> descends to the quotients, the homologies.</p>
+</details>
+</details>
+<details class="definition">
+<summary>Definition 11.15</summary>
+<h3 id="induced-morphisms-of-singular-chains">Induced morphisms of singular chains</h3>
+<p>Let <span class="arithmatex">\(f : X \to Y\)</span> be a continuous map.</p>
+<ul>
+<li>Any <span class="arithmatex">\(n\)</span>-simplex <span class="arithmatex">\(\sigma : \Delta^n \to X\)</span> determines an <span class="arithmatex">\(n\)</span>-simplex <span class="arithmatex">\(f_*\s = f\circ\s\)</span>
+in <span class="arithmatex">\(Y\)</span>.</li>
+<li>This extends to a unique homomorphism of abelian groups</li>
+</ul>
+<div class="arithmatex">\[f_* : (f_*)_n : \Csing_n(X) \to \Csing_n(Y).\]</div>
+</details>
+<details class="proposition">
+<summary>Proposition 11.16</summary>
+<h3 id="functoriality-of-singular-homology_1">Functoriality of singular homology</h3>
+<ol>
+<li><span class="arithmatex">\(f_*\)</span> is a chain map.</li>
+<li>Therefore, it induces maps on the homology groups</li>
+</ol>
+<div class="arithmatex">\[
+\begin{align*}
+    f_* : H_n(X) &amp;\to H_n(Y) \\
+    [z] &amp;\mapsto [f_*z].
+\end{align*}
+\]</div>
+<details class="proof">
+<summary>Proof</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="arithmatex">\((1)\)</span></label><label for="__tabbed_1_2"><span class="arithmatex">\((2)\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(\displaystyle z = \sum_j n_j \s_j \in \Csing_n(X)\)</span>.</p>
+<p>Then, we have</p>
+<div class="arithmatex">\[\partial(f_*z) = \sum_j n_j \partial(f \circ \s_j)
+= \sum_j n_j \sum_i (-1)^i d_i(f \circ \s_j) \tag{*}.\]</div>
+<p>Notice that</p>
+<div class="arithmatex">\[d_i(f \circ \s_j) = f \circ \s_j \circ \delta^i
+= f_*(\s_j \circ \delta^i) = f_*d_i(\s_j) \tag{**}.\]</div>
+<p>Substituting <span class="arithmatex">\((**)\)</span> into <span class="arithmatex">\((*)\)</span>, we get</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \partial(f_*z)
+    &amp;= \sum_j n_j \sum_i (-1)^i f_*d_i(\s_j) \\
+    &amp;= f_*\left(\sum_j n_j \sum_i (-1)^i d_i(\s_j)\right) \\
+    &amp;= f_*\left(\sum_i (-1)^i d_i(z)\right) \\
+    &amp;= f_*\partial z.
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>By <a href="#l1114">Lemma 11.14</a>, <span class="arithmatex">\(f_*\)</span> induces maps on the homology groups.</p>
+</div>
+</div>
+</div>
+</details>
+</details>
+<h2 id="-complexes">Δ-complexes</h2>
+<details class="definition">
+<summary>Definition 11.17</summary>
+<h3 id="-complex-structure">Δ-complex structure <a id="d1117"></a></h3>
+<p>A <strong><span class="arithmatex">\(\bm\Delta\)</span>-complex structure</strong> on a space <span class="arithmatex">\(X\)</span> is a collection of simplices of <span class="arithmatex">\(X\)</span></p>
+<div class="arithmatex">\[\Delta_X = \{\sigma_\alpha : \Delta^{k_\alpha} \to X\}_\alpha\]</div>
+<p>such that</p>
+<div class="arithmatex">\[
+\begin{align*}
+    (1) &amp; \quad \s_\alpha|_{\Delta^{k_\alpha}} \text{ is injective,} \\ \\
+    (2) &amp; \quad \forall\, x \in X, \exists! \alpha :
+    x \in \Im \left(\s_\alpha|_{\Delta^{k_\alpha}}\right) \\ \\
+    (3) &amp; \quad \forall\, \alpha, 0 \le i \le k_\alpha\ \exists! \beta :
+    d_i(\s_\alpha) = \s_\beta \\ \\
+    (4) &amp; \quad \forall\, A \subseteq X
+    (A \text{ is open } \iff
+    \s_\alpha^{-1}(A) \text{ is open in } \Delta^{k_\alpha} \text{ for all } \alpha).
+\end{align*}
+\]</div>
+</details>
+<details class="example">
+<summary>Example 11.18</summary>
+<p>Consider the following <span class="arithmatex">\(\Delta\)</span>-complex structure on the torus and the Klein bottle:</p>
+<p><img alt="Torus and Klein bottle Δ-structure" src="../11_homology_images/delta-structure_torus_klein_bottle_e1118.png" /></p>
+<p>Both have</p>
+<ul>
+<li>two <span class="arithmatex">\(2\)</span>-simplices,</li>
+<li>three <span class="arithmatex">\(1\)</span>-simplices,</li>
+<li>one <span class="arithmatex">\(0\)</span>-simplex,</li>
+</ul>
+<p>however, the face maps are different:</p>
+<ul>
+<li>The torus has <span class="arithmatex">\(d_0(V) = b\)</span>,</li>
+<li>while the Klein bottle has <span class="arithmatex">\(d_0(V) = c\)</span>.</li>
+</ul>
+<p>So knowing the simplices alone is not enough to understand <span class="arithmatex">\(X\)</span>; the face maps encode
+important information.</p>
+</details>
+<details class="remark">
+<summary>Remark 11.19</summary>
+<p>The conditions for a <span class="arithmatex">\(\Delta\)</span>-complex on <span class="arithmatex">\(X\)</span> ensure that we can recover <span class="arithmatex">\(X\)</span> from the
+simplices if we know what the faces of the simplices are.</p>
+<p>We can organize this data into a <strong>semi-simplicial set</strong>, which is a combinatorial
+way to encode the <span class="arithmatex">\(\Delta\)</span>-complex. Thus, <span class="arithmatex">\(X\)</span> is recovered via geometric realization.</p>
+<p>Not all spaces arise this way: any <span class="arithmatex">\(\Delta\)</span>-complex is a CW-complex.</p>
+</details>
+<details class="definition">
+<summary>Definition 11.20</summary>
+<p>Let <span class="arithmatex">\((X, \Delta_X)\)</span> be a <span class="arithmatex">\(\Delta\)</span>-complex, and let</p>
+<div class="arithmatex">\[C_n^\Delta(X, \Delta_X) \subset \Csing_n(X)\]</div>
+<p>be the subgroup spanned by <span class="arithmatex">\(n\)</span>-simplices which lies in <span class="arithmatex">\(\Delta_X\)</span>.</p>
+</details>
+<details class="remark">
+<summary>Remark 11.21</summary>
+<p>The properties <span class="arithmatex">\((1)\)</span> and <span class="arithmatex">\((2)\)</span> of the <span class="arithmatex">\(\Delta\)</span>-complex structure (<a href="#d1117">D.11.17</a>)
+ensure that the differential <span class="arithmatex">\(\partial_n\)</span> of <span class="arithmatex">\(\Csing_n(X)\)</span> restricts to
+<span class="arithmatex">\(C_n^\Delta(X, \Delta_X)\)</span>.</p>
+<p>Thus, we have a chain complex</p>
+<div class="arithmatex">\[C_\bullet^\Delta(X, \Delta_X) = (C_n^\Delta(X, \Delta_X), \partial).\]</div>
+</details>
+<details class="definition">
+<summary>Definition 11.22</summary>
+<h3 id="simplicial-chain-complex">Simplicial chain complex</h3>
+<p>The <strong>simplicial chain complex</strong> of a <span class="arithmatex">\(\Delta\)</span>-complex <span class="arithmatex">\((X, \Delta_X)\)</span> is</p>
+<div class="arithmatex">\[(C_n^\Delta(X, \Delta_X), \partial_n).\]</div>
+<p>The <strong>simplicial homology</strong> of <span class="arithmatex">\((X, \Delta_X)\)</span> is</p>
+<div class="arithmatex">\[H_n^\Delta(X, \Delta_X) = H(C_n^\Delta(X, \Delta_X)).\]</div>
+</details>
+<details class="example">
+<summary>Example 11.23</summary>
+<p>Recall the <span class="arithmatex">\(\Delta\)</span>-complex structure on a torus:</p>
+<p><img alt="Torus Δ-structure" src="../11_homology_images/delta-structure_torus_e1123.png" /></p>
+<p><strong>We compute its homology</strong>:</p>
+<p>The chain groups are generated by</p>
+<ul>
+<li>the triangles: <span class="arithmatex">\(\Z U \oplus \Z V\)</span>,</li>
+<li>edges: <span class="arithmatex">\(\Z a \oplus \Z b \oplus \Z c\)</span>,</li>
+<li>vertex: <span class="arithmatex">\(\Z P\)</span>.</li>
+</ul>
+<p>The boundary of an edge is the tip minus end of the edge:</p>
+<div class="arithmatex">\[\partial_1: \Z a \oplus \Z b \oplus \Z c \to \Z P, \quad a, b, c \mapsto P - P = 0.\]</div>
+<p>For a triangle, we take a signed linear combination of the boundary edges:</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \partial_2: \Z U \oplus \Z V &amp;\to \Z a \oplus \Z b \oplus \Z c, \\
+    U &amp;\mapsto a - c + b \\
+    V &amp;\mapsto b - c + a.
+\end{align*}
+\]</div>
+<p>We add zero maps to obtain a chain complex:</p>
+<div class="arithmatex">\[0 \xrightarrow{\partial_3} \Z U \oplus \Z V \xrightarrow{\partial_2}
+\Z a \oplus \Z b \oplus \Z c \xrightarrow{\partial_1} \Z P
+\xrightarrow{\partial_0} 0.\]</div>
+<p>Then, we get the homology groups</p>
+<div class="arithmatex">\[
+\begin{align*}
+    H_0 = \ker \partial_0/\Im \partial_1 &amp; \cong \Z[P] \cong \Z, \\
+    H_1 = \ker \partial_1/\Im \partial_2
+    &amp; \cong \Z a \oplus \Z b \oplus \Z c / \Z(a+b-c) \\
+    &amp; \cong \Z[a] \oplus \Z[b] \\
+    &amp; \cong \Z^2, \\
+    H_2 = \ker \partial_2/\Im \partial_3 &amp; \cong \Z[U-V] \cong \Z.
+\end{align*}
+\]</div>
+<p><strong>What this tells us about the torus:</strong></p>
+<p>In <span class="arithmatex">\(H_0\)</span>, we identify all vertices that are connected by an ende. The rank of this
+abelian group is the number of path components.</p>
+<p>In the torus, the generators <span class="arithmatex">\([a]\)</span> and <span class="arithmatex">\([b]\)</span> are represented by the loops <span class="arithmatex">\(\alpha\)</span> and
+<span class="arithmatex">\(\beta\)</span> in <a href="../fundamental_group$e93">E.9.3</a>. They generate the fundamental group. For
+path-connected spaces, <span class="arithmatex">\(H_1\)</span> is the abelianization of the fundamental group (the
+quotient by commutators <span class="arithmatex">\(x\cdot y - y\cdot x\)</span>).</p>
+<p>The rank of <span class="arithmatex">\(H_2\)</span> is <span class="arithmatex">\(1\)</span>, reflecting that the torus is an orientable surface. The Klein
+bottle is not orientable and <span class="arithmatex">\(H_2\)</span> has rank <span class="arithmatex">\(2\)</span>.</p>
+</details>
+<details class="remark">
+<summary>Remark 11.24</summary>
+<p><strong>Advantages of simplicial homology</strong>:</p>
+<ul>
+<li>By construction, if <span class="arithmatex">\(\Delta_X\)</span> contains only <span class="arithmatex">\(k\)</span>-simplices for <span class="arithmatex">\(k\le n\)</span>, then
+<span class="arithmatex">\(H_k^\Delta(X, \Delta_X) = 0\)</span> for <span class="arithmatex">\(k &gt; n\)</span>. We do not have such a simple criterion for
+simplicial homology.</li>
+<li>The chain complexes are much smaller than the singular chain complexes. This often
+makes simplicial homology computationally directly. However, it is more difficult to
+prove properties like homotopy invariance directly.</li>
+</ul>
+</details>
+<details class="remark">
+<summary>Remark 11.25</summary>
+<p>Choose two <span class="arithmatex">\(\Delta\)</span>-structures on a space and compute simplicial homology for both of
+them. Notice that you get isomorphic homology groups.</p>
+</details>
+<details class="theorem">
+<summary>Theorem 11.26</summary>
+<p>The map induced by the inclusion of simplices</p>
+<div class="arithmatex">\[C_\bullet^\Delta(X, \Delta_X) \to \Csing_\bullet(X)\]</div>
+<p>induces an isomorphism on homology. In particular,</p>
+<div class="arithmatex">\[H_\bullet(X) = H_\bullet^\Delta(X, \Delta_X)\]</div>
+<p>is independent of the choice of <span class="arithmatex">\(\Delta\)</span>-complex structure.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "navigation.instant", "search.highlight", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/convert_to_tikzjax_script.js"></script>
+      
+    
+  </body>
+</html>

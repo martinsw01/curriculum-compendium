@@ -1,0 +1,34 @@
+.md-typeset .admonition.proof,
+.md-typeset details.proof {
+  border-color: rgb(182, 182, 182);
+}
+.md-typeset .proof > .admonition-title,
+.md-typeset .proof > summary {
+  background-color: rgba(182, 182, 182, 0.1);
+  padding-left: .6rem; /* Use the same padding on the left as on the right */
+}
+
+.md-typeset .proof .proof > summary {
+  font-weight: normal;
+}
+
+.md-typeset .proof > .admonition-title::before,
+.md-typeset .proof > summary::before {
+  width: 0; /* Hide icon */
+}
+
+.proof:not([open])::after {
+  content: "";
+}
+
+.proof {
+  position: relative;
+}
+
+.proof::after {
+  content: "◻";
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.8rem;
+  font-size: 113.1%;
+}
